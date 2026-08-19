@@ -37,14 +37,6 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player died!");
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            TakeDamage(10f);
-        }
-    }
 }
 
 

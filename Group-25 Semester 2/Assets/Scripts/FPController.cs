@@ -15,9 +15,6 @@ public class FPController : MonoBehaviour
     [SerializeField] private float fallGravityMultiplier = 2f;
     [SerializeField] private float maxFallSpeed = -30f;
 
-    [Header("Sprint")]
-    [SerializeField] private float sprintSpeed = 8f;
-
     [Header("Crouch")]
     [SerializeField] private float crouchSpeed = 2.5f;
     [SerializeField] private float standingHeight = 2f;
@@ -37,7 +34,6 @@ public class FPController : MonoBehaviour
     private Vector3 velocity;
     private float verticalRotation;
 
-    private bool isSprinting;
     private bool isCrouching;
 
     private void Awake()
@@ -74,10 +70,6 @@ public class FPController : MonoBehaviour
         }
     }
 
-    public void OnSprint(InputAction.CallbackContext context)
-    {
-        isSprinting = context.ReadValueAsButton();
-    }
     public void OnCrouch(InputAction.CallbackContext context)
     {
         isCrouching = context.ReadValueAsButton();
@@ -96,10 +88,6 @@ public class FPController : MonoBehaviour
             currentSpeed = crouchSpeed;
         }
 
-        else if (isSprinting)
-        {
-            currentSpeed = sprintSpeed;
-        }
 
         Vector3 targetVelocity = inputDirection * currentSpeed;
 

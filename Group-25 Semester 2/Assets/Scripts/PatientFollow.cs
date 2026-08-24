@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
 
-public class PatientFollow : MonoBehaviour
+public class PatientAI: MonoBehaviour
 {
     private GameObject destination;// where the patient should stop, their final destination
     private NavMeshAgent agent; 
@@ -19,5 +19,9 @@ public class PatientFollow : MonoBehaviour
         agent.SetDestination(destination.transform.position); // Makes patient go to players position
     }
 
+    private void Rest()
+    {
+
+    }
 
 }

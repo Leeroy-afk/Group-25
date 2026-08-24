@@ -50,15 +50,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Flashlight",
-                    "type": "Button",
-                    "id": "13bd79db-9dd8-434e-8a4b-36259413251f",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -312,17 +303,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Sprinting",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "32df3ff1-7df8-4f54-b76a-cc49cc9b511f",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Flashlight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

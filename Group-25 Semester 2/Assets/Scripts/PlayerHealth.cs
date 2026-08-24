@@ -33,6 +33,13 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void TakeHalfHealth()
+{
+    float damage = currentHealth * 0.5f;
+
+    TakeDamage(damage);
+}
+
     private void Die()
     {
         Debug.Log("Player died!");

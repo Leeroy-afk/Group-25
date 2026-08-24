@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
     
     [Header("UI")]
     [SerializeField] private Slider healthBar;
+
+    [SerializeField] private GameManager gameManager;
     private void Awake()
     {
         currentHealth = maxHealth; 
@@ -42,7 +44,18 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Player died!");
+        Debug.Log("PLAYER DIED!");
+
+        gameManager.PlayerDied();
+    }
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+
+        if (healthBar != null)
+        {
+            healthBar.value = currentHealth;
+        }
     }
 }
 

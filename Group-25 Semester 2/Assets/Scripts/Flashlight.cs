@@ -131,4 +131,15 @@ public class Flashlight : MonoBehaviour
         flashlight.enabled = false;
         playerSanity.SetFlashlight(false);
     }
+    public void ResetFlashlight()
+    {
+        currentBattery = maxBattery;
+
+        TurnOffFlashlight();
+
+        if (batterySlider != null)
+        {
+            batterySlider.value = currentBattery;
+        }
+    }
 }

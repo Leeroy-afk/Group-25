@@ -59,4 +59,15 @@ public class PlayerSanity : MonoBehaviour
     {
         lightZoneCount = Mathf.Max(0, lightZoneCount - 1);
     }
+    public void ResetSanity()
+    {
+        currentSanity = maxSanity;
+
+        if (sanityBar != null)
+        {
+            sanityBar.value = currentSanity;
+        }
+
+        SetFlashlight(false);
+    }
 }

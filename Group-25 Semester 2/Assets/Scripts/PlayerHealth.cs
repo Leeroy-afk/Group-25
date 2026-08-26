@@ -1,0 +1,62 @@
+using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.UI;
+using Unity.VisualScripting;
+
+public class PlayerHealth : MonoBehaviour
+{
+    [Header("Health")]
+    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float currentHealth = 100f;
+    
+    [Header("UI")]
+    [SerializeField] private Slider healthBar;
+
+    [SerializeField] private GameManager gameManager;
+    private void Awake()
+    {
+        currentHealth = maxHealth; 
+
+        healthBar.maxValue = maxHealth;
+        healthBar.value = currentHealth;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth = Mathf.Max(currentHealth - damage, 0f);
+
+        Debug.Log("Player Took Damage: " + currentHealth);
+
+        healthBar.value = currentHealth;
+
+        if(currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void TakeHalfHealth()
+{
+    float damage = currentHealth * 0.5f;
+
+    TakeDamage(damage);
+}
+
+    private void Die()
+    {
+        Debug.Log("PLAYER DIED!");
+
+        gameManager.PlayerDied();
+    }
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+
+        if (healthBar != null)
+        {
+            healthBar.value = currentHealth;
+        }
+    }
+}
+
+

@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PatientSit : PatientAI
+public class PatientSit : PlayerInteraction
 {
     public GameObject patientStanding, patientSitting, intText, standText;
     public bool interactable, sitting;

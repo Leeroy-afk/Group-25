@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "TitleScrene",
+    "maps": [
+        {
+            "name": "TitleScreenButtons",
+            "id": "dc049e9f-6e7f-4eb4-82ba-fac5c55574ca",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "d1aeec62-8a3b-4bdc-8757-cac5594c4463",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c2200f7b-c62a-40f7-a572-66b1bf1fc373",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

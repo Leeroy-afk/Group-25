@@ -7,14 +7,18 @@ public class AttackEnemyAI : MonoBehaviour
 
     [Header("Attack")]
     public float attackDistance = 2f;
-    public float attackCooldown = 1f;
+    public float attackCooldown = 0.5f;
     public float damage = 10f;
+
+    [Header("Sanity")]
+    public PlayerSanity playerSanity;
 
     [Header("Light")]
     public float lightEscapeTime = 2f;
 
     private NavMeshAgent agent;
     private PlayerHealth playerHealth;
+
     private float attackTimer;
 
     private bool escapingLight = false;
@@ -35,8 +39,6 @@ public class AttackEnemyAI : MonoBehaviour
         if (player == null)
             return;
 
-        // If the enemy is currently escaping light,
-        // don't chase the player.
         if (escapingLight)
         {
             escapeTimer -= Time.deltaTime;
@@ -71,7 +73,7 @@ public class AttackEnemyAI : MonoBehaviour
     {
         attackTimer -= Time.deltaTime;
 
-        if (attackTimer <= 0)
+        if (attackTimer <= 0f)
         {
             playerHealth.TakeDamage(damage);
 
@@ -108,7 +110,7 @@ public class AttackEnemyAI : MonoBehaviour
             agent.isStopped = false;
             agent.SetDestination(hit.position);
 
-            Debug.Log("Enemy is escaping the light!");
+            Debug.Log("Big enemy is escaping the light!");
         }
     }
 }

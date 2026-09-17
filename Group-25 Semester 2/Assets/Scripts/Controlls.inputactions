@@ -369,6 +369,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UI",
+            "id": "406f9bd8-b156-48b9-9f53-60d7d9d94647",
+            "actions": [
+                {
+                    "name": "DialogueAdvance",
+                    "type": "Button",
+                    "id": "ae54bebe-a7f5-4dc6-a312-860a2844505a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "af498149-b1cf-4733-aa1c-00ee9dab0b7c",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DialogueAdvance",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

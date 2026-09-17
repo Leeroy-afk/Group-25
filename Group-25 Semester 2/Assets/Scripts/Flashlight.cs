@@ -7,7 +7,10 @@ public class Flashlight : MonoBehaviour
 {
     [SerializeField] private Light flashlight;
     [SerializeField] private PlayerSanity playerSanity;
-    [SerializeField] private InputActionReference flashlightAction;
+    
+      
+
+    private InputActionReference flashlightAction;
 
     [Header("Enemy Detection")]
     [SerializeField] private float detectionDistance = 15f;

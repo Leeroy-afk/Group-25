@@ -369,6 +369,45 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "PatientStay",
+            "id": "75ef12b8-76eb-429f-9f37-849637befa3a",
+            "actions": [
+                {
+                    "name": "PatientCommand",
+                    "type": "Button",
+                    "id": "15f282cc-9964-4f85-bdd9-5215eaec11ce",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c8b8c7e3-8140-493a-9a5a-f71a453e90c3",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PatientCommand",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be33aed3-4a95-4ef0-a583-4052970b84e0",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PatientCommand",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

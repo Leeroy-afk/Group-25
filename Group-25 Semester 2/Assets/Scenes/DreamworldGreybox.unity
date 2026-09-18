@@ -63968,8 +63968,8 @@ MonoBehaviour:
     - speaker: Johny Sins
       portrait: {fileID: -1890486142, guid: 6db40329b1439d747bac3d49276457e7, type: 3}
       text: 'You can navigate using WASD, go on walk around. '
-    - speaker: Johny Sins
-      portrait: {fileID: -1890486142, guid: 6db40329b1439d747bac3d49276457e7, type: 3}
+    - speaker: Alice
+      portrait: {fileID: 417084974, guid: 4ff5ba7fa4cf9ef4cbd01b144fe6e3aa, type: 3}
       text: Be careful, there's a big bad capsule lingering around here. Use F to
         shine your light and deter him away.
   - lines:

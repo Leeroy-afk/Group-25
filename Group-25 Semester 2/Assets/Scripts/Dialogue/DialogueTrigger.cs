@@ -23,5 +23,6 @@ public class DialogueTrigger : MonoBehaviour
     public void ConversationFinished()
     {
         conversationCount++;
+        Debug.Log("Dialogue is finished");
     }
 }

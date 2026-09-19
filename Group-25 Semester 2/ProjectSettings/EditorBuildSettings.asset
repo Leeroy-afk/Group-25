@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Test Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 67280d1f92f0a094da9a16472c995398
+  - enabled: 1
     path: Assets/Scenes/DreamworldGreybox.unity
     guid: b5610d7f6e2a74e498016a8cc38553f7
   m_configObjects:

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - AttackEnemy
   - SanityEnemy
+  - PatientStay
+  - Patient
+  - Memory
   layers:
   - Default
   - TransparentFX
@@ -13,7 +16,7 @@ TagManager:
   - Enemy
   - Water
   - UI
-  - 
+  - Interactable
   - 
   - 
   - 

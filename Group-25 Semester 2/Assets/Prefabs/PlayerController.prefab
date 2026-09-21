@@ -501,11 +501,17 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0898e89a5382a04aad317e81f993833, type: 3}
   m_Name: 
+<<<<<<<< HEAD:Group-25 Semester 2/Assets/Prefabs/PlayerController.prefab
   m_EditorClassIdentifier: Assembly-CSharp::Flashlight
   normalLight: {fileID: 9096696220690957274}
   focusedLight: {fileID: 1797280709400887406}
   playerSanity: {fileID: 6734851922549474257}
   flashlightAction: {fileID: -3315757324711480895, guid: bf48b24f419944343971dacf2538cc0c, type: 3}
+========
+  m_EditorClassIdentifier: '::'
+  flashlight: {fileID: 2551042176347090202}
+  playerSanity: {fileID: 7556269237985221107}
+>>>>>>>> Patient-tweaks:Group-25 Semester 2/Assets/Prefabs/PlayerController 1.prefab
   detectionDistance: 15
   escapeDistance: 8
   enemyLayer:
@@ -519,6 +525,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<<< HEAD:Group-25 Semester 2/Assets/Prefabs/PlayerController.prefab
   - component: {fileID: 7611403781217081727}
   - component: {fileID: 6794457855587171555}
   - component: {fileID: 3132381727429658916}
@@ -528,6 +535,17 @@ GameObject:
   - component: {fileID: 8379104619388197954}
   - component: {fileID: 6734851922549474257}
   - component: {fileID: 3205569810164604855}
+========
+  - component: {fileID: 5575148942908081460}
+  - component: {fileID: 3913735929491757393}
+  - component: {fileID: 3759834385756432672}
+  - component: {fileID: 2646482450974536851}
+  - component: {fileID: 2502453893801196368}
+  - component: {fileID: 4292220028268903506}
+  - component: {fileID: 1441343701971701022}
+  - component: {fileID: 7556269237985221107}
+  - component: {fileID: 9143798546100861975}
+>>>>>>>> Patient-tweaks:Group-25 Semester 2/Assets/Prefabs/PlayerController 1.prefab
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Player
@@ -747,6 +765,7 @@ MonoBehaviour:
     m_ActionId: 68d63eaf-af99-4b06-aef9-47d0ec49c478
     m_ActionName: 'Player/Interaction[/Keyboard/e]'
   - m_PersistentCalls:
+<<<<<<<< HEAD:Group-25 Semester 2/Assets/Prefabs/PlayerController.prefab
       m_Calls: []
     m_ActionId: ae54bebe-a7f5-4dc6-a312-860a2844505a
     m_ActionName: 'UI/DialogueAdvance[/Keyboard/t]'
@@ -754,6 +773,23 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f9c9dcbc-a79c-44ed-8750-e036e7efd47f
     m_ActionName: 'Player/Hide[/Keyboard/h]'
+========
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 85bc75da-4774-4545-98e6-e276f4b8c41b
+    m_ActionName: 'Player/PatientCommand[/Keyboard/q]'
+>>>>>>>> Patient-tweaks:Group-25 Semester 2/Assets/Prefabs/PlayerController 1.prefab
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -801,7 +837,11 @@ MonoBehaviour:
   currentHealth: 100
   healthBar: {fileID: 0}
   gameManager: {fileID: 0}
+<<<<<<<< HEAD:Group-25 Semester 2/Assets/Prefabs/PlayerController.prefab
 --- !u!114 &6734851922549474257
+========
+--- !u!114 &7556269237985221107
+>>>>>>>> Patient-tweaks:Group-25 Semester 2/Assets/Prefabs/PlayerController 1.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -817,8 +857,120 @@ MonoBehaviour:
   currentSanity: 100
   focusDrainRate: 10
   sanityBar: {fileID: 0}
+<<<<<<<< HEAD:Group-25 Semester 2/Assets/Prefabs/PlayerController.prefab
   focusedLightOn: 0
 --- !u!114 &3205569810164604855
+========
+  flashlightOn: 0
+--- !u!114 &9143798546100861975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3840025378011350803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3bd5cc5a1cecd4d92f768fe40490db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PatientStay
+  patientStayCommand: {fileID: 0}
+--- !u!1 &6678949479249260127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3289759229801892688}
+  - component: {fileID: 3396058626776327870}
+  - component: {fileID: 7225297339545863029}
+  - component: {fileID: 1043019275480422758}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3289759229801892688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678949479249260127}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.35355, y: 0.61, z: 0.35355}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4890007914315023166}
+  m_Father: {fileID: 5575148942908081460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &3396058626776327870
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678949479249260127}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &7225297339545863029
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678949479249260127}
+  m_Enabled: 1
+--- !u!114 &1043019275480422758
+>>>>>>>> Patient-tweaks:Group-25 Semester 2/Assets/Prefabs/PlayerController 1.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

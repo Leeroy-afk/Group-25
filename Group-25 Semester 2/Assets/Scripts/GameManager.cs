@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
         // Reset player systems
         playerHealth.ResetHealth();
         playerSanity.ResetSanity();
-        flashlight.ResetFlashlight();
 
         // Hide death screen
         deathScreen.SetActive(false);

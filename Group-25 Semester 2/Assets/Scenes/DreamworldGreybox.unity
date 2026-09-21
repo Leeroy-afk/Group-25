@@ -72510,6 +72510,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SanityEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7666954383574166566, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 5575148942687295164}
+    - target: {fileID: 7666954383574166566, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
+      propertyPath: playerSanity
+      value: 
+      objectReference: {fileID: 7556269238038104699}
     - target: {fileID: 8350502789256343666, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: player
       value: 
@@ -72517,69 +72525,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5218866127491843418, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2104251757}
-    - targetCorrespondingSourceObject: {fileID: 5218866127491843418, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2104251763}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
 --- !u!4 &2104251755 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2676171295259104989, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
   m_PrefabInstance: {fileID: 2104251754}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2104251756 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5218866127491843418, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
-  m_PrefabInstance: {fileID: 2104251754}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &2104251757
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104251756}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &2104251763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104251756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4553c42c833bde2469f824a7b7b2f763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AttackEnemyAI
-  player: {fileID: 5575148942687295164}
-  attackDistance: 2
-  attackCooldown: 0.5
-  damage: 10
-  playerSanity: {fileID: 7556269238038104699}
-  lightEscapeTime: 2
 --- !u!43 &2108974754
 Mesh:
   m_ObjectHideFlags: 0
@@ -73895,6 +73847,10 @@ PrefabInstance:
       propertyPath: sanityBar
       value: 
       objectReference: {fileID: 1316297815}
+    - target: {fileID: 6734851922549474257, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
+      propertyPath: focusDrainRate
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7611403781217081727, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.66814
@@ -74013,17 +73969,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
---- !u!114 &3900548976012232766 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5387864952044074705, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
-  m_PrefabInstance: {fileID: 1481226093359026274}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0898e89a5382a04aad317e81f993833, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!4 &5575148942687295164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7611403781217081727, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
@@ -74044,7 +73989,7 @@ PrefabInstance:
     - target: {fileID: 2081363076102578378, guid: 75fb38275a93b5a40bdadd22db5ad249, type: 3}
       propertyPath: flashlight
       value: 
-      objectReference: {fileID: 3900548976012232766}
+      objectReference: {fileID: 0}
     - target: {fileID: 2081363076102578378, guid: 75fb38275a93b5a40bdadd22db5ad249, type: 3}
       propertyPath: playerHealth
       value: 

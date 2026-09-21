@@ -174,6 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   flashlight: {fileID: 2551042176347090202}
   playerSanity: {fileID: 7556269237985221107}
+  flashlightAction: {fileID: -3315757324711480895, guid: bf48b24f419944343971dacf2538cc0c, type: 3}
   detectionDistance: 15
   escapeDistance: 8
   enemyLayer:
@@ -198,7 +199,6 @@ GameObject:
   - component: {fileID: 4292220028268903506}
   - component: {fileID: 1441343701971701022}
   - component: {fileID: 7556269237985221107}
-  - component: {fileID: 9143798546100861975}
   m_Layer: 0
   m_Name: PlayerController 1
   m_TagString: Untagged
@@ -417,22 +417,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 68d63eaf-af99-4b06-aef9-47d0ec49c478
     m_ActionName: 'Player/Interaction[/Keyboard/e]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 85bc75da-4774-4545-98e6-e276f4b8c41b
-    m_ActionName: 'Player/PatientCommand[/Keyboard/q]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -479,7 +463,6 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   healthBar: {fileID: 0}
-  gameManager: {fileID: 0}
 --- !u!114 &7556269237985221107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,19 +480,6 @@ MonoBehaviour:
   drainRate: 5
   sanityBar: {fileID: 0}
   flashlightOn: 0
---- !u!114 &9143798546100861975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3840025378011350803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3bd5cc5a1cecd4d92f768fe40490db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PatientStay
-  patientStayCommand: {fileID: 0}
 --- !u!1 &6678949479249260127
 GameObject:
   m_ObjectHideFlags: 0

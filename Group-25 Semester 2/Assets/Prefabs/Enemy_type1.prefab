@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 1572036446990838692}
   - component: {fileID: 8366578568900791361}
   - component: {fileID: 8254553796019852047}
-  - component: {fileID: 8350502789256343666}
   - component: {fileID: 4864988392452886462}
+  - component: {fileID: 8144487985777251697}
+  - component: {fileID: 7666954383574166566}
   m_Layer: 0
   m_Name: Enemy_type1
   m_TagString: Untagged
@@ -116,20 +117,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8350502789256343666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5218866127491843418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89ecb3dd3bdb0ed4fb36ed9f805b4b4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  player: {fileID: 0}
-  stopDistance: 10
 --- !u!195 &4864988392452886462
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -152,3 +139,50 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!54 &8144487985777251697
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218866127491843418}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &7666954383574166566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218866127491843418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4553c42c833bde2469f824a7b7b2f763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackEnemyAI
+  player: {fileID: 0}
+  attackDistance: 2
+  attackCooldown: 0.5
+  damage: 10
+  playerSanity: {fileID: 0}
+  lightEscapeTime: 2
+  patrolRadius: 30
+  patrolChangeTime: 6

@@ -6,15 +6,15 @@ public class PlayerSanity : MonoBehaviour
     [Header("Sanity")]
     [SerializeField] private float maxSanity = 100f;
     [SerializeField] private float currentSanity = 100f;
-    [SerializeField] private float drainRate = 10f;
+    [SerializeField] private float focusDrainRate = 10f;
 
     [Header("UI")]
     [SerializeField] private Slider sanityBar;
 
     [Header("Light Status")]
-    public bool flashlightOn = false;
+    public bool focusedLightOn = false;
 
-    private int lightZoneCount = 0;
+    private bool isHiding = false;
 
     public float CurrentSanity => currentSanity;
 
@@ -31,13 +31,13 @@ public class PlayerSanity : MonoBehaviour
 
     private void Update()
     {
-        bool isSafe = flashlightOn || lightZoneCount > 0;
-
-        if (!isSafe)
+       if (focusedLightOn && !isHiding)
         {
-            currentSanity -= drainRate * Time.deltaTime;
+            currentSanity -= focusDrainRate * Time.deltaTime;
             currentSanity = Mathf.Max(currentSanity, 0f);
         }
+
+        Debug.Log("Sanity is draining: " + currentSanity);
 
         if (sanityBar != null)
         {
@@ -45,19 +45,16 @@ public class PlayerSanity : MonoBehaviour
         }
     }
 
-    public void SetFlashlight(bool isOn)
+    public void SetFocusedlight(bool isOn)
     {
-        flashlightOn = isOn;
+        focusedLightOn = isOn;
+
+        Debug.Log("Focused Light State: " + focusedLightOn);
     }
 
-    public void EnterLight()
+    public void SetHiding(bool hiding)
     {
-        lightZoneCount++;
-    }
-
-    public void ExitLight()
-    {
-        lightZoneCount = Mathf.Max(0, lightZoneCount - 1);
+        isHiding = hiding;
     }
     public void ResetSanity()
     {
@@ -68,6 +65,7 @@ public class PlayerSanity : MonoBehaviour
             sanityBar.value = currentSanity;
         }
 
-        SetFlashlight(false);
+        focusedLightOn = false;
+        isHiding = false;
     }
 }

@@ -8,13 +8,6 @@ public class LightZone : MonoBehaviour
     {
         Debug.Log("LightZone detected: " + other.name);
 
-        PlayerSanity sanity = other.GetComponent<PlayerSanity>();
-
-        if (sanity != null)
-        {
-            sanity.EnterLight();
-        }
-
         AttackEnemyAI enemy = other.GetComponentInParent<AttackEnemyAI>();
 
         if (enemy != null)
@@ -34,9 +27,5 @@ public class LightZone : MonoBehaviour
 
         PlayerSanity sanity = other.GetComponent<PlayerSanity>();
 
-        if (sanity != null)
-        {
-            sanity.ExitLight();
-        }
     }
 }

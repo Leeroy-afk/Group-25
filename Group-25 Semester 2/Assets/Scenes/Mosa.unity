@@ -5136,32 +5136,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
-      propertyPath: m_DefaultActionMap
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
-      value: 85bc75da-4774-4545-98e6-e276f4b8c41b
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
-      value: 'Player/PatientCommand[/Keyboard/q]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
-      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5176,20 +5152,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 193849335}
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -5251,6 +5219,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6379138585557213084, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
+      propertyPath: patientStayCommand
+      value: 
+      objectReference: {fileID: 193849335}
     - target: {fileID: 8527338862358461225, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: healthBar
       value: 
@@ -5262,9 +5234,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5364237928990346671, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 904361029}
-    - targetCorrespondingSourceObject: {fileID: 5364237928990346671, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 904361030}
   m_SourcePrefab: {fileID: 100100000, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
 --- !u!1 &904361028 stripped
@@ -5272,19 +5241,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5364237928990346671, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
   m_PrefabInstance: {fileID: 904361027}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &904361029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904361028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3bd5cc5a1cecd4d92f768fe40490db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PatientStay
-  patientStayCommand: {fileID: 193849335}
 --- !u!54 &904361030
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -446,7 +446,7 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a5ff7a8b-5ab6-4360-8452-c1993e243c7d"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

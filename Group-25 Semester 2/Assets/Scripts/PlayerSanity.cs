@@ -37,8 +37,6 @@ public class PlayerSanity : MonoBehaviour
             currentSanity = Mathf.Max(currentSanity, 0f);
         }
 
-        Debug.Log("Sanity is draining: " + currentSanity);
-
         if (sanityBar != null)
         {
             sanityBar.value = currentSanity;

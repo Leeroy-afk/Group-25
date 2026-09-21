@@ -3079,6 +3079,7 @@ GameObject:
   - component: {fileID: 3170674362918650806}
   - component: {fileID: 856630965858808083}
   - component: {fileID: 634715453561322763}
+  - component: {fileID: 2763925083936792140}
   m_Layer: 5
   m_Name: Vignetting
   m_TagString: Untagged
@@ -3126,14 +3127,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 650541741, guid: 49bbae7d13f6cfb4cb3c26a1fa7bbf71, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3143,6 +3144,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2763925083936792140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8550146609779451651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf57958f1c7d4745b6412605ca47995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VignetteEffect
+  vignetteImage: {fileID: 634715453561322763}
+  playerSanity: {fileID: 0}
+  playerHealth: {fileID: 0}
+  maxSanityAlpha: 0.8
+  lowHealthThreshold: 0.3
+  pulseSpeed: 4
+  pulseStrength: 0.25
 --- !u!1 &8674092378515518323
 GameObject:
   m_ObjectHideFlags: 0

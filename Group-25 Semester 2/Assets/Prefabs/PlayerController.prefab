@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1055684624098244103}
   - component: {fileID: 2545986287087956679}
   - component: {fileID: 5666739797441924495}
+  - component: {fileID: 3922905643115719926}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -248,7 +249,6 @@ MonoBehaviour:
   gravity: -20
   fallGravityMultiplier: 2
   maxFallSpeed: -30
-  sprintSpeed: 10
   crouchSpeed: 2.5
   standingHeight: 2
   crouchingHeight: 1
@@ -256,6 +256,19 @@ MonoBehaviour:
   cameraTransform: {fileID: 4794867073501725657}
   lookSensitivity: 0.3
   verticalLookLimit: 90
+--- !u!114 &3922905643115719926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771762598848130590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3bd5cc5a1cecd4d92f768fe40490db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PatientStay
+  patientStayCommand: {fileID: 0}
 --- !u!1 &9191634926551488760
 GameObject:
   m_ObjectHideFlags: 0

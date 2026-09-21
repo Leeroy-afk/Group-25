@@ -62656,6 +62656,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2763925083936792140, guid: d82ff89e0d8342b41bdc5a9c560da2de, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1441343701622070934}
+    - target: {fileID: 2763925083936792140, guid: d82ff89e0d8342b41bdc5a9c560da2de, type: 3}
+      propertyPath: playerSanity
+      value: 
+      objectReference: {fileID: 7556269238038104699}
+    - target: {fileID: 2785804060193830229, guid: d82ff89e0d8342b41bdc5a9c560da2de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3220642209474034159, guid: d82ff89e0d8342b41bdc5a9c560da2de, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -1,38 +1,34 @@
-using System;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class PatientStay : PatientStayCommand
+
+public class PatientStay : MonoBehaviour
 {
-    private PlayerInput _playerInput;
-  
+    [SerializeField] private PatientStayCommand patientStayCommand;
+
+    private PlayerInput playerInput;
 
     private void Awake()
     {
-        _playerInput = GetComponent<PlayerInput>();
+        playerInput = GetComponent<PlayerInput>();
     }
 
     private void OnEnable()
     {
-        Debug.Log("PatientStay Enabled");
-        _playerInput.actions["PatientCommand"].performed += OnInteract;
-       
-
+        playerInput.actions["PatientCommand"].performed += OnInteract;
     }
 
     private void OnDisable()
     {
-        Debug.Log("PatientStay Disabled");
-        _playerInput.actions["PatientCommand"].performed -= OnInteract;
-       
+        playerInput.actions["PatientCommand"].performed -= OnInteract;
     }
 
     private void OnInteract(InputAction.CallbackContext context)
     {
-        Debug.Log("I'm Working...");
-        PatientCommand();
-       
+        Debug.Log("Patient Command pressed");
+
+        if (patientStayCommand != null)
+        {
+            patientStayCommand.PatientCommand();
+        }
     }
-         
 }

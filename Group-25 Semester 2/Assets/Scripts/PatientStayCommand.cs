@@ -1,45 +1,29 @@
-using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.AI;
-using System.Runtime.CompilerServices;
-using Assets.Scripts;
-using UnityEngine.Events;
 
-public class PatientStayCommand : MonoBehaviour, IInteractable1
+public class PatientStayCommand : MonoBehaviour
 {
-
     [SerializeField] private MonoBehaviour patientFollow;
     [SerializeField] private NavMeshAgent agent;
-
 
     private bool playerInSafeZone = false;
     private bool patientIsStaying = false;
 
-    [SerializeField] private UnityEvent _onInteract;
-
-    UnityEvent IInteractable1.onInteract { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-
-    private void OnTriggerEnter(Collider other)
+    public void SetPlayerInSafeZone(bool value)
     {
-        if (other.CompareTag("Player")) playerInSafeZone = true;
-    }
+        playerInSafeZone = value;
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player")) playerInSafeZone = false;
+        Debug.Log("playerInSafeZone = " + value);
     }
 
     public void PatientCommand()
     {
-        Debug.Log("PatientCommand() called");
-        Debug.Log("Player in safe zone: " + playerInSafeZone);
-        Debug.Log("Patient staying: " + patientIsStaying);
+        Debug.Log("PatientCommand reached!");
+        Debug.Log("Player in safe zone = " + playerInSafeZone);
 
         if (!playerInSafeZone)
         {
-            Debug.Log("Player is NOT in safe zone!");
+            Debug.Log("Player is NOT in safe zone.");
             return;
         }
 
@@ -55,35 +39,31 @@ public class PatientStayCommand : MonoBehaviour, IInteractable1
 
     private void CommandToStay()
     {
-        if (patientFollow != null) patientFollow.enabled = false;
+        Debug.Log("COMMAND: PATIENT STAY");
 
-        agent.isStopped = true;
-        agent.velocity = Vector3.zero;
-        agent.ResetPath();
+        if (patientFollow != null)
+            patientFollow.enabled = false;
+
+        if (agent != null)
+        {
+            agent.isStopped = true;
+            agent.velocity = Vector3.zero;
+            agent.ResetPath();
+        }
 
         patientIsStaying = true;
-        Debug.Log("Patient stops following");
     }
 
     private void CommandToFollow()
     {
+        Debug.Log("COMMAND: PATIENT FOLLOW");
+
         patientIsStaying = false;
-        agent.isStopped = false;
 
-        if (patientFollow != null) patientFollow.enabled = true;
-        Debug.Log("Patient starys following");
-    }
+        if (agent != null)
+            agent.isStopped = false;
 
-    public void Interact() => _onInteract.Invoke();
-
-    void IInteractable1.Interact()
-    {
-        throw new System.NotImplementedException();
-    }
-    public void SetPlayerInSafeZone(bool value)
-    {
-        playerInSafeZone = value;
-
-        Debug.Log("playerInSafeZone = " + value);
+        if (patientFollow != null)
+            patientFollow.enabled = true;
     }
 }

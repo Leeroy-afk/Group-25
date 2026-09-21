@@ -4,28 +4,34 @@ public class SafeZoneStay : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("TRIGGER ENTER: " + other.name);
+
         if (other.CompareTag("Player"))
         {
-            PatientStay patientStay = other.GetComponent<PatientStay>();
+            Debug.Log("PLAYER ENTERED LIGHT ZONE!");
 
-            if (patientStay != null)
+            PatientStayCommand command = GetComponent<PatientStayCommand>();
+
+            if (command != null)
             {
-                patientStay.SetPlayerInSafeZone(true);
-                Debug.Log("Player entered safe zone.");
+                command.SetPlayerInSafeZone(true);
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("TRIGGER EXIT: " + other.name);
+
         if (other.CompareTag("Player"))
         {
-            PatientStay patientStay = other.GetComponent<PatientStay>();
+            Debug.Log("PLAYER LEFT LIGHT ZONE!");
 
-            if (patientStay != null)
+            PatientStayCommand command = GetComponent<PatientStayCommand>();
+
+            if (command != null)
             {
-                patientStay.SetPlayerInSafeZone(false);
-                Debug.Log("Player left safe zone.");
+                command.SetPlayerInSafeZone(false);
             }
         }
     }

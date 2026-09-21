@@ -11,10 +11,7 @@ public class LightZone : MonoBehaviour
 
         PlayerSanity sanity = other.GetComponent<PlayerSanity>();
 
-        if (sanity != null)
-        {
-            sanity.EnterLight();
-        }
+        
 
         if (other.CompareTag("Player"))
         {
@@ -40,11 +37,6 @@ public class LightZone : MonoBehaviour
         Debug.Log("LightZone exit: " + other.name);
 
         PlayerSanity sanity = other.GetComponent<PlayerSanity>();
-
-        if (sanity != null)
-        {
-            sanity.ExitLight();
-        }
 
         if (other.CompareTag("Player"))
         {

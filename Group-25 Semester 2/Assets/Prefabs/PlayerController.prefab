@@ -528,6 +528,7 @@ GameObject:
   - component: {fileID: 8379104619388197954}
   - component: {fileID: 6734851922549474257}
   - component: {fileID: 3205569810164604855}
+  - component: {fileID: 3862640869108529735}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Player
@@ -836,3 +837,16 @@ MonoBehaviour:
   playerController: {fileID: 4369872589910410008}
   hideAction: {fileID: -7366224219624813046, guid: bf48b24f419944343971dacf2538cc0c, type: 3}
   hideDuration: 7.5
+--- !u!114 &3862640869108529735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645192808922569176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3bd5cc5a1cecd4d92f768fe40490db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PatientStay
+  patientStayCommand: {fileID: 0}

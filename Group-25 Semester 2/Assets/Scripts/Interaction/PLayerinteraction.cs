@@ -17,7 +17,9 @@ namespace Interaction
         private void Update()
         {
             IInteractable nearest = FindNearestInteractable();
-            UpdateFocus(nearest); 
+            UpdateFocus(nearest);
+
+            
         }
 
         private IInteractable FindNearestInteractable()
@@ -63,6 +65,11 @@ namespace Interaction
             if(InteractInspectUI.Instance != null && InteractInspectUI.Instance.IsInspecting) // when the inspectionUI panel is up, presing the interact button during the popup screen will close the popup. 
             {
                 InteractInspectUI.Instance.CloseInspection();
+                return;
+            }
+
+            if (InventoryUI.Instance != null && InventoryUI.Instance.IsOpen)
+            {
                 return;
             }
 

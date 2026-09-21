@@ -1,3 +1,4 @@
+using Interaction;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
@@ -131,6 +132,12 @@ public class FPController : MonoBehaviour
 
     private void HandleLook()
     {
+        if ((InteractInspectUI.Instance != null && InteractInspectUI.Instance.IsInspecting) ||
+        (InventoryUI.Instance != null && InventoryUI.Instance.IsOpen)) // for both instances if the inventory is open or the inspect menu is open, the camera will lock in place
+        {
+            return; // Prevents camera movement
+        }
+
         float mouseX = lookInput.x * lookSensitivity;
         float mouseY = lookInput.y * lookSensitivity;
 

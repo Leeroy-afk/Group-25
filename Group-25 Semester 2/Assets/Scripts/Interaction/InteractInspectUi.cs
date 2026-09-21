@@ -67,6 +67,8 @@ namespace Interaction
             panel.SetActive(true);
             Time.timeScale = 0f;
             IsInspecting = true;
+
+            
         }
 
          public void CloseInspection()
@@ -80,6 +82,7 @@ namespace Interaction
                 Destroy(currentTargetObject);
             }
 
+            
 
 
 

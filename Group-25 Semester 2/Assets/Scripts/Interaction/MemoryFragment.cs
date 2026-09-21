@@ -17,7 +17,13 @@ namespace Interaction
             Debug.Log("Interacting with Memory Fragment");
             if (isCollected) return;
 
-            if(InteractInspectUI.Instance != null)
+            if(InventoryManager.Instance != null)
+            {
+                InventoryManager.Instance.AddItem(titleText, descriptionText, itemImage);
+                
+            }
+
+            if (InteractInspectUI.Instance != null)
             {
                 isCollected = true;
                 Debug.Log("Memory Fragment collected");

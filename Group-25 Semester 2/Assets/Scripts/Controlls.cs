@@ -154,6 +154,15 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PatientCommand"",
+                    ""type"": ""Button"",
+                    ""id"": ""85bc75da-4774-4545-98e6-e276f4b8c41b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -453,39 +462,11 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
                     ""action"": ""Interaction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""PatientStay"",
-            ""id"": ""75ef12b8-76eb-429f-9f37-849637befa3a"",
-            ""actions"": [
-                {
-                    ""name"": ""PatientCommand"",
-                    ""type"": ""Button"",
-                    ""id"": ""15f282cc-9964-4f85-bdd9-5215eaec11ce"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""c8b8c7e3-8140-493a-9a5a-f71a453e90c3"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""PatientCommand"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""be33aed3-4a95-4ef0-a583-4052970b84e0"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""id"": ""9ce668b4-90c4-46de-be19-0547a5e4cbb8"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -524,15 +505,12 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         m_Player_Sprinting = m_Player.FindAction("Sprinting", throwIfNotFound: true);
         m_Player_Flashlight = m_Player.FindAction("Flashlight", throwIfNotFound: true);
         m_Player_Interaction = m_Player.FindAction("Interaction", throwIfNotFound: true);
-        // PatientStay
-        m_PatientStay = asset.FindActionMap("PatientStay", throwIfNotFound: true);
-        m_PatientStay_PatientCommand = m_PatientStay.FindAction("PatientCommand", throwIfNotFound: true);
+        m_Player_PatientCommand = m_Player.FindAction("PatientCommand", throwIfNotFound: true);
     }
 
     ~@Controlls()
     {
         UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, Controlls.Player.Disable() has not been called.");
-        UnityEngine.Debug.Assert(!m_PatientStay.enabled, "This will cause a leak and performance issues, Controlls.PatientStay.Disable() has not been called.");
     }
 
     /// <summary>
@@ -615,6 +593,7 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Sprinting;
     private readonly InputAction m_Player_Flashlight;
     private readonly InputAction m_Player_Interaction;
+    private readonly InputAction m_Player_PatientCommand;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -654,6 +633,10 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Interaction".
         /// </summary>
         public InputAction @Interaction => m_Wrapper.m_Player_Interaction;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/PatientCommand".
+        /// </summary>
+        public InputAction @PatientCommand => m_Wrapper.m_Player_PatientCommand;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -701,6 +684,9 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
             @Interaction.started += instance.OnInteraction;
             @Interaction.performed += instance.OnInteraction;
             @Interaction.canceled += instance.OnInteraction;
+            @PatientCommand.started += instance.OnPatientCommand;
+            @PatientCommand.performed += instance.OnPatientCommand;
+            @PatientCommand.canceled += instance.OnPatientCommand;
         }
 
         /// <summary>
@@ -733,6 +719,9 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
             @Interaction.started -= instance.OnInteraction;
             @Interaction.performed -= instance.OnInteraction;
             @Interaction.canceled -= instance.OnInteraction;
+            @PatientCommand.started -= instance.OnPatientCommand;
+            @PatientCommand.performed -= instance.OnPatientCommand;
+            @PatientCommand.canceled -= instance.OnPatientCommand;
         }
 
         /// <summary>
@@ -766,102 +755,6 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="PlayerActions" /> instance referencing this action map.
     /// </summary>
     public PlayerActions @Player => new PlayerActions(this);
-
-    // PatientStay
-    private readonly InputActionMap m_PatientStay;
-    private List<IPatientStayActions> m_PatientStayActionsCallbackInterfaces = new List<IPatientStayActions>();
-    private readonly InputAction m_PatientStay_PatientCommand;
-    /// <summary>
-    /// Provides access to input actions defined in input action map "PatientStay".
-    /// </summary>
-    public struct PatientStayActions
-    {
-        private @Controlls m_Wrapper;
-
-        /// <summary>
-        /// Construct a new instance of the input action map wrapper class.
-        /// </summary>
-        public PatientStayActions(@Controlls wrapper) { m_Wrapper = wrapper; }
-        /// <summary>
-        /// Provides access to the underlying input action "PatientStay/PatientCommand".
-        /// </summary>
-        public InputAction @PatientCommand => m_Wrapper.m_PatientStay_PatientCommand;
-        /// <summary>
-        /// Provides access to the underlying input action map instance.
-        /// </summary>
-        public InputActionMap Get() { return m_Wrapper.m_PatientStay; }
-        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
-        public void Enable() { Get().Enable(); }
-        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
-        public void Disable() { Get().Disable(); }
-        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
-        public bool enabled => Get().enabled;
-        /// <summary>
-        /// Implicitly converts an <see ref="PatientStayActions" /> to an <see ref="InputActionMap" /> instance.
-        /// </summary>
-        public static implicit operator InputActionMap(PatientStayActions set) { return set.Get(); }
-        /// <summary>
-        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
-        /// </summary>
-        /// <param name="instance">Callback instance.</param>
-        /// <remarks>
-        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
-        /// </remarks>
-        /// <seealso cref="PatientStayActions" />
-        public void AddCallbacks(IPatientStayActions instance)
-        {
-            if (instance == null || m_Wrapper.m_PatientStayActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PatientStayActionsCallbackInterfaces.Add(instance);
-            @PatientCommand.started += instance.OnPatientCommand;
-            @PatientCommand.performed += instance.OnPatientCommand;
-            @PatientCommand.canceled += instance.OnPatientCommand;
-        }
-
-        /// <summary>
-        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
-        /// </summary>
-        /// <remarks>
-        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
-        /// </remarks>
-        /// <seealso cref="PatientStayActions" />
-        private void UnregisterCallbacks(IPatientStayActions instance)
-        {
-            @PatientCommand.started -= instance.OnPatientCommand;
-            @PatientCommand.performed -= instance.OnPatientCommand;
-            @PatientCommand.canceled -= instance.OnPatientCommand;
-        }
-
-        /// <summary>
-        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="PatientStayActions.UnregisterCallbacks(IPatientStayActions)" />.
-        /// </summary>
-        /// <seealso cref="PatientStayActions.UnregisterCallbacks(IPatientStayActions)" />
-        public void RemoveCallbacks(IPatientStayActions instance)
-        {
-            if (m_Wrapper.m_PatientStayActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        /// <summary>
-        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
-        /// </summary>
-        /// <remarks>
-        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
-        /// </remarks>
-        /// <seealso cref="PatientStayActions.AddCallbacks(IPatientStayActions)" />
-        /// <seealso cref="PatientStayActions.RemoveCallbacks(IPatientStayActions)" />
-        /// <seealso cref="PatientStayActions.UnregisterCallbacks(IPatientStayActions)" />
-        public void SetCallbacks(IPatientStayActions instance)
-        {
-            foreach (var item in m_Wrapper.m_PatientStayActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_PatientStayActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    /// <summary>
-    /// Provides a new <see cref="PatientStayActions" /> instance referencing this action map.
-    /// </summary>
-    public PatientStayActions @PatientStay => new PatientStayActions(this);
     private int m_NewControlSchemeSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
@@ -931,14 +824,6 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInteraction(InputAction.CallbackContext context);
-    }
-    /// <summary>
-    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "PatientStay" which allows adding and removing callbacks.
-    /// </summary>
-    /// <seealso cref="PatientStayActions.AddCallbacks(IPatientStayActions)" />
-    /// <seealso cref="PatientStayActions.RemoveCallbacks(IPatientStayActions)" />
-    public interface IPatientStayActions
-    {
         /// <summary>
         /// Method invoked when associated input action "PatientCommand" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

@@ -68,6 +68,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PatientCommand",
+                    "type": "Button",
+                    "id": "85bc75da-4774-4545-98e6-e276f4b8c41b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -367,39 +376,11 @@
                     "action": "Interaction",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "PatientStay",
-            "id": "75ef12b8-76eb-429f-9f37-849637befa3a",
-            "actions": [
-                {
-                    "name": "PatientCommand",
-                    "type": "Button",
-                    "id": "15f282cc-9964-4f85-bdd9-5215eaec11ce",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "c8b8c7e3-8140-493a-9a5a-f71a453e90c3",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PatientCommand",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "be33aed3-4a95-4ef0-a583-4052970b84e0",
-                    "path": "<Gamepad>/buttonWest",
+                    "id": "9ce668b4-90c4-46de-be19-0547a5e4cbb8",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

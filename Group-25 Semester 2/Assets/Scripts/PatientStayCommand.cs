@@ -15,7 +15,6 @@ public class PatientStayCommand : MonoBehaviour, IInteractable1
 
 
     private bool playerInSafeZone = false;
-    private bool patientInSafeZone = false;
     private bool patientIsStaying = false;
 
     [SerializeField] private UnityEvent _onInteract;
@@ -25,27 +24,33 @@ public class PatientStayCommand : MonoBehaviour, IInteractable1
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) playerInSafeZone = true;
-        if (other.CompareTag("Patient")) patientInSafeZone = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player")) playerInSafeZone = false;
-        if (other.CompareTag("Patient")) patientInSafeZone = false;
     }
 
     public void PatientCommand()
     {
-        if (!playerInSafeZone || patientInSafeZone) return;
-        if (patientIsStaying)
+        Debug.Log("PatientCommand() called");
+        Debug.Log("Player in safe zone: " + playerInSafeZone);
+        Debug.Log("Patient staying: " + patientIsStaying);
+
+        if (!playerInSafeZone)
         {
-            CommandToStay();
+            Debug.Log("Player is NOT in safe zone!");
+            return;
         }
-        else
+
+        if (patientIsStaying)
         {
             CommandToFollow();
         }
-
+        else
+        {
+            CommandToStay();
+        }
     }
 
     private void CommandToStay()
@@ -74,5 +79,11 @@ public class PatientStayCommand : MonoBehaviour, IInteractable1
     void IInteractable1.Interact()
     {
         throw new System.NotImplementedException();
+    }
+    public void SetPlayerInSafeZone(bool value)
+    {
+        playerInSafeZone = value;
+
+        Debug.Log("playerInSafeZone = " + value);
     }
 }

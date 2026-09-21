@@ -4951,7 +4951,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -5148,16 +5148,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: 7cea7a1b-61db-4111-b2a9-161727a6c6d4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_ActionEvents.Array.data[7].m_ActionId
-      value: 15f282cc-9964-4f85-bdd9-5215eaec11ce
+      value: 85bc75da-4774-4545-98e6-e276f4b8c41b
       objectReference: {fileID: 0}
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_ActionEvents.Array.data[7].m_ActionName
-      value: 'PatientCommand/PatientStay[/Keyboard/q]'
+      value: 'Player/PatientCommand[/Keyboard/q]'
       objectReference: {fileID: 0}
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.size
@@ -5169,7 +5173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5197,7 +5201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PatientStay
+      value: PatientCommand
       objectReference: {fileID: 0}
     - target: {fileID: 1223360614283949484, guid: 46cff27f81c90d445a42ed92d0dd2836, type: 3}
       propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -5290,9 +5294,6 @@ MonoBehaviour:
   _onInteract:
     m_PersistentCalls:
       m_Calls: []
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!43 &994418648
 Mesh:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using NUnit.Framework;
 
 
 namespace Interaction
@@ -11,12 +12,12 @@ namespace Interaction
         public static InteractInspectUI Instance { get; private set; }
 
         [SerializeField] private GameObject panel;
-
         [SerializeField] private Image itemImage;
-
         [SerializeField] private TextMeshProUGUI titleText;
-
         [SerializeField] private TextMeshProUGUI descriptionText;
+        [SerializeField] private TextMeshProUGUI exitPromptText;
+        [SerializeField] private GameObject viewingPanel;
+        
 
         private GameObject currentTargetObject;
         public bool IsInspecting { get; private set; } = false;
@@ -35,10 +36,12 @@ namespace Interaction
                 Destroy(this);
             }
             if (panel != null) {panel.SetActive(false);}
+            if (viewingPanel != null) {viewingPanel.SetActive(false);}
         }
 
         private void OnDestroy()
         {
+
             if (Instance == this) Instance = null;
             Time.timeScale = 1f;
         }
@@ -56,8 +59,19 @@ namespace Interaction
                 }
             }
 
-            if (titleText != null) { titleText.text = title; }
-            if (descriptionText != null) { descriptionText.text = description; }
+            if (titleText != null) 
+            { 
+                titleText.text = title;
+            }
+            if (descriptionText != null) 
+            { 
+                descriptionText.text = description; 
+            }
+            if (exitPromptText != null)
+            {
+                exitPromptText.text = "press [E] / button north to exit";
+            }
+
             if (itemImage != null) 
             { 
                 itemImage.sprite = sprite;
@@ -65,26 +79,33 @@ namespace Interaction
             }
 
             panel.SetActive(true);
+            viewingPanel.SetActive(true);
             Time.timeScale = 0f;
             IsInspecting = true;
 
-            
-        }
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
-         public void CloseInspection()
+        }
+         public void CloseInspection() // working for both the initial inspectiong and the inventory view.
         {
             panel.SetActive(false);
+            viewingPanel.SetActive(false);
             Time.timeScale = 1f;
             IsInspecting = false;
 
             if (currentTargetObject != null)
             {
                 Destroy(currentTargetObject);
+                currentTargetObject = null;
             }
 
-            
-
-
+            if (InventoryUI.Instance == null || !InventoryUI.Instance.IsOpen) // unpauses game and re-lock cursor if inventory panel is not open underneath
+            {
+                Time.timeScale = 1f;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
 
         }
 

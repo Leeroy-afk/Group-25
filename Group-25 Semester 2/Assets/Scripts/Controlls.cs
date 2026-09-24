@@ -156,9 +156,9 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Inventory"",
+                    ""name"": ""InventoryAccess/Close"",
                     ""type"": ""Button"",
-                    ""id"": ""a173b992-a8b8-4f5d-94ee-18cc04534a69"",
+                    ""id"": ""3ecbce1d-b376-4b52-9eb2-86ce9a147dc2"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -465,23 +465,23 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c1ecd5ae-e8b1-4cef-958c-b7fa1f9cbc90"",
-                    ""path"": ""<Keyboard>/i"",
+                    ""id"": ""705bd47f-487a-4d1c-be2b-ec339b00ef32"",
+                    ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Inventory"",
+                    ""action"": ""InventoryAccess/Close"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""fa1241a5-0d11-49bb-852f-3d4319e3ac55"",
+                    ""id"": ""8e8f056c-ccc0-4b68-be7e-1691989b60f4"",
                     ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Inventory"",
+                    ""action"": ""InventoryAccess/Close"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -490,41 +490,8 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         {
             ""name"": ""Inventory"",
             ""id"": ""872e65d9-7c88-4813-8618-a1a5dafd58d4"",
-            ""actions"": [
-                {
-                    ""name"": ""Inventory"",
-                    ""type"": ""Button"",
-                    ""id"": ""6c292b76-f135-472c-aa3e-f11aabea654d"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""86c34a39-88f0-43c3-9097-4610e1094f8f"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Inventory"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4d956d6d-edb9-45c9-b2fa-b7dca48eb1f9"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Inventory"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
+            ""actions"": [],
+            ""bindings"": []
         }
     ],
     ""controlSchemes"": [
@@ -555,10 +522,9 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         m_Player_Sprinting = m_Player.FindAction("Sprinting", throwIfNotFound: true);
         m_Player_Flashlight = m_Player.FindAction("Flashlight", throwIfNotFound: true);
         m_Player_Interaction = m_Player.FindAction("Interaction", throwIfNotFound: true);
-        m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
+        m_Player_InventoryAccessClose = m_Player.FindAction("InventoryAccess/Close", throwIfNotFound: true);
         // Inventory
         m_Inventory = asset.FindActionMap("Inventory", throwIfNotFound: true);
-        m_Inventory_Inventory = m_Inventory.FindAction("Inventory", throwIfNotFound: true);
     }
 
     ~@Controlls()
@@ -647,7 +613,7 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Sprinting;
     private readonly InputAction m_Player_Flashlight;
     private readonly InputAction m_Player_Interaction;
-    private readonly InputAction m_Player_Inventory;
+    private readonly InputAction m_Player_InventoryAccessClose;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -688,9 +654,9 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Interaction => m_Wrapper.m_Player_Interaction;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Inventory".
+        /// Provides access to the underlying input action "Player/InventoryAccessClose".
         /// </summary>
-        public InputAction @Inventory => m_Wrapper.m_Player_Inventory;
+        public InputAction @InventoryAccessClose => m_Wrapper.m_Player_InventoryAccessClose;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -738,9 +704,9 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
             @Interaction.started += instance.OnInteraction;
             @Interaction.performed += instance.OnInteraction;
             @Interaction.canceled += instance.OnInteraction;
-            @Inventory.started += instance.OnInventory;
-            @Inventory.performed += instance.OnInventory;
-            @Inventory.canceled += instance.OnInventory;
+            @InventoryAccessClose.started += instance.OnInventoryAccessClose;
+            @InventoryAccessClose.performed += instance.OnInventoryAccessClose;
+            @InventoryAccessClose.canceled += instance.OnInventoryAccessClose;
         }
 
         /// <summary>
@@ -773,9 +739,9 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
             @Interaction.started -= instance.OnInteraction;
             @Interaction.performed -= instance.OnInteraction;
             @Interaction.canceled -= instance.OnInteraction;
-            @Inventory.started -= instance.OnInventory;
-            @Inventory.performed -= instance.OnInventory;
-            @Inventory.canceled -= instance.OnInventory;
+            @InventoryAccessClose.started -= instance.OnInventoryAccessClose;
+            @InventoryAccessClose.performed -= instance.OnInventoryAccessClose;
+            @InventoryAccessClose.canceled -= instance.OnInventoryAccessClose;
         }
 
         /// <summary>
@@ -813,7 +779,6 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
     // Inventory
     private readonly InputActionMap m_Inventory;
     private List<IInventoryActions> m_InventoryActionsCallbackInterfaces = new List<IInventoryActions>();
-    private readonly InputAction m_Inventory_Inventory;
     /// <summary>
     /// Provides access to input actions defined in input action map "Inventory".
     /// </summary>
@@ -825,10 +790,6 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
         public InventoryActions(@Controlls wrapper) { m_Wrapper = wrapper; }
-        /// <summary>
-        /// Provides access to the underlying input action "Inventory/Inventory".
-        /// </summary>
-        public InputAction @Inventory => m_Wrapper.m_Inventory_Inventory;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -855,9 +816,6 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_InventoryActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_InventoryActionsCallbackInterfaces.Add(instance);
-            @Inventory.started += instance.OnInventory;
-            @Inventory.performed += instance.OnInventory;
-            @Inventory.canceled += instance.OnInventory;
         }
 
         /// <summary>
@@ -869,9 +827,6 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         /// <seealso cref="InventoryActions" />
         private void UnregisterCallbacks(IInventoryActions instance)
         {
-            @Inventory.started -= instance.OnInventory;
-            @Inventory.performed -= instance.OnInventory;
-            @Inventory.canceled -= instance.OnInventory;
         }
 
         /// <summary>
@@ -975,12 +930,12 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInteraction(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Inventory" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "InventoryAccess/Close" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnInventory(InputAction.CallbackContext context);
+        void OnInventoryAccessClose(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Inventory" which allows adding and removing callbacks.
@@ -989,12 +944,5 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
     /// <seealso cref="InventoryActions.RemoveCallbacks(IInventoryActions)" />
     public interface IInventoryActions
     {
-        /// <summary>
-        /// Method invoked when associated input action "Inventory" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnInventory(InputAction.CallbackContext context);
     }
 }

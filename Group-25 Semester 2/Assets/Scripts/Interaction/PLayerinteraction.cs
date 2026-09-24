@@ -1,14 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.LowLevelPhysics2D;
+
 
 namespace Interaction
 {
-    public class PLayerinteraction : MonoBehaviour // this is attached to the player onject so that it can link to the input system 
+    public class PLayerinteraction : MonoBehaviour // basically defining the player interaction, 
     {
        [SerializeField] private float interactionRange = 3.5f;
-
-        [SerializeField] private LayerMask interactionLayerMask;
+       [SerializeField] private LayerMask interactionLayerMask;
 
         private Collider[] buffer = new Collider[32]; //contains all the colliders that are in range of the player
 
@@ -18,8 +17,6 @@ namespace Interaction
         {
             IInteractable nearest = FindNearestInteractable();
             UpdateFocus(nearest);
-
-            
         }
 
         private IInteractable FindNearestInteractable()
@@ -31,11 +28,21 @@ namespace Interaction
             for (int i = 0; i < count; i++)
             {
                 Collider col = buffer[i];
-                if (col == null) continue;
+                if (col == null)
+                {
+                    continue;
+                }
                 IInteractable interactable = col.GetComponentInParent<IInteractable>();
-                if (interactable == null) continue;
-                if (!interactable.CanInteract()) continue;
+                if (interactable == null)
+                {
+                    continue;
+                }
+                if (!interactable.CanInteract())
+                {
+                    continue;
+                }
                 float distSq = (col.transform.position - transform.position).sqrMagnitude;
+
                 if (distSq < bestDistSq)
                 {
                     bestDistSq = distSq;
@@ -65,6 +72,12 @@ namespace Interaction
             if(InteractInspectUI.Instance != null && InteractInspectUI.Instance.IsInspecting) // when the inspectionUI panel is up, presing the interact button during the popup screen will close the popup. 
             {
                 InteractInspectUI.Instance.CloseInspection();
+
+                if (InventoryUI.Instance != null && InventoryUI.Instance.IsOpen)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                }
                 return;
             }
 

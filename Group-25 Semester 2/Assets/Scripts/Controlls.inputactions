@@ -70,9 +70,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Inventory",
+                    "name": "InventoryAccess/Close",
                     "type": "Button",
-                    "id": "a173b992-a8b8-4f5d-94ee-18cc04534a69",
+                    "id": "3ecbce1d-b376-4b52-9eb2-86ce9a147dc2",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -379,23 +379,23 @@
                 },
                 {
                     "name": "",
-                    "id": "c1ecd5ae-e8b1-4cef-958c-b7fa1f9cbc90",
-                    "path": "<Keyboard>/i",
+                    "id": "705bd47f-487a-4d1c-be2b-ec339b00ef32",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inventory",
+                    "action": "InventoryAccess/Close",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "fa1241a5-0d11-49bb-852f-3d4319e3ac55",
+                    "id": "8e8f056c-ccc0-4b68-be7e-1691989b60f4",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inventory",
+                    "action": "InventoryAccess/Close",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -404,41 +404,8 @@
         {
             "name": "Inventory",
             "id": "872e65d9-7c88-4813-8618-a1a5dafd58d4",
-            "actions": [
-                {
-                    "name": "Inventory",
-                    "type": "Button",
-                    "id": "6c292b76-f135-472c-aa3e-f11aabea654d",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "86c34a39-88f0-43c3-9097-4610e1094f8f",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4d956d6d-edb9-45c9-b2fa-b7dca48eb1f9",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
+            "actions": [],
+            "bindings": []
         }
     ],
     "controlSchemes": [

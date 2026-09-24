@@ -53,6 +53,13 @@ public class FPController : MonoBehaviour
         HandleCrouch();
     }
 
+    private bool IsUIActive() // a check for if any UI menus are open when player controls are active (which then stops them or prevents them from happening)
+    {
+        bool isInspecting = InteractInspectUI.Instance != null && InteractInspectUI.Instance.IsInspecting;
+        bool isInventoryOpen = InventoryUI.Instance != null && InventoryUI.Instance.IsOpen;
+
+        return isInspecting || isInventoryOpen;
+    }
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
@@ -65,6 +72,10 @@ public class FPController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
+        if (IsUIActive())
+        {
+            return;
+        }
         if (context.performed && controller.isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
@@ -132,12 +143,10 @@ public class FPController : MonoBehaviour
 
     private void HandleLook()
     {
-        if ((InteractInspectUI.Instance != null && InteractInspectUI.Instance.IsInspecting) ||
-        (InventoryUI.Instance != null && InventoryUI.Instance.IsOpen)) // for both instances if the inventory is open or the inspect menu is open, the camera will lock in place
+        if (IsUIActive())
         {
-            return; // Prevents camera movement
+            return;
         }
-
         float mouseX = lookInput.x * lookSensitivity;
         float mouseY = lookInput.y * lookSensitivity;
 

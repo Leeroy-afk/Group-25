@@ -57,8 +57,9 @@ public class FPController : MonoBehaviour
     {
         bool isInspecting = InteractInspectUI.Instance != null && InteractInspectUI.Instance.IsInspecting;
         bool isInventoryOpen = InventoryUI.Instance != null && InventoryUI.Instance.IsOpen;
+        bool isPedestalOpen = PedestalUI.Instance != null && PedestalUI.Instance.IsOpen;
 
-        return isInspecting || isInventoryOpen;
+        return isInspecting || isInventoryOpen || isPedestalOpen;
     }
     public void OnMove(InputAction.CallbackContext context)
     {

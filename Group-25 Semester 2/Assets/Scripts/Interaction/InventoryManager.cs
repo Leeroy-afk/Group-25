@@ -21,9 +21,7 @@ namespace Interaction
             {
                 Destroy(this);
             }
-           
         }
-
         public void AddItem(ItemData item)
         {
             if (item != null && !items.Contains(item)) 
@@ -32,16 +30,18 @@ namespace Interaction
                 Debug.Log ("Item added: " + item.title);
             }
         }
-
+        public void RemoveItem(ItemData item)
+        {
+            if (item != null && items.Contains(item))
+            {
+                items.Remove(item);
+                Debug.Log("Item removed from inventory: " + item.title);
+            }
+        }
         public List<ItemData> GetItems() //reads the list of items in the inventory and returns it
         {
             return items;
         }
-        
-
-       
-
-
     }
 
 }

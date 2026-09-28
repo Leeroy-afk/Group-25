@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DreamworldGreybox.unity
     guid: b5610d7f6e2a74e498016a8cc38553f7
+  - enabled: 1
+    path: Assets/Scenes/SceneEndings/BadEnding.unity
+    guid: dd0ba52afd141404ab382ac5163a504f
+  - enabled: 1
+    path: Assets/Scenes/SceneEndings/GoodEnding.unity
+    guid: 898a965c07917fa41991290f12fc8985
+  - enabled: 1
+    path: Assets/Scenes/SceneEndings/NeutralEnding.unity
+    guid: 7e012884858358145b90eee4243d794c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -37885,6 +37885,7 @@ GameObject:
   - component: {fileID: 1055970467}
   - component: {fileID: 1055970466}
   - component: {fileID: 1055970470}
+  - component: {fileID: 1055970471}
   m_Layer: 5
   m_Name: InteractionCanvas
   m_TagString: Untagged
@@ -37991,6 +37992,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.InventorySlotUI
   itemImage: {fileID: 639567417}
   slotButton: {fileID: 2095386181}
+--- !u!114 &1055970471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055970465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdc5b6ef4f7f784fae15581f3eb3784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction.InteractInspectUI
+  panel: {fileID: 1701041518}
+  itemImage: {fileID: 1220764419}
+  titleText: {fileID: 71197273}
+  descriptionText: {fileID: 1290298764}
+  exitPromptText: {fileID: 915443441}
+  viewingPanel: {fileID: 913011657}
 --- !u!43 &1056212489
 Mesh:
   m_ObjectHideFlags: 0
@@ -62039,7 +62058,6 @@ GameObject:
   - component: {fileID: 1701041519}
   - component: {fileID: 1701041521}
   - component: {fileID: 1701041520}
-  - component: {fileID: 1701041522}
   m_Layer: 5
   m_Name: InspectionBackground
   m_TagString: Untagged
@@ -62109,24 +62127,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701041518}
   m_CullTransparentMesh: 1
---- !u!114 &1701041522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701041518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc5b6ef4f7f784fae15581f3eb3784, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interaction.InteractInspectUI
-  panel: {fileID: 1701041518}
-  itemImage: {fileID: 1220764419}
-  titleText: {fileID: 71197273}
-  descriptionText: {fileID: 1290298764}
-  exitPromptText: {fileID: 915443441}
-  viewingPanel: {fileID: 913011657}
 --- !u!1 &1708645551
 GameObject:
   m_ObjectHideFlags: 0

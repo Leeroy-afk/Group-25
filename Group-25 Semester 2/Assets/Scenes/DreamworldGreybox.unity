@@ -40378,17 +40378,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!114 &1104894055 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3900548975959350198, guid: 4564d15d10a4595499b1bf50dab5cad1, type: 3}
-  m_PrefabInstance: {fileID: 489362312}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0898e89a5382a04aad317e81f993833, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!43 &1112927388
 Mesh:
   m_ObjectHideFlags: 0
@@ -47172,28 +47161,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!114 &1321796530 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7556269237985221107, guid: 4564d15d10a4595499b1bf50dab5cad1, type: 3}
-  m_PrefabInstance: {fileID: 489362312}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7c87b42b9e70a54f84f06666825d9b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerSanity
---- !u!114 &1321796531 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1441343701971701022, guid: 4564d15d10a4595499b1bf50dab5cad1, type: 3}
-  m_PrefabInstance: {fileID: 489362312}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31370657690a15c418d974864c7f349d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!4 &1321796537 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5575148942908081460, guid: 4564d15d10a4595499b1bf50dab5cad1, type: 3}
@@ -65858,10 +65825,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab866e618fbeddd42846130c72b1608b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  deathScreen: {fileID: 0}
-  playerHealth: {fileID: 1321796531}
-  playerSanity: {fileID: 1321796530}
-  flashlight: {fileID: 1104894055}
 --- !u!4 &1917326694
 Transform:
   m_ObjectHideFlags: 0

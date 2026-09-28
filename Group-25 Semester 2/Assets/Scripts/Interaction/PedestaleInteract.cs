@@ -57,20 +57,21 @@ namespace Interaction
                 if (Parts.itemData == itemData)
                 {
                     currentlyPlacedItem = itemData;
-                    currentlyPlacedItem = itemData;
-                }
-                if (Parts.memoryObject != null) // makes the memory object on the pedestal visible
-                {
-                    Parts.memoryObject.SetActive(true);
-                }
-                if (InventoryManager.Instance != null) // removes memory from inventory 
-                {
-                    InventoryManager.Instance.RemoveItem(itemData);
-                }
-                EndingManager.Instance?.CheckEndState();
 
-                return true;
+                    if (Parts.memoryObject != null) // makes the memory object on the pedestal visible
+                    {
+                        Parts.memoryObject.SetActive(true);
+                    }
+                    if (InventoryManager.Instance != null) // removes memory from inventory 
+                    {
+                        InventoryManager.Instance.RemoveItem(itemData);
+                    }
+                    EndingManager.Instance?.CheckEndState();
 
+                    return true;
+
+                }
+                
             }
 
             Debug.LogWarning("This item cannot be placed on this pedestal.");

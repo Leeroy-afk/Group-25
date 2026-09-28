@@ -1,63 +1,76 @@
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 namespace Interaction
 {
-
-    public class Interactable : MonoBehaviour, IInteractable //placed on every interactable so the player can interact with it.
+    public class Interactable : MonoBehaviour, IInteractable
     {
+       // for general inetraction
         [SerializeField] private string displayName = "Interact";
-
         [SerializeField] private bool isEnabled = true;
+        [SerializeField] private UnityEvent onInteract;
 
-        [SerializeField] private UnityEvent onInteract; // the action we want to perform when we interact with this object 
-
+      // for visual feedback
         [SerializeField] private Material highlightMaterial;
-
         [SerializeField] private TextMeshProUGUI promptText;
+
+      // to dictate what happens on interaction.
+        [SerializeField] private ItemData itemData;
+        [SerializeField] private bool showInspectionScreen = true;
+        [SerializeField] private bool addToInventory = true;
+        [SerializeField] private bool destroyOnClose = true;
+        
 
         private Renderer objectRenderer;
 
         private Material originalMaterial;
 
-        private bool isHighlighted = false; 
-
+        private bool isCollected = false;
         public string DisplayName => displayName;
-
-        public bool CanInteract() => isEnabled;
+        public bool CanInteract() => isEnabled && (!addToInventory || !isCollected);
 
         public void Awake()
         {
             objectRenderer = GetComponent<Renderer>();
+
+            if (objectRenderer != null)
             {
-                if(objectRenderer != null)
-                {
-                    originalMaterial = objectRenderer.material;
-                }
-                else
-                {
-                    Debug.LogError(" No renderer component found on object " + gameObject.name);
-                }
+                originalMaterial = objectRenderer.material;
             }
 
-            if(promptText != null)
+            if (promptText != null)
             {
                 promptText.gameObject.SetActive(false);
             }
-
         }
 
-        public void Interact()
+        public void Interact() // encumpases all the logic for every interactable item this time
         {
             onInteract?.Invoke();
+
+            if (itemData != null && showInspectionScreen)
+            {
+                if (addToInventory) // adds item to inventory
+                {
+                    isCollected = true;
+                    if (InventoryManager.Instance != null)
+                    {
+                        InventoryManager.Instance.AddItem(itemData); 
+                    }
+                }
+                
+                if (InteractInspectUI.Instance != null) // destroys game objects (like for collectable items)
+                { 
+                    GameObject targetToDestroy = destroyOnClose ? gameObject : null;
+
+                    InteractInspectUI.Instance.ShowInspection(itemData.title, itemData.description, itemData.icon, targetToDestroy); 
+                }
+            }
         }
+
         public void OnFocusGained()
         {
-            isHighlighted = true;
-
             if (objectRenderer != null && highlightMaterial != null)
             {
                 objectRenderer.material = highlightMaterial;
@@ -66,14 +79,12 @@ namespace Interaction
             if (promptText != null)
             {
                 promptText.gameObject.SetActive(true);
-                promptText.text = " press [E] / button south to interact with " + displayName;
+                promptText.text = (" press [E] / button south to interact ");
             }
         }
 
         public void OnFocusLost()
         {
-            isHighlighted = false;
-
             if (objectRenderer != null && originalMaterial != null)
             {
                 objectRenderer.material = originalMaterial;
@@ -85,5 +96,4 @@ namespace Interaction
             }
         }
     }
-
 }

@@ -61,11 +61,10 @@ namespace Interaction
                         ItemData selectedItem = item;
                         butt.onClick.AddListener(() => OnItemSelected(selectedItem));
                     }
-
-                    if (!foundAny && titleText != null)
-                    {
-                        titleText.text = "You have no memories to place here.";
-                    }
+                }
+                if (!foundAny && titleText != null)
+                {
+                    titleText.text = "You have no memories to place here.";
                 }
             }
 

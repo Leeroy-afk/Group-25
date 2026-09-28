@@ -38,7 +38,9 @@ namespace Interaction
         {
             if (!context.performed)
             {
+
                 return;
+                Debug.Log("Inventory Button pressed");
             }
             if (InteractInspectUI.Instance != null && InteractInspectUI.Instance.IsInspecting) // can't toggle inventory when inspecting an object
             {
@@ -49,7 +51,9 @@ namespace Interaction
 
         public void ToggleInventory()
         {
+            
             IsOpen = !IsOpen;
+            Debug.Log("Inventory is being toggled");
 
             if (IsOpen)
             {

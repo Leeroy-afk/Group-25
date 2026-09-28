@@ -172,6 +172,24 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""InventoryAcess/Close"",
+                    ""type"": ""Button"",
+                    ""id"": ""25fa9dd1-6046-42e2-8dae-aa33342fbf58"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""INTERACTION1"",
+                    ""type"": ""Button"",
+                    ""id"": ""e9cbe80d-168a-4e9c-830b-7495f614a9eb"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -493,6 +511,50 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
                     ""action"": ""PatientCommand"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""add78ce9-fea8-4e2c-a151-f4c6849f773b"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InventoryAcess/Close"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2da0c367-3fe9-454b-86c4-c05e54901842"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InventoryAcess/Close"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3de48761-4285-479f-a4db-6fe1f36f1fd1"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""INTERACTION1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""173cd3d1-f77c-4d88-ab67-567cb3941108"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""INTERACTION1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -758,6 +820,8 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         m_Player_Interaction = m_Player.FindAction("Interaction", throwIfNotFound: true);
         m_Player_Hide = m_Player.FindAction("Hide", throwIfNotFound: true);
         m_Player_PatientCommand = m_Player.FindAction("PatientCommand", throwIfNotFound: true);
+        m_Player_InventoryAcessClose = m_Player.FindAction("InventoryAcess/Close", throwIfNotFound: true);
+        m_Player_INTERACTION1 = m_Player.FindAction("INTERACTION1", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_DialogueAdvance = m_UI.FindAction("DialogueAdvance", throwIfNotFound: true);
@@ -854,6 +918,8 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interaction;
     private readonly InputAction m_Player_Hide;
     private readonly InputAction m_Player_PatientCommand;
+    private readonly InputAction m_Player_InventoryAcessClose;
+    private readonly InputAction m_Player_INTERACTION1;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -901,6 +967,14 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/PatientCommand".
         /// </summary>
         public InputAction @PatientCommand => m_Wrapper.m_Player_PatientCommand;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/InventoryAcessClose".
+        /// </summary>
+        public InputAction @InventoryAcessClose => m_Wrapper.m_Player_InventoryAcessClose;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/INTERACTION1".
+        /// </summary>
+        public InputAction @INTERACTION1 => m_Wrapper.m_Player_INTERACTION1;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -954,6 +1028,12 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
             @PatientCommand.started += instance.OnPatientCommand;
             @PatientCommand.performed += instance.OnPatientCommand;
             @PatientCommand.canceled += instance.OnPatientCommand;
+            @InventoryAcessClose.started += instance.OnInventoryAcessClose;
+            @InventoryAcessClose.performed += instance.OnInventoryAcessClose;
+            @InventoryAcessClose.canceled += instance.OnInventoryAcessClose;
+            @INTERACTION1.started += instance.OnINTERACTION1;
+            @INTERACTION1.performed += instance.OnINTERACTION1;
+            @INTERACTION1.canceled += instance.OnINTERACTION1;
         }
 
         /// <summary>
@@ -992,6 +1072,12 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
             @PatientCommand.started -= instance.OnPatientCommand;
             @PatientCommand.performed -= instance.OnPatientCommand;
             @PatientCommand.canceled -= instance.OnPatientCommand;
+            @InventoryAcessClose.started -= instance.OnInventoryAcessClose;
+            @InventoryAcessClose.performed -= instance.OnInventoryAcessClose;
+            @InventoryAcessClose.canceled -= instance.OnInventoryAcessClose;
+            @INTERACTION1.started -= instance.OnINTERACTION1;
+            @INTERACTION1.performed -= instance.OnINTERACTION1;
+            @INTERACTION1.canceled -= instance.OnINTERACTION1;
         }
 
         /// <summary>
@@ -1237,6 +1323,20 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPatientCommand(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "InventoryAcess/Close" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnInventoryAcessClose(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "INTERACTION1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnINTERACTION1(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

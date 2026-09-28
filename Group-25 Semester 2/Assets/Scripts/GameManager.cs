@@ -10,10 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerSanity playerSanity;
     [SerializeField] private Flashlight flashlight;
 
-    private void Start()
-    {
-        deathScreen.SetActive(false);
-    }
+    
 
     public void PlayerDied()
     {

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Test Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/InsideHostpitalSandBox.unity
+    guid: 1af6027e0ff1e4a4081711b42a52e613
+  - enabled: 1
     path: Assets/Scenes/DreamworldGreybox.unity
     guid: b5610d7f6e2a74e498016a8cc38553f7
   - enabled: 1

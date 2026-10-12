@@ -301542,6 +301542,14 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[2].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[0].text
       value: This is the dreamworld. There are entities that roam, press F to keep
         them away or you can hide from them by pressing H.
@@ -301553,6 +301561,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[2].text
+      value: Hi, I am the patient. I am supposed to stay beside you. I can give hint
+        about different memories
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[0].text
+      value: This is the dreamworld. There are entities that roam, press F to keep
+        them away or you can hide from them by pressing H.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[1].text
+      value: Roam around and collect memories. When needed you can place the patient
+        by the lamps by pressing G.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[2].text
+      value: Hi, I am the patient. I am supposed to stay beside you. I can give hint
+        about different memories
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[2].lines.Array.data[0].text
+      value: This is the dreamworld. There are entities that roam, press F to keep
+        them away or you can hide from them by pressing H.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[2].lines.Array.data[1].text
+      value: Roam around and collect memories. When needed you can place the patient
+        by the lamps by pressing G.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[2].lines.Array.data[2].text
       value: Hi, I am the patient. I am supposed to stay beside you. I can give hint
         about different memories
       objectReference: {fileID: 0}
@@ -301569,6 +301607,30 @@ PrefabInstance:
       value: Patient
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[0].speaker
+      value: The Voices
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[1].speaker
+      value: The Voices
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[2].speaker
+      value: Patient
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[2].lines.Array.data[0].speaker
+      value: The Voices
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[2].lines.Array.data[1].speaker
+      value: The Voices
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[2].lines.Array.data[2].speaker
+      value: Patient
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[0].portrait
       value: 
       objectReference: {fileID: 21300000, guid: 6c55ca4f9d4985f44a565cc62cc1e6bd, type: 3}
@@ -301578,6 +301640,30 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 6c55ca4f9d4985f44a565cc62cc1e6bd, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[2].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: ac012d4a5d02c0847b0caf4625d82c12, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[0].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6c55ca4f9d4985f44a565cc62cc1e6bd, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[1].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6c55ca4f9d4985f44a565cc62cc1e6bd, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[2].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: ac012d4a5d02c0847b0caf4625d82c12, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[2].lines.Array.data[0].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6c55ca4f9d4985f44a565cc62cc1e6bd, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[2].lines.Array.data[1].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6c55ca4f9d4985f44a565cc62cc1e6bd, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[2].lines.Array.data[2].portrait
       value: 
       objectReference: {fileID: 21300000, guid: ac012d4a5d02c0847b0caf4625d82c12, type: 3}
     m_RemovedComponents: []

@@ -13,6 +13,10 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Slider healthBar;
 
     [SerializeField] private GameManager gameManager;
+
+    public float CurrentHealth => currentHealth;
+    public float MaxHealth => maxHealth;
+
     private void Awake()
     {
         currentHealth = maxHealth; 

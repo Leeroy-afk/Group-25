@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed43b8c9f8528d4d831271bc212eaa6, type: 3}
   m_Name: Bad 2 Memory
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
-  title: 'yuck yuck '
-  description: baaaaddddd
+  title: 'yuck ycuk '
+  description: baaaddd
   icon: {fileID: 7125823, guid: c6849d47c323291458f392ae6728bdef, type: 3}
   alignment: 2
   isPlaceable: 1

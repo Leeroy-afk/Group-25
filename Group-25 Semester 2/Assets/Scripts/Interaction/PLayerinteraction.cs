@@ -81,12 +81,18 @@ namespace Interaction
                 return;
             }
 
-            if (InventoryUI.Instance != null && InventoryUI.Instance.IsOpen)
+            if (PedestalUI.Instance != null && PedestalUI.Instance.IsOpen) // closes the Pedestal pop up if interaction button pressed again
+            {
+                PedestalUI.Instance.ClosePedestalMenu();
+                return;
+            }
+
+            if (InventoryUI.Instance != null && InventoryUI.Instance.IsOpen) 
             {
                 return;
             }
 
-            if (focused != null && focused.CanInteract()) // this is the standard interaction code for if there is no pop up. 
+            if (focused != null && focused.CanInteract()) // this is the interaction code for if there is no pop up. 
             {
                 Debug.Log("interaction button pressed and focused is not null");
                 focused.Interact();

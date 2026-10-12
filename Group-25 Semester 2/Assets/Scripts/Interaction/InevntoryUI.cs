@@ -13,6 +13,9 @@ namespace Interaction
         [SerializeField] private Transform gridParent;
         [SerializeField] private GameObject slotPrefab;
         [SerializeField] private TextMeshProUGUI titleText;
+        [SerializeField] private TextMeshProUGUI patientInfo;
+        [SerializeField] private TextMeshProUGUI innerMessage;
+
         [SerializeField] private string invenTitle = "INVENTORY";
    
 

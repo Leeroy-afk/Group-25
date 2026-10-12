@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed43b8c9f8528d4d831271bc212eaa6, type: 3}
   m_Name: Good 2 Memory
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
-  title: 'Yum Yum '
-  description: gioooooodddd
+  title: 'ym yum '
+  description: goooodddd
   icon: {fileID: 2058578313, guid: b81844d96ead201439cb286c4e2ec661, type: 3}
   alignment: 1
   isPlaceable: 1

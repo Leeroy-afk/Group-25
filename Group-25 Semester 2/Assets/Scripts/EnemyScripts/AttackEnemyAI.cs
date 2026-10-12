@@ -7,14 +7,25 @@ public class AttackEnemyAI : MonoBehaviour
 
     [Header("Attack")]
     public float attackDistance = 2f;
-    public float attackCooldown = 1f;
+    public float attackCooldown = 0.5f;
     public float damage = 10f;
+
+    [Header("Sanity")]
+    public PlayerSanity playerSanity;
 
     [Header("Light")]
     public float lightEscapeTime = 2f;
 
+    [Header("Patrol")]
+    [SerializeField] private float patrolRadius = 10f;
+    [SerializeField] private float patrolChangeTime = 2f;
+
+    private bool isPatrolling = false;
+    private float patrolTimer;
+
     private NavMeshAgent agent;
     private PlayerHealth playerHealth;
+
     private float attackTimer;
 
     private bool escapingLight = false;
@@ -32,11 +43,16 @@ public class AttackEnemyAI : MonoBehaviour
 
     void Update()
     {
+        if (isPatrolling)
+        {
+            Patrol();
+            return;
+
+        }
+
         if (player == null)
             return;
 
-        // If the enemy is currently escaping light,
-        // don't chase the player.
         if (escapingLight)
         {
             escapeTimer -= Time.deltaTime;
@@ -71,12 +87,65 @@ public class AttackEnemyAI : MonoBehaviour
     {
         attackTimer -= Time.deltaTime;
 
-        if (attackTimer <= 0)
+        if (attackTimer <= 0f)
         {
             playerHealth.TakeDamage(damage);
 
             attackTimer = attackCooldown;
         }
+    }
+
+    void Patrol()
+    {
+        patrolTimer -= Time.deltaTime;
+
+        if (patrolTimer <= 0f)
+        {
+            Vector3 randomDirection =
+                Random.insideUnitSphere * patrolRadius;
+
+            randomDirection.y = 0f;
+
+            Vector3 randomPosition =
+                transform.position + randomDirection;
+
+            if (NavMesh.SamplePosition(
+                randomPosition,
+                out NavMeshHit hit,
+                patrolRadius,
+                NavMesh.AllAreas))
+            {
+                agent.isStopped = false;
+                agent.SetDestination(hit.position);
+
+                Debug.Log("ENEMY PATROLLING TO: " + hit.position);
+            }
+            else
+            {
+                Debug.Log("COULD NOT FIND PATROL POSITION");
+            }
+
+            patrolTimer = patrolChangeTime;
+        }
+    }
+
+    public void StartPatrol()
+    {
+        isPatrolling = true;
+
+        agent.isStopped = false;
+        patrolTimer = 0f;
+
+        Debug.Log("ENEMY STARTED PATROLLING");
+    }
+
+    public void StopPatrol()
+    {
+        isPatrolling = false;
+
+        agent.isStopped = false;
+
+        Debug.Log("Found you!");
     }
 
     public void EscapeLight(Vector3 lightPosition, float distance)
@@ -108,7 +177,7 @@ public class AttackEnemyAI : MonoBehaviour
             agent.isStopped = false;
             agent.SetDestination(hit.position);
 
-            Debug.Log("Enemy is escaping the light!");
+            Debug.Log("Big enemy is escaping the light!");
         }
     }
 }

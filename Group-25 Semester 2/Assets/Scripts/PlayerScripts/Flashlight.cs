@@ -5,8 +5,14 @@ using UnityEngine.UI;
 
 public class Flashlight : MonoBehaviour
 {
-    [SerializeField] private Light flashlight;
+    [Header("Lights")]
+    [SerializeField] private Light normalLight;
+    [SerializeField] private Light focusedLight;
+
+    [Header("Player")]
     [SerializeField] private PlayerSanity playerSanity;
+
+    [Header("Input")]
     [SerializeField] private InputActionReference flashlightAction;
 
     [Header("Enemy Detection")]
@@ -14,132 +20,98 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private float escapeDistance = 8f;
     [SerializeField] private LayerMask enemyLayer;
 
-    [Header("Battery")]
-    [SerializeField] private float maxBattery = 100f;
-    [SerializeField] private float batteryDrainRate = 5f;
-
-    [Header("BatteryUI")]
-    [SerializeField] private Slider batterySlider;
-
-    private float currentBattery;
-
-    private bool isOn = false;
+    private bool focusedLightOn = false;
 
     private void OnEnable()
     {
-        flashlightAction.action.performed += ToggleFlashlight;
+        flashlightAction.action.performed += ToggleFocusedLight;
         flashlightAction.action.Enable();
     }
 
     private void OnDisable()
     {
-        flashlightAction.action.performed -= ToggleFlashlight;
+        flashlightAction.action.performed -= ToggleFocusedLight;
         flashlightAction.action.Disable();
     }
 
     private void Start()
     {
-        flashlight.enabled = false;
-        playerSanity.SetFlashlight(false);
+        normalLight.enabled = true;
 
-        currentBattery = maxBattery;
+        focusedLightOn = false;
+        focusedLight.enabled = false;
 
-        if (batterySlider != null)
-        {
-            batterySlider.maxValue = maxBattery;
-            batterySlider.value = currentBattery;
-        }
+        playerSanity.SetFocusedlight(false);
     }
 
     private void Update()
     {
-        if (!isOn)
+        if (!focusedLightOn)
             return;
 
-        DrainBattery();
         CheckForEnemy();
     }
 
-    private void ToggleFlashlight(InputAction.CallbackContext context)
+    private void ToggleFocusedLight(InputAction.CallbackContext context)
     {
-        if (isOn)
+        focusedLightOn = !focusedLightOn;
+
+        if (focusedLightOn)
         {
-            TurnOffFlashlight();
+            normalLight.enabled = false;  // Turn normal light off
+
+            focusedLight.enabled = true; // Turn focus light on
+
+            playerSanity.SetFocusedlight(true); // Tell sanity to drain
         }
         else
         {
-            if (currentBattery > 0f)
-            {
-                TurnOnFlashlight();
-            }
+            normalLight.enabled = true; // Turn normal light back on
+
+            focusedLight.enabled = false; // Turn focus light off
+
+            playerSanity.SetFocusedlight(false); // Stop sanity drain
         }
     }
-
-    private void DrainBattery()
-    {
-        currentBattery -= batteryDrainRate * Time.deltaTime;
-
-        currentBattery = Mathf.Clamp(currentBattery, 0f, maxBattery);
-
-        if (batterySlider != null)
-        {
-            batterySlider.value = currentBattery;
-        }
-
-        if (currentBattery <= 0f)
-        {
-            TurnOffFlashlight();
-        }
-    }
+    
     private void CheckForEnemy()
     {
-        Ray ray = new Ray(
-            flashlight.transform.position,
-            flashlight.transform.forward
+        Collider[] hits = Physics.OverlapSphere(
+            focusedLight.transform.position,
+            detectionDistance,
+            enemyLayer
         );
 
-        if (Physics.Raycast(
-            ray,
-            out RaycastHit hit,
-            detectionDistance,
-            enemyLayer))
+        foreach (Collider hit in hits)
         {
             AttackEnemyAI enemy =
-                hit.collider.GetComponentInParent<AttackEnemyAI>();
+                hit.GetComponentInParent<AttackEnemyAI>();
 
-            if (enemy != null)
+            if (enemy == null)
+                continue;
+
+            Vector3 directionToEnemy =
+                (enemy.transform.position - focusedLight.transform.position).normalized;
+
+            float angle = Vector3.Angle(
+                focusedLight.transform.forward,
+                directionToEnemy
+            );
+
+            Debug.Log(
+                "Enemy found! Angle: " + angle +
+                " | Allowed angle: " + (focusedLight.spotAngle / 2f)
+            );
+
+            if (angle <= focusedLight.spotAngle / 2f)
             {
+                Debug.Log("ENEMY IS INSIDE FOCUS LIGHT!");
+
                 enemy.EscapeLight(
-                    flashlight.transform.position,
+                    focusedLight.transform.position,
                     escapeDistance
                 );
             }
-        }
-    }
-    private void TurnOnFlashlight()
-    {
-        isOn = true;
-
-        flashlight.enabled = true;
-        playerSanity.SetFlashlight(true);
-    }
-
-    private void TurnOffFlashlight()
-    {
-        isOn = false;
-
-        flashlight.enabled = false;
-        playerSanity.SetFlashlight(false);
-    }
-    public void ResetFlashlight()
-    {
-        currentBattery = maxBattery;
-
-        TurnOffFlashlight();
-
-        if (batterySlider != null)
-        {
-            batterySlider.value = currentBattery;
         }
     }
 }

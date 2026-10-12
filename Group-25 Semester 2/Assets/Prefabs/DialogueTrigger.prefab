@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4160800225327430713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7150852918236010139}
+  - component: {fileID: 7565277135779453482}
+  - component: {fileID: 8451805815172884903}
+  m_Layer: 0
+  m_Name: DialogueTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7150852918236010139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160800225327430713}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.261, y: 5.07, z: 6.74}
+  m_LocalScale: {x: 6, y: 2, z: 6}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7565277135779453482
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160800225327430713}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8451805815172884903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160800225327430713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6db3b1d9838a1441bfb566ae7b493c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueManager: {fileID: 0}
+  conversations:
+  - lines:
+    - speaker: Johny Sins
+      portrait: {fileID: -1890486142, guid: 6db40329b1439d747bac3d49276457e7, type: 3}
+      text: Hey there, this is a test for the dialogue system.
+    - speaker: Johny Sins
+      portrait: {fileID: -1890486142, guid: 6db40329b1439d747bac3d49276457e7, type: 3}
+      text: 'You can navigate using WASD, go on walk around. '
+    - speaker: Alice
+      portrait: {fileID: 417084974, guid: 4ff5ba7fa4cf9ef4cbd01b144fe6e3aa, type: 3}
+      text: Be careful, there's a big bad capsule lingering around here. Use F to
+        shine your light and deter him away.
+  - lines:
+    - speaker: 'Alice '
+      portrait: {fileID: 417084974, guid: 4ff5ba7fa4cf9ef4cbd01b144fe6e3aa, type: 3}
+      text: Dont forget about me, I'm the patient.
+    - speaker: Alice
+      portrait: {fileID: 417084974, guid: 4ff5ba7fa4cf9ef4cbd01b144fe6e3aa, type: 3}
+      text: Watch out for your sanity meter, if it drains both you and I are vulnerable
+        to any attacks of the enemy.

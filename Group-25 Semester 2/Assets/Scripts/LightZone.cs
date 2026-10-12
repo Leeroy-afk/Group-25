@@ -3,6 +3,7 @@ using UnityEngine;
 public class LightZone : MonoBehaviour
 {
     [SerializeField] private float enemyPushDistance = 8f;
+    [SerializeField] private PatientStayCommand patientStayCommand;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -10,9 +11,12 @@ public class LightZone : MonoBehaviour
 
         PlayerSanity sanity = other.GetComponent<PlayerSanity>();
 
-        if (sanity != null)
+        
+
+        if (other.CompareTag("Player"))
         {
-            sanity.EnterLight();
+            patientStayCommand.SetPlayerInSafeZone(true);
+            Debug.Log("Player is now in the safe zone");
         }
 
         AttackEnemyAI enemy = other.GetComponentInParent<AttackEnemyAI>();
@@ -34,9 +38,10 @@ public class LightZone : MonoBehaviour
 
         PlayerSanity sanity = other.GetComponent<PlayerSanity>();
 
-        if (sanity != null)
+        if (other.CompareTag("Player"))
         {
-            sanity.ExitLight();
+            patientStayCommand.SetPlayerInSafeZone(false);
+            Debug.Log("Player has left the safe zone");
         }
     }
 }

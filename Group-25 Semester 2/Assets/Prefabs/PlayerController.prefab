@@ -314,7 +314,7 @@ Transform:
   m_GameObject: {fileID: 4209096925045385625}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.61, z: 0.12}
+  m_LocalPosition: {x: 0.06, y: 0.61, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -771,6 +771,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 84700e64-12c7-42ef-afc4-7a7d8a41d178
     m_ActionName: 'UI/Cancel[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 25fa9dd1-6046-42e2-8dae-aa33342fbf58
+    m_ActionName: 'Player/InventoryAcess/Close[/Keyboard/tab]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e9cbe80d-168a-4e9c-830b-7495f614a9eb
+    m_ActionName: 'Player/INTERACTION1[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

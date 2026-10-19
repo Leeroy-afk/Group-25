@@ -148,8 +148,11 @@ public class FPController : MonoBehaviour
         {
             return;
         }
-        float mouseX = lookInput.x * lookSensitivity;
-        float mouseY = lookInput.y * lookSensitivity;
+
+        float mouseSensitivity = PlayerPrefs.GetFloat("MouseSensitivity", 2f); // altered the origional look logic to cater for options players set at the beginning of the game (Lexie)
+
+        float mouseX = lookInput.x * mouseSensitivity;
+        float mouseY = lookInput.y * mouseSensitivity;
 
         verticalRotation -= mouseY;
         verticalRotation = Mathf.Clamp(

@@ -21,6 +21,8 @@ public class PlayerSanity : MonoBehaviour, ISaveable
     public float CurrentSanity => currentSanity;
     public float MaxSanity => maxSanity;
 
+    public AudioSource breathingSound;
+
     [Serializable]
     private class SanityData
     {
@@ -40,6 +42,11 @@ public class PlayerSanity : MonoBehaviour, ISaveable
         {
             currentSanity -= focusDrainRate * Time.deltaTime;
             currentSanity = Mathf.Max(currentSanity, 0f);
+        }
+
+        if(currentSanity <= 0f)
+        {
+            breathingSound.enabled = true;
         }
 
         UpdateSanityUI();
@@ -109,6 +116,7 @@ public class PlayerSanity : MonoBehaviour, ISaveable
             return;
 
         currentSanity = Mathf.Min(currentSanity + amount, maxSanity);
+        breathingSound.enabled = false;
         UpdateSanityUI();
     }
 

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
   title: a bag of 13 gold coins
   description: 'it''s so specific, probably a gift for someone? '
-  icon: {fileID: 0}
+  icon: {fileID: -357065325, guid: 076452513f3cd2041902242c6332ca2f, type: 3}
   alignment: 0
   isPlaceable: 0

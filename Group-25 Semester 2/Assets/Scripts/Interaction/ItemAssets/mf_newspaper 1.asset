@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: mf_newspaper 1
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
   title: a newspaper artical
-  description: advertising america as the  land of prosperity, dated 1920
-  icon: {fileID: 0}
+  description: seems to talk of an infamous gangster
+  icon: {fileID: -555329730, guid: 076452513f3cd2041902242c6332ca2f, type: 3}
   alignment: 0
   isPlaceable: 0

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed43b8c9f8528d4d831271bc212eaa6, type: 3}
   m_Name: mf_a child's shoe
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
-  title: a child's shoe, it looks pristine and unused
-  description: 
-  icon: {fileID: 0}
+  title: a child's shoe
+  description: ' it looks pristine and unused'
+  icon: {fileID: 984184422, guid: 076452513f3cd2041902242c6332ca2f, type: 3}
   alignment: 0
   isPlaceable: 0

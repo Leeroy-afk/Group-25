@@ -9,6 +9,8 @@ public class PatientAI : MonoBehaviour
     private GameObject destination;// where the patient should stop, their final destination
     private NavMeshAgent agent;
 
+    public AudioSource patientSteps;
+
 
     void Start()
     {
@@ -20,8 +22,8 @@ public class PatientAI : MonoBehaviour
 
     private void Update()
     {  
-            agent.SetDestination(destination.transform.position); // Makes patient go to players position
-        
+        agent.SetDestination(destination.transform.position); // Makes patient go to players position
+        patientSteps.Play();
     }
 
     

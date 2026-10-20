@@ -1,7 +1,9 @@
 using Interaction;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.Serialization;
 
 public class FPController : MonoBehaviour
 {
@@ -26,16 +28,20 @@ public class FPController : MonoBehaviour
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private float lookSensitivity = 2f;
     [SerializeField] private float verticalLookLimit = 90f;
-
+   
     private CharacterController controller;
 
-    private Vector2 moveInput;
+    public Vector2 moveInput;
     private Vector2 lookInput;
 
     private Vector3 velocity;
     private float verticalRotation;
 
     private bool isCrouching;
+
+    public AudioSource footSteps;
+
+
 
     private void Awake()
     {
@@ -51,7 +57,28 @@ public class FPController : MonoBehaviour
         HandleLook();
         HandleGravity();
         HandleCrouch();
+
+        if (controller.isGrounded)
+        {
+            if (controller.velocity.magnitude > 0 )
+            {
+                if (!footSteps.isPlaying)
+                {
+                    footSteps.Play();
+                }
+            }
+            else
+            {
+                footSteps.Stop();
+            }
+        }
+        else
+        {
+            footSteps.Stop();
+        }
     }
+
+
 
     private bool IsUIActive() // a check for if any UI menus are open when player controls are active (which then stops them or prevents them from happening)
     {
@@ -64,6 +91,7 @@ public class FPController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+
     }
 
     public void OnLook(InputAction.CallbackContext context)
@@ -167,6 +195,7 @@ public class FPController : MonoBehaviour
 
     private void HandleCrouch()
     {
+        Debug.Log("Sound is playing");
         float targetHeight = isCrouching
             ? crouchingHeight
             : standingHeight;
@@ -177,4 +206,6 @@ public class FPController : MonoBehaviour
             crouchTransitionSpeed * Time.deltaTime
             );
     }
+
+    
 }

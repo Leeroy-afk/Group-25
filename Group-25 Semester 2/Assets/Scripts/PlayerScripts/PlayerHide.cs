@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerHide : MonoBehaviour
 {
@@ -19,6 +22,8 @@ public class PlayerHide : MonoBehaviour
 
     private bool isHiding = false;
     private float hideTimer;
+
+    public AudioSource heartBeat;
 
     private void OnEnable()
     {
@@ -65,6 +70,8 @@ public class PlayerHide : MonoBehaviour
 
         playerController.enabled = false;
 
+        heartBeat.enabled = true;
+
         AttackEnemyAI[] enemies =
             FindObjectsByType<AttackEnemyAI>(FindObjectsSortMode.None);
 
@@ -87,6 +94,8 @@ public class PlayerHide : MonoBehaviour
 
         playerController.enabled = true;
 
+        heartBeat.enabled = false;
+
         AttackEnemyAI[] enemies =
             FindObjectsByType<AttackEnemyAI>(FindObjectsSortMode.None);
 
@@ -97,4 +106,5 @@ public class PlayerHide : MonoBehaviour
 
         Debug.Log("PLAYER IS REVEALED");
     }
+
 }

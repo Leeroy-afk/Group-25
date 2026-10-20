@@ -20,6 +20,8 @@ namespace Interaction
         [SerializeField] private bool showInspectionScreen = true;
         [SerializeField] private bool addToInventory = true;
         [SerializeField] private bool destroyOnClose = true;
+
+        public AudioSource interactionSound;
         
 
         private Renderer objectRenderer;
@@ -56,7 +58,12 @@ namespace Interaction
                     isCollected = true;
                     if (InventoryManager.Instance != null)
                     {
-                        InventoryManager.Instance.AddItem(itemData); 
+                        InventoryManager.Instance.AddItem(itemData);
+                        interactionSound.enabled = true;
+                    }
+                    else
+                    {
+                        interactionSound.enabled = false;
                     }
                 }
                 
@@ -80,6 +87,7 @@ namespace Interaction
             {
                 promptText.gameObject.SetActive(true);
                 promptText.text = (" press [E] / button south to interact ");
+                Debug.Log("prompt text is showing");
             }
         }
 

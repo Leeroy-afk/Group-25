@@ -2,45 +2,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("UI")]
-    [SerializeField] private GameObject deathScreen;
-
-    [Header("Player")]
-    [SerializeField] private PlayerHealth playerHealth;
-    [SerializeField] private PlayerSanity playerSanity;
-    [SerializeField] private Flashlight flashlight;
-
-    
-
     public void PlayerDied()
     {
-        Debug.Log("GAME MANAGER: Showing death screen!");
+        Debug.Log("PLAYER DIED: Respawning at checkpoint!");
 
-        deathScreen.SetActive(true);
-
-        Time.timeScale = 0f;
-
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-    }
-
-    public void ResetAndContinue()
-    {
-        Debug.Log("RESET BUTTON CLICKED!");
-
-        // Reset player systems
-        playerHealth.ResetHealth();
-        playerSanity.ResetSanity();
-
-        // Hide death screen
-        deathScreen.SetActive(false);
-
-        // Resume game
+        // Make sure gameplay is not paused.
         Time.timeScale = 1f;
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-
-        Debug.Log("PLAYER FULLY RESET!");
+        if (SaveManager.Instance != null)
+        {
+            SaveManager.Instance.RespawnFromCheckpoint();
+        }
+        else
+        {
+            Debug.LogError("SaveManager was not found!");
+        }
     }
 }

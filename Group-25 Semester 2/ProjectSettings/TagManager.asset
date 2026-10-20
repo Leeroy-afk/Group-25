@@ -9,6 +9,8 @@ TagManager:
   - PatientStay
   - Patient
   - Memory
+  - MarbleFloor
+  - CobbeleStoneFloor
   layers:
   - Default
   - TransparentFX

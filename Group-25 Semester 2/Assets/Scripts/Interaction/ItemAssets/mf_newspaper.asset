@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed43b8c9f8528d4d831271bc212eaa6, type: 3}
   m_Name: mf_newspaper
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
-  title: 
+  title: News Paper
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: -1042183439, guid: 076452513f3cd2041902242c6332ca2f, type: 3}
   alignment: 0
   isPlaceable: 0

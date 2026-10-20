@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
   title: Toy Boat
   description: 'a toy boat, hand carved and looks well worn '
-  icon: {fileID: 1784337450, guid: c6ca59d7ead606046b184475c4060aff, type: 3}
+  icon: {fileID: -672352431, guid: 076452513f3cd2041902242c6332ca2f, type: 3}
+  alignment: 0
+  isPlaceable: 0

@@ -7,7 +7,7 @@ public class Flashlight : MonoBehaviour
 {
     [Header("Lights")]
     [SerializeField] private Light normalLight;
-    [SerializeField] private Light focusedLight;
+    [SerializeField] public Light focusedLight;
 
     [Header("Player")]
     [SerializeField] private PlayerSanity playerSanity;
@@ -20,12 +20,15 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private float escapeDistance = 8f;
     [SerializeField] private LayerMask enemyLayer;
 
+    public AudioSource flashonSound;
+
     private bool focusedLightOn = false;
 
     private void OnEnable()
     {
         flashlightAction.action.performed += ToggleFocusedLight;
         flashlightAction.action.Enable();
+       
     }
 
     private void OnDisable()
@@ -62,6 +65,8 @@ public class Flashlight : MonoBehaviour
 
             focusedLight.enabled = true; // Turn focus light on
 
+            flashonSound.enabled = true;
+
             playerSanity.SetFocusedlight(true); // Tell sanity to drain
         }
         else
@@ -69,6 +74,8 @@ public class Flashlight : MonoBehaviour
             normalLight.enabled = true; // Turn normal light back on
 
             focusedLight.enabled = false; // Turn focus light off
+
+            flashonSound.enabled = false;
 
             playerSanity.SetFocusedlight(false); // Stop sanity drain
         }

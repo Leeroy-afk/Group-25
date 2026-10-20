@@ -7,7 +7,7 @@ public class MainMenuController : MonoBehaviour
     private bool isOptionsOpen = false; 
    public void OnPlayClick()
     {
-        SceneManager.LoadScene("InsideHospitalSandBox");
+        SceneManager.LoadScene("InsideHostpitalSandBox");
     }
 
     public void OnOptionsClick()

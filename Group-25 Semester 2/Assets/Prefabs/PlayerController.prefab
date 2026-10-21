@@ -511,6 +511,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
+  flashonSound: {fileID: 0}
 --- !u!1 &7645192808922569176
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +529,7 @@ GameObject:
   - component: {fileID: 8379104619388197954}
   - component: {fileID: 6734851922549474257}
   - component: {fileID: 3205569810164604855}
+  - component: {fileID: 8195646160452470989}
   - component: {fileID: 3862640869108529735}
   - component: {fileID: 1773501048069459293}
   - component: {fileID: 3274602176983553474}
@@ -812,6 +814,8 @@ MonoBehaviour:
   cameraTransform: {fileID: 2816922187153300853}
   lookSensitivity: 0.3
   verticalLookLimit: 90
+  moveInput: {x: 0, y: 0}
+  footSteps: {fileID: 0}
 --- !u!114 &8379104619388197954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,6 +832,7 @@ MonoBehaviour:
   currentHealth: 100
   healthBar: {fileID: 0}
   gameManager: {fileID: 0}
+  damageFlash: {fileID: 0}
 --- !u!114 &6734851922549474257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,6 +850,7 @@ MonoBehaviour:
   focusDrainRate: 10
   sanityBar: {fileID: 0}
   focusedLightOn: 0
+  breathingSound: {fileID: 0}
 --- !u!114 &3205569810164604855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,6 +869,23 @@ MonoBehaviour:
   playerController: {fileID: 4369872589910410008}
   hideAction: {fileID: -7366224219624813046, guid: bf48b24f419944343971dacf2538cc0c, type: 3}
   hideDuration: 7.5
+  heartBeat: {fileID: 0}
+--- !u!114 &8195646160452470989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645192808922569176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6069161b0ab504aaacd64238d121e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction.PLayerinteraction
+  interactionRange: 3.5
+  interactionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &3862640869108529735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e963a877e7b28644a730b1aea634454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveableEntity
-  uniqueID: fafdc2cd-fb6d-4e27-981e-45e2c14a007a
+  uniqueId: 
 --- !u!114 &3274602176983553474
 MonoBehaviour:
   m_ObjectHideFlags: 0

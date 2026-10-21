@@ -14653,7 +14653,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f2c68044fbc1dd142b0347a1e5c3df9b, type: 2}
+  - {fileID: 2100000, guid: 7c69727972a938c41a451cd6283572c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17835,7 +17835,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b549adf7426782947989236424499a3e, type: 2}
+  - {fileID: 2100000, guid: 33e2a9e83c1c8a041a9b3ac6ceb7f238, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -64394,7 +64394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.size
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[0].text
@@ -64406,15 +64406,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[2].text
-      value: Wait...
+      value: You are in the dream world, something bothers your soul and we must
+        fix it to allow you to move on.
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[3].text
-      value: My children I must know if they are fine!
+      value: Move on where?
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[4].text
-      value: My children I must know if they are fine!
+      value: Don't worry...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[5].text
+      value: Now I'm worried
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[0].speaker
@@ -64426,7 +64431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[2].speaker
-      value: Patient
+      value: You
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[3].speaker
@@ -64434,7 +64439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[4].speaker
-      value: Dr. Domicile
+      value: You
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[5].speaker
+      value: Patient
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[0].portrait
@@ -64447,7 +64456,7 @@ PrefabInstance:
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[2].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
+      objectReference: {fileID: 21300000, guid: 52c73347324f6c74c8ef7c183e04ae89, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[3].portrait
       value: 
@@ -64455,7 +64464,11 @@ PrefabInstance:
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[4].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 102df2b62cd06f242b819dd2ea823c2f, type: 3}
+      objectReference: {fileID: 21300000, guid: 52c73347324f6c74c8ef7c183e04ae89, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[5].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -70973,7 +70986,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 599a620de2616c840bde384b9cd614c0, type: 2}
+  - {fileID: 2100000, guid: 026fed176bd7fe24397cdf1dca6c3aac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78780,6 +78793,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 700670795}
+    - target: {fileID: 5963936916785922689, guid: de95268f9c6569649bf3b08fe9345b62, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.26
+      objectReference: {fileID: 0}
     - target: {fileID: 6649680984118352736, guid: de95268f9c6569649bf3b08fe9345b62, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40.69
@@ -79739,6 +79756,178 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a6ad90200596bd40b1017f9afb83388, type: 3}
+--- !u!1001 &1143986388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4160800225327430713, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: m_Name
+      value: DialogueTrigger (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150852918236010139, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150852918236010139, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150852918236010139, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150852918236010139, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150852918236010139, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150852918236010139, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150852918236010139, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150852918236010139, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150852918236010139, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150852918236010139, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1980879806}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[0].text
+      value: 'This place kind of looks like my hometown '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[1].text
+      value: This place is modeled after your memories.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[2].text
+      value: 'To heal your troubled soul we must find the key memories and only then
+        can we place them on the pedastals. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[3].text
+      value: It's never Lupus!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[4].text
+      value: It's never Lupus!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[0].text
+      value: This is the dreamworld. There are entities that roam, press F to keep
+        them away or you can hide from them by pressing H.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[1].text
+      value: Hi, I am the patient. I am supposed to stay beside you. I can give hint
+        about different memories
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[2].text
+      value: Oh by the way...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[0].speaker
+      value: Patient
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[1].speaker
+      value: You
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[2].speaker
+      value: You
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[3].speaker
+      value: Dr. Domicile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[4].speaker
+      value: Dr. Domicile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[0].speaker
+      value: Dr. Domicile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[1].speaker
+      value: Patient
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[2].speaker
+      value: Dr. Domicile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[0].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[1].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 52c73347324f6c74c8ef7c183e04ae89, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[2].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 52c73347324f6c74c8ef7c183e04ae89, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[3].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 102df2b62cd06f242b819dd2ea823c2f, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[0].lines.Array.data[4].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 102df2b62cd06f242b819dd2ea823c2f, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[0].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 102df2b62cd06f242b819dd2ea823c2f, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[1].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
+    - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
+      propertyPath: conversations.Array.data[1].lines.Array.data[2].portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 102df2b62cd06f242b819dd2ea823c2f, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
 --- !u!1 &1150513678
 GameObject:
   m_ObjectHideFlags: 0
@@ -104270,7 +104459,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 34e749a1e11034348b129fdea8d6341b, type: 2}
+  - {fileID: 2100000, guid: 28addb897f951164095f69916b6350a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -146741,7 +146930,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2676171295259104989, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.74
+      value: -44.811
       objectReference: {fileID: 0}
     - target: {fileID: 2676171295259104989, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -146749,11 +146938,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2676171295259104989, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.43
+      value: 2.95
       objectReference: {fileID: 0}
     - target: {fileID: 2676171295259104989, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7111026
       objectReference: {fileID: 0}
     - target: {fileID: 2676171295259104989, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -146761,7 +146950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2676171295259104989, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7030883
       objectReference: {fileID: 0}
     - target: {fileID: 2676171295259104989, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -146773,7 +146962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2676171295259104989, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 89.351
       objectReference: {fileID: 0}
     - target: {fileID: 2676171295259104989, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -146800,6 +146989,10 @@ PrefabInstance:
       value: 99d33ca3-9d9b-4710-858d-dcc4227eba61
       objectReference: {fileID: 0}
     - target: {fileID: 7666954383574166566, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666954383574166566, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 5575148942687295164}
@@ -146807,6 +147000,10 @@ PrefabInstance:
       propertyPath: playerSanity
       value: 
       objectReference: {fileID: 7556269238038104699}
+    - target: {fileID: 7666954383574166566, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
+      propertyPath: lightEscapeTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8350502789256343666, guid: f5d2b8d20b2eaa744823e71edf09558e, type: 3}
       propertyPath: player
       value: 
@@ -258036,19 +258233,19 @@ PrefabInstance:
       objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 7611403781217081727, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: 72.541
       objectReference: {fileID: 0}
     - target: {fileID: 7611403781217081727, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.6
+      value: 4.271
       objectReference: {fileID: 0}
     - target: {fileID: 7611403781217081727, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17
+      value: 34.017
       objectReference: {fileID: 0}
     - target: {fileID: 7611403781217081727, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.03737058
+      value: 0.18872504
       objectReference: {fileID: 0}
     - target: {fileID: 7611403781217081727, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
       propertyPath: m_LocalRotation.x
@@ -258056,7 +258253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7611403781217081727, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9993015
+      value: 0.98203
       objectReference: {fileID: 0}
     - target: {fileID: 7611403781217081727, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
       propertyPath: m_LocalRotation.z
@@ -258068,7 +258265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7611403781217081727, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 175.717
+      value: 158.243
       objectReference: {fileID: 0}
     - target: {fileID: 7611403781217081727, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -359635,6 +359832,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7811140001787664959, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510064833599257129, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510064833599257129, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1092642,9 +1092847,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2016766761}
+  - {fileID: 1481226093359026274}
   - {fileID: 1806734618}
   - {fileID: 537457196}
-  - {fileID: 1481226093359026274}
   - {fileID: 2122248068}
   - {fileID: 2753735719210598286}
   - {fileID: 5901107846239197479}
@@ -1092655,6 +1092860,7 @@ SceneRoots:
   - {fileID: 1917876914845476453}
   - {fileID: 922923929}
   - {fileID: 340933743}
+  - {fileID: 1143986388}
   - {fileID: 8759944527370994608}
   - {fileID: 621375827}
   - {fileID: 1473333580}

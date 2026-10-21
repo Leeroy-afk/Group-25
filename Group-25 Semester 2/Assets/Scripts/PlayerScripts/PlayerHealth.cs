@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour, ISaveable
 
     [SerializeField] private GameManager gameManager;
 
+    [SerializeField] private DamageFlash damageFlash;
+
     private bool isDead = false;
 
     public float CurrentHealth => currentHealth;
@@ -40,6 +42,9 @@ public class PlayerHealth : MonoBehaviour, ISaveable
         Debug.Log("Player Took Damage: " + currentHealth);
 
         UpdateHealthUI();
+
+        if (damageFlash != null)
+            damageFlash.Flash();
 
         if (currentHealth <= 0f)
         {

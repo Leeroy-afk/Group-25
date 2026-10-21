@@ -20,8 +20,6 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private float escapeDistance = 8f;
     [SerializeField] private LayerMask enemyLayer;
 
-    public AudioSource flashonSound;
-
     private bool focusedLightOn = false;
 
     private void OnEnable()
@@ -65,8 +63,6 @@ public class Flashlight : MonoBehaviour
 
             focusedLight.enabled = true; // Turn focus light on
 
-            flashonSound.enabled = true;
-
             playerSanity.SetFocusedlight(true); // Tell sanity to drain
         }
         else
@@ -75,7 +71,6 @@ public class Flashlight : MonoBehaviour
 
             focusedLight.enabled = false; // Turn focus light off
 
-            flashonSound.enabled = false;
 
             playerSanity.SetFocusedlight(false); // Stop sanity drain
         }

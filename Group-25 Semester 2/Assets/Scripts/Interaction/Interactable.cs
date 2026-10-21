@@ -21,7 +21,6 @@ namespace Interaction
         [SerializeField] private bool addToInventory = true;
         [SerializeField] private bool destroyOnClose = true;
 
-        public AudioSource interactionSound;
         
 
         private Renderer objectRenderer;
@@ -59,12 +58,8 @@ namespace Interaction
                     if (InventoryManager.Instance != null)
                     {
                         InventoryManager.Instance.AddItem(itemData);
-                        interactionSound.enabled = true;
                     }
-                    else
-                    {
-                        interactionSound.enabled = false;
-                    }
+                   
                 }
                 
                 if (InteractInspectUI.Instance != null) // destroys game objects (like for collectable items)

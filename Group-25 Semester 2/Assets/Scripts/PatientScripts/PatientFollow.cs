@@ -1,14 +1,14 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 
 public class PatientAI : MonoBehaviour
 {
     private GameObject destination;// where the patient should stop, their final destination
     private NavMeshAgent agent;
-
     public AudioSource patientSteps;
 
 
@@ -23,7 +23,24 @@ public class PatientAI : MonoBehaviour
     private void Update()
     {  
         agent.SetDestination(destination.transform.position); // Makes patient go to players position
-        patientSteps.Play();
+        if (agent)
+        {
+            if (agent.velocity.magnitude > 0)
+            {
+                if (!patientSteps.isPlaying)
+                {
+                    patientSteps.Play();
+                }
+            }
+            else
+            {
+                patientSteps.Stop();
+            }
+        }
+        else
+        {
+            patientSteps.Stop();
+        }
     }
 
     

@@ -5,6 +5,7 @@ using TMPro;
 using NUnit.Framework;
 using UnityEngine.InputSystem;
 using Unity.AI.Navigation.Samples;
+using System.Collections;
 
 
 namespace Interaction
@@ -19,6 +20,8 @@ namespace Interaction
         [SerializeField] private TextMeshProUGUI descriptionText;
         [SerializeField] private TextMeshProUGUI exitPromptText;
         [SerializeField] private GameObject viewingPanel;
+        [SerializeField] private TextMeshProUGUI notificationText; // item collected notifaction
+        [SerializeField] private float notificationDuration = 2f;
 
 
         private GameObject currentTargetObject;
@@ -42,9 +45,22 @@ namespace Interaction
             {
                 Destroy(this);
             }
-            if (panel != null) { panel.SetActive(false); }
-            if (viewingPanel != null) { viewingPanel.SetActive(false); }
+            if (panel != null) 
+            { 
+                panel.SetActive(false); 
+            }
+            if (viewingPanel != null) 
+            { 
+                viewingPanel.SetActive(false); 
+            }
+            if (notificationText != null)
+            {
+                notificationText.gameObject.SetActive(false);
+            }
         }
+
+        
+        
 
         private void OnDestroy()
         {
@@ -164,6 +180,8 @@ namespace Interaction
                     {
                         currentInteractableComponent.MarkAsCollected();
 
+                        ShowNotification($"'{currentItemData.title}' added to inventory");
+
                         if (currentTargetObject != null)
                         {
                             Destroy(currentTargetObject);
@@ -181,17 +199,26 @@ namespace Interaction
                 }
 
             }
-            else if (currentInteractableComponent == null && currentItemData != null)
+            else if (currentInteractableComponent == null && currentItemData != null) // discarding inventory item
             {
                 if (InventoryManager.Instance != null)
                 {
                     InventoryManager.Instance.RemoveItem(currentItemData);
+                    ShowNotification($"'{currentItemData.title}' discarded from inventory");
                 }
                 if (InventoryUI.Instance != null && InventoryUI.Instance.IsOpen)
                 {
                     InventoryUI.Instance.RefreshGrid();
                 }
                 CloseInspection();
+            }
+        }
+
+        public void ShowNotification(string message)
+        {
+            if (NotificationDisplay.Instance != null)
+            {
+                NotificationDisplay.Instance.ShowNotification(message);
             }
         }
 

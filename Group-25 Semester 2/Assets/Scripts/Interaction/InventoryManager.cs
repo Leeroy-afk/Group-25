@@ -7,7 +7,7 @@ namespace Interaction
     {
         public static InventoryManager Instance { get; private set; }
 
-        private readonly List<ItemData> items = new List<ItemData>(); //making a list containing all the items in the inventory
+        private readonly List<ItemData> items = new List<ItemData>();
 
         private void Awake()
         {
@@ -21,14 +21,16 @@ namespace Interaction
                 Destroy(this);
             }
         }
+
         public void AddItem(ItemData item)
         {
-            if (item != null && !items.Contains(item)) 
+            if (item != null && !items.Contains(item))
             {
                 items.Add(item);
-                Debug.Log ("Item added: " + item.title);
+                Debug.Log("Item added: " + item.title);
             }
         }
+
         public void RemoveItem(ItemData item)
         {
             if (item != null && items.Contains(item))
@@ -37,10 +39,24 @@ namespace Interaction
                 Debug.Log("Item removed from inventory: " + item.title);
             }
         }
-        public List<ItemData> GetItems() //reads the list of items in the inventory and returns it
+
+        public List<ItemData> GetItems()
         {
             return items;
         }
-    }
 
+        // Checks whether the inventory contains an item with this ID.
+        public bool HasItem(string itemID)
+        {
+            foreach (ItemData item in items)
+            {
+                if (item != null && item.itemID == itemID)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    }
 }

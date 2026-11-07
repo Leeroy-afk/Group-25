@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 using NUnit.Framework;
 using UnityEngine.InputSystem;
+using Unity.AI.Navigation.Samples;
 
 
 namespace Interaction
@@ -63,24 +64,22 @@ namespace Interaction
             }
             if(IsInspecting)
             {
-                TryCollectItem();
+                TryAction();
             }
         }
 
 
-        //for showing inspection when intecating
+        //for showing inspection when intecating with item in world
         public void ShowInspection(ItemData itemData, GameObject targetObject, Interactable interactable)
         {
             currentTargetObject = targetObject;
             currentItemData = itemData;
             currentInteractableComponent = interactable;
 
-            if (currentTargetObject != null)
-            {
-               if(currentInteractableComponent != null)
-                {
-                    currentInteractableComponent.OnFocusLost();
-                }
+            if (currentTargetObject != null && currentInteractableComponent != null)
+            { 
+               currentInteractableComponent.OnFocusLost();
+                
             }
 
             if (titleText != null) 
@@ -120,29 +119,29 @@ namespace Interaction
 
         }
         // for showing inpection in ineventory 
-        public void ShowInspection(string title, string description, Sprite sprite, GameObject targetObject)
+        public void ShowInspection(ItemData itemData)
         {
-            currentTargetObject = targetObject;
-            currentItemData = null;
+            currentTargetObject = null;
+            currentItemData = itemData;
             currentInteractableComponent = null;
 
             if (titleText != null) 
             { 
-                titleText.text = title; 
+                titleText.text = itemData.title; 
             }
             if (descriptionText != null) 
             { 
-                descriptionText.text = description; 
+                descriptionText.text = itemData.description; 
             }
             if (exitPromptText != null) 
             { 
-                exitPromptText.text = "press [E] / button south to exit"; 
+                exitPromptText.text = "press [Q] / button east to discard item | press [E] / button south to exit";
             }
 
             if (itemImage != null)
             {
-                itemImage.sprite = sprite;
-                itemImage.gameObject.SetActive(sprite != null);
+                itemImage.sprite = itemData.icon;
+                itemImage.gameObject.SetActive(itemData.icon != null);
             }
 
             panel.SetActive(true);
@@ -154,24 +153,41 @@ namespace Interaction
             Cursor.visible = true;
         }
 
-        public void TryCollectItem()
+        public void TryAction()
         {
             if(currentInteractableComponent != null && currentInteractableComponent.AddToInventory && currentItemData != null)
             {
                 currentInteractableComponent.MarkAsCollected();
 
-                if(InventoryManager.Instance != null)
+                if (InventoryManager.Instance != null)
                 {
                     InventoryManager.Instance.AddItem(currentItemData);
                 }
-                if(currentTargetObject != null)
+                if (currentTargetObject != null)
                 {
                     Destroy(currentTargetObject);
                 }
 
                 CloseInspection();
             }
+            else if(currentInteractableComponent == null && currentItemData != null)
+            {
+                if (InventoryManager.Instance != null)
+                {
+                    InventoryManager.Instance.RemoveItem(currentItemData);
+                }
+
+                if(InventoryUI.Instance != null && InventoryUI.Instance.IsOpen)
+                {
+                    InventoryUI.Instance.RefreshGrid();
+                }
+
+                CloseInspection();
+            }
+
+            
         }
+
         public void CloseInspection() // working for both the initial inspectiong and the inventory view.
         {
             panel.SetActive(false);

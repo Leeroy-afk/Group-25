@@ -107,7 +107,7 @@ namespace Interaction
             }
             if(InteractInspectUI.Instance != null && InteractInspectUI.Instance.IsInspecting)
             {
-                InteractInspectUI.Instance.TryCollectItem();
+                InteractInspectUI.Instance.TryAction();
             }
         }
     }

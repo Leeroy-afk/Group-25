@@ -56,7 +56,20 @@ namespace Interaction
         {
             return items;
         }
-        public bool IsFull() => items.Count >= maxCapacity; 
+        public bool IsFull() => items.Count >= maxCapacity;
+
+        public bool HasItem(string itemID)
+        {
+            foreach (ItemData item in items)
+            {
+                if (item != null && item.itemID == itemID)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 
 }

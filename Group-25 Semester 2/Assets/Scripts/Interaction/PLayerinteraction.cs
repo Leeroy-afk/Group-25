@@ -99,7 +99,17 @@ namespace Interaction
             }
         }
 
-
+        public void OnCollect(InputAction.CallbackContext context)
+        {
+            if(!context.performed)
+            {
+                return;
+            }
+            if(InteractInspectUI.Instance != null && InteractInspectUI.Instance.IsInspecting)
+            {
+                InteractInspectUI.Instance.TryCollectItem();
+            }
+        }
     }
 }
 

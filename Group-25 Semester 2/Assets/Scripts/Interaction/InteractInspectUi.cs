@@ -155,37 +155,44 @@ namespace Interaction
 
         public void TryAction()
         {
-            if(currentInteractableComponent != null && currentInteractableComponent.AddToInventory && currentItemData != null)
+            if (currentInteractableComponent != null && currentInteractableComponent.AddToInventory && currentItemData != null)
             {
-                currentInteractableComponent.MarkAsCollected();
-
                 if (InventoryManager.Instance != null)
                 {
-                    InventoryManager.Instance.AddItem(currentItemData);
-                }
-                if (currentTargetObject != null)
-                {
-                    Destroy(currentTargetObject);
+
+                    if (InventoryManager.Instance.AddItem(currentItemData))
+                    {
+                        currentInteractableComponent.MarkAsCollected();
+
+                        if (currentTargetObject != null)
+                        {
+                            Destroy(currentTargetObject);
+                        }
+
+                        CloseInspection();
+                    }
+                    else
+                    {
+                        if (exitPromptText != null)
+                        {
+                            exitPromptText.text = "Inventory is full (max 5)! press [E] / button south to exit";
+                        }
+                    }
                 }
 
-                CloseInspection();
             }
-            else if(currentInteractableComponent == null && currentItemData != null)
+            else if (currentInteractableComponent == null && currentItemData != null)
             {
                 if (InventoryManager.Instance != null)
                 {
                     InventoryManager.Instance.RemoveItem(currentItemData);
                 }
-
-                if(InventoryUI.Instance != null && InventoryUI.Instance.IsOpen)
+                if (InventoryUI.Instance != null && InventoryUI.Instance.IsOpen)
                 {
                     InventoryUI.Instance.RefreshGrid();
                 }
-
                 CloseInspection();
             }
-
-            
         }
 
         public void CloseInspection() // working for both the initial inspectiong and the inventory view.

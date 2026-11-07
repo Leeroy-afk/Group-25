@@ -21,7 +21,9 @@ namespace Interaction
         [SerializeField] private bool addToInventory = true;
         [SerializeField] private bool destroyOnClose = false;
 
-        
+        //for key memories (so that only one an be collected at the end of each path) 
+        [SerializeField] private GameObject pairedKeyMemoryToDisable; 
+
 
         private Renderer objectRenderer;
 
@@ -65,6 +67,11 @@ namespace Interaction
         public void MarkAsCollected()
         {
             isCollected = true;
+
+            if(pairedKeyMemoryToDisable !=null)
+            {
+                pairedKeyMemoryToDisable.SetActive(false);
+            }
 
             if (destroyOnClose)
             {

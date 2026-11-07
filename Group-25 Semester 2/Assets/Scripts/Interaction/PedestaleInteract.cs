@@ -116,6 +116,10 @@ namespace Interaction
                     {
                         InventoryManager.Instance.RemoveItem(itemData);
                     }
+
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true; 
+
                     EndingManager.Instance?.CheckEndState();
 
                     return true;

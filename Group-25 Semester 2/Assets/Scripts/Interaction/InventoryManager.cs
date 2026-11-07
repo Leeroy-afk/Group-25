@@ -5,6 +5,7 @@ namespace Interaction
 {
     public class InventoryManager : MonoBehaviour
     {
+        [SerializeField] private int maxCapacity = 5; 
         public static InventoryManager Instance { get; private set; }
 
         private readonly List<ItemData> items = new List<ItemData>(); //making a list containing all the items in the inventory
@@ -21,13 +22,27 @@ namespace Interaction
                 Destroy(this);
             }
         }
-        public void AddItem(ItemData item)
+        public bool AddItem(ItemData item)
         {
-            if (item != null && !items.Contains(item)) 
+            if (item == null)
             {
-                items.Add(item);
-                Debug.Log ("Item added: " + item.title);
+                return false;
             }
+            if (items.Contains(item)) 
+            {
+                Debug.Log ("Item added: " + item.title);
+                return false;
+            }
+            if(items.Count >= maxCapacity)
+            {
+                Debug.LogWarning("Inventory is full. Cannot add item: " + item.title);
+                return false;
+            }
+            items.Add(item);
+            Debug.Log("Item added: " + item.title + " (Total: " + "/" + maxCapacity + ")");
+            return true;
+
+
         }
         public void RemoveItem(ItemData item)
         {
@@ -40,6 +55,20 @@ namespace Interaction
         public List<ItemData> GetItems() //reads the list of items in the inventory and returns it
         {
             return items;
+        }
+        public bool IsFull() => items.Count >= maxCapacity;
+
+        public bool HasItem(string itemID)
+        {
+            foreach (ItemData item in items)
+            {
+                if (item != null && item.itemID == itemID)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 

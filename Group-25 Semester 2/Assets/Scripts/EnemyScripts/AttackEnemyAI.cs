@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.AI;
 using System;
@@ -32,6 +31,9 @@ public class AttackEnemyAI : MonoBehaviour, ISaveable
 
     private bool escapingLight = false;
     private float escapeTimer;
+    private bool aiActive = false;
+
+    public bool lightImmunity = false;
 
     [Serializable]
     private class EnemyData
@@ -54,6 +56,8 @@ public class AttackEnemyAI : MonoBehaviour, ISaveable
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+
+        SetAIActive(false);
     }
 
     private void Start()
@@ -66,6 +70,10 @@ public class AttackEnemyAI : MonoBehaviour, ISaveable
 
     private void Update()
     {
+
+        if (!aiActive)
+            return;
+
         if (agent == null || !agent.enabled || !agent.isOnNavMesh)
             return;
 
@@ -105,6 +113,7 @@ public class AttackEnemyAI : MonoBehaviour, ISaveable
             agent.isStopped = true;
             Attack();
         }
+
     }
 
     private void Attack()
@@ -186,7 +195,11 @@ public class AttackEnemyAI : MonoBehaviour, ISaveable
 
     public void EscapeLight(Vector3 lightPosition, float distance)
     {
-        if (agent == null || !agent.enabled || !agent.isOnNavMesh)
+        // The enemy ignores the light while immune.
+        if (lightImmunity)
+            return;
+
+        if (!aiActive || agent == null || !agent.enabled || !agent.isOnNavMesh)
             return;
 
         Vector3 directionAway =
@@ -218,6 +231,18 @@ public class AttackEnemyAI : MonoBehaviour, ISaveable
 
             Debug.Log("Big enemy is escaping the light!");
         }
+    }
+    public void SetLightImmunity(bool immune)
+    {
+        lightImmunity = immune;
+
+        if (immune)
+        {
+            escapingLight = false;
+            escapeTimer = 0f;
+        }
+
+        Debug.Log("Enemy light immunity: " + immune);
     }
 
     public string CaptureState()
@@ -292,5 +317,27 @@ public class AttackEnemyAI : MonoBehaviour, ISaveable
                 agent.SetDestination(data.destination);
             }
         }
+    }
+    public void SetAIActive(bool active)
+    {
+        aiActive = active;
+
+        if (agent != null && agent.enabled && agent.isOnNavMesh)
+        {
+            agent.isStopped = !active;
+
+            if (!active)
+            {
+                agent.ResetPath();
+            }
+        }
+
+        if (!active)
+        {
+            isPatrolling = false;
+            escapingLight = false;
+        }
+
+        Debug.Log("Enemy AI active: " + active);
     }
 }

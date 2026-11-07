@@ -16,7 +16,7 @@ namespace Interaction
         [SerializeField] private TextMeshProUGUI patientInfo;
         [SerializeField] private TextMeshProUGUI innerMessage;
 
-        [SerializeField] private string invenTitle = "INVENTORY";
+        [SerializeField] private string invenTitle = "COLLECTION";
    
 
         public bool IsOpen { get; private set; } = false;
@@ -41,7 +41,6 @@ namespace Interaction
         {
             if (!context.performed)
             {
-
                 return;
                 Debug.Log("Inventory Button pressed");
             }
@@ -87,7 +86,7 @@ namespace Interaction
             }
         }
 
-        private void RefreshGrid()
+        public void RefreshGrid()
         {
             if (gridParent == null || slotPrefab == null)
             {

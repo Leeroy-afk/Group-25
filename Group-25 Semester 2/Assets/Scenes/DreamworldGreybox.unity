@@ -897,6 +897,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!135 &18801799
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2097,6 +2098,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!135 &30296317
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19423,6 +19425,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!135 &291457051
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25638,6 +25641,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &360775163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27340,6 +27344,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!114 &395200053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31450,6 +31455,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!82 &443636329
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36207,6 +36213,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!135 &483355555
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -37821,6 +37828,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!135 &530776019
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -39498,6 +39506,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!135 &558201564
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -40089,6 +40098,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &560175302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45137,6 +45147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3990b14a38d4ec4282c4f97e404f425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.InventoryManager
+  maxCapacity: 5
 --- !u!4 &621375827
 Transform:
   m_ObjectHideFlags: 0
@@ -58626,6 +58637,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!135 &839752957
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -68497,7 +68509,7 @@ Transform:
   m_GameObject: {fileID: 964986084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.70151, y: 6.39, z: -12.75}
+  m_LocalPosition: {x: 20.70151, y: 6.39, z: 3.47}
   m_LocalScale: {x: 15, y: 5, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69840,6 +69852,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &978278518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77999,6 +78012,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &1118905820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88285,6 +88299,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &1302073113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93394,6 +93409,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &1340522809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93536,6 +93552,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!135 &1342026358
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -105170,6 +105187,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &1535729159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -111791,6 +111809,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &1628064663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -115483,6 +115502,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!135 &1671929353
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -119690,6 +119710,8 @@ MonoBehaviour:
   descriptionText: {fileID: 1290298764}
   exitPromptText: {fileID: 915443441}
   viewingPanel: {fileID: 913011657}
+  notificationText: {fileID: 0}
+  notificationDuration: 2
 --- !u!43 &1701974800
 Mesh:
   m_ObjectHideFlags: 0
@@ -121309,6 +121331,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &1715482285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125465,6 +125488,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &1781520184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127633,6 +127657,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &1802797122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -134320,6 +134345,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!135 &1914669177
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -137825,6 +137851,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!135 &1943970869
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -138981,6 +139008,7 @@ MonoBehaviour:
   showInspectionScreen: 1
   addToInventory: 1
   destroyOnClose: 1
+  pairedKeyMemoryToDisable: {fileID: 0}
 --- !u!65 &1969373407
 BoxCollider:
   m_ObjectHideFlags: 0

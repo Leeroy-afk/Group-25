@@ -3,7 +3,9 @@ using UnityEngine.InputSystem;
 
 public class PatientStay : MonoBehaviour
 {
-    [SerializeField] private PatientStayCommand patientStayCommand;
+    [SerializeField] private PatientAI patientAI;
+
+    [SerializeField] private float interactionRange = 3f;
 
     private PlayerInput playerInput;
 
@@ -26,9 +28,21 @@ public class PatientStay : MonoBehaviour
     {
         Debug.Log("Patient Command pressed");
 
-        if (patientStayCommand != null)
+        if (patientAI == null)
+            return;
+
+        float distance = Vector3.Distance(transform.position,
+            patientAI.transform.position );
+
+        if (distance <= interactionRange)
         {
-            patientStayCommand.PatientCommand();
+            Debug.Log("Patient interaction successful");
+            patientAI.ToggleFollowing();
+        }
+        else
+        {
+            Debug.Log("Player is far from patient");
         }
     }
+
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class EnemyEncounterZone : MonoBehaviour
 {
@@ -14,12 +15,14 @@ public class EnemyEncounterZone : MonoBehaviour
     public float attackDamage = 10f;
     public float attackCooldown = 1f;
 
+    [Header("Cooldown")]
+    public float encounterCooldown = 5f;
+
     private bool completed = false;
     private bool playerInside = false;
 
     private NavMeshAgent agent;
 
-    // Original enemy settings
     private float originalSpeed;
     private float originalDamage;
     private float originalCooldown;
@@ -59,7 +62,6 @@ public class EnemyEncounterZone : MonoBehaviour
 
         playerInside = true;
 
-        // Apply encounter settings
         if (agent != null)
             agent.speed = enemySpeed;
 
@@ -85,10 +87,19 @@ public class EnemyEncounterZone : MonoBehaviour
         playerInside = false;
         completed = true;
 
-        // Deactivate enemy
+        encounterManager.ReleaseEncounter(this);
+
+        StartCoroutine(ReturnToNaturalBehaviour());
+
+        Debug.Log("Enemy encounter completed: " + gameObject.name);
+    }
+
+    private IEnumerator ReturnToNaturalBehaviour()
+    {
         enemyAI.SetAIActive(false);
 
-        // Restore original settings
+        yield return new WaitForSeconds(encounterCooldown);
+
         if (agent != null)
             agent.speed = originalSpeed;
 
@@ -96,8 +107,9 @@ public class EnemyEncounterZone : MonoBehaviour
         enemyAI.attackCooldown = originalCooldown;
         enemyAI.SetLightImmunity(originalLightImmunity);
 
-        encounterManager.ReleaseEncounter(this);
+        enemyAI.StopPatrol();
+        enemyAI.SetAIActive(true);
 
-        Debug.Log("Enemy encounter completed: " + gameObject.name);
+        Debug.Log("Enemy returned to natural follow-and-attack behaviour.");
     }
 }

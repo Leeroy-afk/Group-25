@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 namespace Interaction
 {
@@ -7,11 +8,21 @@ namespace Interaction
         [Header("Required Memory")]
         public string requiredItemID;
 
-        [Header("Gate Settings")]
-        public Animator gateAnimator;
-        public string openAnimationTrigger = "Open";
+        [Header("Gate Movement")]
+        public Transform gatePivot;
+        public float openAngle = 90f;
+        public float openDuration = 1.5f;
 
         private bool isUnlocked = false;
+        private Quaternion closedRotation;
+
+        private void Awake()
+        {
+            if (gatePivot == null)
+                gatePivot = transform;
+
+            closedRotation = gatePivot.localRotation;
+        }
 
         public void TryUnlock()
         {
@@ -28,17 +39,39 @@ namespace Interaction
             {
                 isUnlocked = true;
 
-                if (gateAnimator != null)
-                {
-                    gateAnimator.SetTrigger(openAnimationTrigger);
-                }
+                Debug.Log("Memory gate unlocked!");
 
-                Debug.Log("Gate unlocked!");
+                StartCoroutine(OpenGate());
             }
             else
             {
                 Debug.Log("You need memory fragment: " + requiredItemID);
             }
+        }
+
+        private IEnumerator OpenGate()
+        {
+            Quaternion targetRotation =
+                closedRotation * Quaternion.Euler(0f, openAngle, 0f);
+
+            float elapsed = 0f;
+
+            while (elapsed < openDuration)
+            {
+                elapsed += Time.deltaTime;
+
+                float progress = Mathf.Clamp01(elapsed / openDuration);
+
+                gatePivot.localRotation = Quaternion.Slerp(
+                    closedRotation,
+                    targetRotation,
+                    progress
+                );
+
+                yield return null;
+            }
+
+            gatePivot.localRotation = targetRotation;
         }
     }
 }

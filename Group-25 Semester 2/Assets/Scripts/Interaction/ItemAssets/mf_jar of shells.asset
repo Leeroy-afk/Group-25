@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed43b8c9f8528d4d831271bc212eaa6, type: 3}
   m_Name: mf_jar of shells
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
+  itemID: testItem
   title: jar of sea shells
   description: a dirty jar of meticulously gathered multicolour sea shells
   icon: {fileID: 1612878600, guid: 076452513f3cd2041902242c6332ca2f, type: 3}

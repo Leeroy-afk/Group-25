@@ -161,8 +161,9 @@ public class AudioManager : MonoBehaviour
         {
             scream.Play();
             deathSoundPlayed = true;
+            Debug.Log("Player is dying");
         }
-        Debug.Log("Player is dying");
+      
     }
     public void PlayInteractionSound(AudioClip sound)
     {

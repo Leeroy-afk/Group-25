@@ -6,12 +6,18 @@ public class SceneChange : MonoBehaviour
 {
     public string scenename;
 
+    [Header("Enemy Sequence")]
+    [SerializeField]private AITriggerSequence aiTriggerSequence;
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
+        if (!other.CompareTag("Player"))
+            return;
+        if (!aiTriggerSequence.enemySequenceFinished)
+            return;
+        
             SceneManager.LoadScene(scenename);
         }
     }
 
-}
+

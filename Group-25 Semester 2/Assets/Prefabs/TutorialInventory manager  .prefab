@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4664751917790917800}
   - component: {fileID: 5355711595374746357}
   - component: {fileID: 6728869692804795109}
-  - component: {fileID: 8321649372053265323}
+  - component: {fileID: 2341364897435532880}
   m_Layer: 0
-  m_Name: Inventory manager  1
+  m_Name: 'TutorialInventory manager  '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   patientInfo: {fileID: 0}
   innerMessage: {fileID: 0}
   invenTitle: INVENTORY
---- !u!114 &8321649372053265323
+--- !u!114 &2341364897435532880
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,10 +75,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5134557478893153298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dfc7a71e4b3c5640b1eb8724e29377e, type: 3}
+  m_Script: {fileID: 11500000, guid: d6d12671e2485b2458c9d198170620b1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interaction.PedestalUI
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction.TutorialPedestalUI
   pedestalPanel: {fileID: 0}
   optionsParent: {fileID: 0}
-  optionButtonPrefab: {fileID: 3131419869352925823, guid: a03f3e1e73da8d2439dad1008dd00e76, type: 3}
+  optionButtonPrefab: {fileID: 0}
   titleText: {fileID: 0}
+  tutorialMenuTitile: ADMINISTER MEDICINE
+  noItemsText: You have no medicine to administer.

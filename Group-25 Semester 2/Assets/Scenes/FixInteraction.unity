@@ -948553,6 +948553,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1006941470119324455, guid: fc1db3f303f46d14581c20fc9c44847f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182118457012596998, guid: fc1db3f303f46d14581c20fc9c44847f, type: 3}
       propertyPath: m_Pivot.x
       value: 0

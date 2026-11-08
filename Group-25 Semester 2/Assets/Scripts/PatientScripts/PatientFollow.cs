@@ -7,34 +7,34 @@ using UnityEngine.InputSystem.XR;
 
 public class PatientAI : MonoBehaviour
 {
-    private GameObject destination;// where the patient should stop, their final destination
+    private GameObject destination;
     private NavMeshAgent agent;
+
     public AudioSource patientSteps;
 
+    private bool isFollowing = true;
 
     void Start()
     {
-        destination = GameObject.FindGameObjectWithTag("Player"); // makes agent follow player
-        agent = GetComponent<NavMeshAgent>();// // Allows script to access the navmesh on patien
-
-
+        destination = GameObject.FindGameObjectWithTag("Player");
+        agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
-    {  
-        agent.SetDestination(destination.transform.position); // Makes patient go to players position
-        if (agent)
+    {
+        if (agent == null || destination == null)
+            return;
+
+        if (isFollowing)
         {
-            if (agent.velocity.magnitude > 0)
+            agent.SetDestination(destination.transform.position);
+        }
+
+        if (agent.velocity.magnitude > 0.1f)
+        {
+            if (!patientSteps.isPlaying)
             {
-                if (!patientSteps.isPlaying)
-                {
-                    patientSteps.Play();
-                }
-            }
-            else
-            {
-                patientSteps.Stop();
+                patientSteps.Play();
             }
         }
         else
@@ -42,6 +42,22 @@ public class PatientAI : MonoBehaviour
             patientSteps.Stop();
         }
     }
+    public void ToggleFollowing()
+    {
+        isFollowing = !isFollowing;
 
-    
+        if (isFollowing)
+        {
+            agent.isStopped = false;
+            Debug.Log("Patient is following the player");
+        }
+        else
+        {
+            agent.isStopped = true;
+            agent.ResetPath();
+            patientSteps.Stop();
+
+            Debug.Log("Patient is staying in place");
+        }
+    }
 }

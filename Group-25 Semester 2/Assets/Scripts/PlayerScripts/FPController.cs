@@ -34,14 +34,11 @@ public class FPController : MonoBehaviour
     public Vector2 moveInput;
     private Vector2 lookInput;
 
-    private Vector3 velocity;
+    public Vector3 velocity;
     private float verticalRotation;
 
-    private bool isCrouching;
-
-    public AudioSource footSteps;
-
-
+    internal bool isCrouching;
+    public bool isGrounded;
 
     private void Awake()
     {
@@ -58,24 +55,6 @@ public class FPController : MonoBehaviour
         HandleGravity();
         HandleCrouch();
 
-        if (controller.isGrounded)
-        {
-            if (controller.velocity.magnitude > 0 )
-            {
-                if (!footSteps.isPlaying)
-                {
-                    footSteps.Play();
-                }
-            }
-            else
-            {
-                footSteps.Stop();
-            }
-        }
-        else
-        {
-            footSteps.Stop();
-        }
     }
 
 
@@ -153,6 +132,7 @@ public class FPController : MonoBehaviour
 
     private void HandleGravity()
     {
+        isGrounded = controller.isGrounded;
         if (controller.isGrounded && velocity.y < 0f)
         {
             velocity.y = -2f;

@@ -190,6 +190,15 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ItemCollect"",
+                    ""type"": ""Button"",
+                    ""id"": ""0665b5ea-15cd-40ec-8d57-c1237e4b6d26"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -555,6 +564,28 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
                     ""action"": ""INTERACTION1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6f649a16-f785-4758-bf30-ddf81a67073a"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemCollect"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""22699112-f8eb-4220-8da9-b2cebc132271"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemCollect"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -822,6 +853,7 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         m_Player_PatientCommand = m_Player.FindAction("PatientCommand", throwIfNotFound: true);
         m_Player_InventoryAcessClose = m_Player.FindAction("InventoryAcess/Close", throwIfNotFound: true);
         m_Player_INTERACTION1 = m_Player.FindAction("INTERACTION1", throwIfNotFound: true);
+        m_Player_ItemCollect = m_Player.FindAction("ItemCollect", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_DialogueAdvance = m_UI.FindAction("DialogueAdvance", throwIfNotFound: true);
@@ -920,6 +952,7 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_PatientCommand;
     private readonly InputAction m_Player_InventoryAcessClose;
     private readonly InputAction m_Player_INTERACTION1;
+    private readonly InputAction m_Player_ItemCollect;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -975,6 +1008,10 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/INTERACTION1".
         /// </summary>
         public InputAction @INTERACTION1 => m_Wrapper.m_Player_INTERACTION1;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/ItemCollect".
+        /// </summary>
+        public InputAction @ItemCollect => m_Wrapper.m_Player_ItemCollect;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1034,6 +1071,9 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
             @INTERACTION1.started += instance.OnINTERACTION1;
             @INTERACTION1.performed += instance.OnINTERACTION1;
             @INTERACTION1.canceled += instance.OnINTERACTION1;
+            @ItemCollect.started += instance.OnItemCollect;
+            @ItemCollect.performed += instance.OnItemCollect;
+            @ItemCollect.canceled += instance.OnItemCollect;
         }
 
         /// <summary>
@@ -1078,6 +1118,9 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
             @INTERACTION1.started -= instance.OnINTERACTION1;
             @INTERACTION1.performed -= instance.OnINTERACTION1;
             @INTERACTION1.canceled -= instance.OnINTERACTION1;
+            @ItemCollect.started -= instance.OnItemCollect;
+            @ItemCollect.performed -= instance.OnItemCollect;
+            @ItemCollect.canceled -= instance.OnItemCollect;
         }
 
         /// <summary>
@@ -1337,6 +1380,13 @@ public partial class @Controlls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnINTERACTION1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ItemCollect" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnItemCollect(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

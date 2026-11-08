@@ -19,9 +19,11 @@ namespace Interaction
         [SerializeField] private ItemData itemData;
         [SerializeField] private bool showInspectionScreen = true;
         [SerializeField] private bool addToInventory = true;
-        [SerializeField] private bool destroyOnClose = true;
+        [SerializeField] private bool destroyOnClose = false;
 
-        
+        //for key memories (so that only one an be collected at the end of each path) 
+        [SerializeField] private GameObject pairedKeyMemoryToDisable; 
+
 
         private Renderer objectRenderer;
 
@@ -30,6 +32,8 @@ namespace Interaction
         private bool isCollected = false;
         public string DisplayName => displayName;
         public bool CanInteract() => isEnabled && (!addToInventory || !isCollected);
+
+        public bool AddToInventory => addToInventory; //UI check
 
         public void Awake()
         {
@@ -52,22 +56,26 @@ namespace Interaction
 
             if (itemData != null && showInspectionScreen)
             {
-                if (addToInventory) // adds item to inventory
-                {
-                    isCollected = true;
-                    if (InventoryManager.Instance != null)
-                    {
-                        InventoryManager.Instance.AddItem(itemData);
-                    }
-                   
-                }
-                
                 if (InteractInspectUI.Instance != null) // destroys game objects (like for collectable items)
-                { 
-                    GameObject targetToDestroy = destroyOnClose ? gameObject : null;
+                {
 
-                    InteractInspectUI.Instance.ShowInspection(itemData.title, itemData.description, itemData.icon, targetToDestroy); 
+                    InteractInspectUI.Instance.ShowInspection(itemData, gameObject, this); 
                 }
+            }
+        }
+
+        public void MarkAsCollected()
+        {
+            isCollected = true;
+
+            if(pairedKeyMemoryToDisable !=null)
+            {
+                pairedKeyMemoryToDisable.SetActive(false);
+            }
+
+            if (destroyOnClose)
+            {
+                Destroy(gameObject);
             }
         }
 

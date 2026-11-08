@@ -34,7 +34,7 @@ namespace Interaction
             if (currentItem != null && InteractInspectUI.Instance != null)
             {
                 // Inspect item from inventory without passing a world GameObject to destroy
-                InteractInspectUI.Instance.ShowInspection(currentItem.title, currentItem.description, currentItem.icon, null);
+                InteractInspectUI.Instance.ShowInspection(currentItem);
             }
         }
     }

@@ -3,12 +3,7 @@ guid: d1b406c1c59be4045ad7414bf43b76a9
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Diffuse(crate)
-    second: {fileID: 2800000, guid: 559c0d86c389bb249ab120af7cba7dee, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

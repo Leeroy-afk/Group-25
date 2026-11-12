@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed43b8c9f8528d4d831271bc212eaa6, type: 3}
   m_Name: mf_bait
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
+  itemID: ItemTest
   title: bucket of chum
   description: smells rancid, potent enough to attract some big predators
   icon: {fileID: 1102518548, guid: 076452513f3cd2041902242c6332ca2f, type: 3}

@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2811935722379593305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8900932479474977545}
+  - component: {fileID: 5135197141365058600}
+  - component: {fileID: 9138732821734645317}
+  - component: {fileID: 5205406484113108893}
+  - component: {fileID: 5317894433319865285}
+  m_Layer: 0
+  m_Name: TutInventoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8900932479474977545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811935722379593305}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.1739, y: 3, z: 10.60034}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5135197141365058600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811935722379593305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3990b14a38d4ec4282c4f97e404f425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction.InventoryManager
+  maxCapacity: 5
+--- !u!114 &9138732821734645317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811935722379593305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717cd4b150be6814ab2a87a3a0f8eeac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction.InventoryUI
+  inventoryPanel: {fileID: 0}
+  gridParent: {fileID: 0}
+  slotPrefab: {fileID: 496604383920402138, guid: 7024f65b7305d154ca66a76ea717b9d7, type: 3}
+  titleText: {fileID: 0}
+  patientInfo: {fileID: 0}
+  innerMessage: {fileID: 0}
+  invenTitle: INVENTORY
+--- !u!114 &5205406484113108893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811935722379593305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94fbbb0bd1d9fcd488f743059b6ee92b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction.NotificationDisplay
+  notificationText: {fileID: 0}
+  notificationDuration: 2
+--- !u!114 &5317894433319865285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811935722379593305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd731e1790e7bb46af681dff606f8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction.TutorialPedestalUI
+  pedestalPanel: {fileID: 0}
+  optionsParent: {fileID: 0}
+  optionButtonPrefab: {fileID: 3131419869352925823, guid: a03f3e1e73da8d2439dad1008dd00e76, type: 3}
+  titleText: {fileID: 0}
+  chooseMedicineTitle: Choose medicine to administer
+  noMedicineText: You have no medicine to administer.

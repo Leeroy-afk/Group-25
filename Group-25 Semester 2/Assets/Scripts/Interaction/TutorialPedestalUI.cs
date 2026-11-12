@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace Interaction
@@ -8,61 +9,51 @@ namespace Interaction
     public class TutorialPedestalUI : MonoBehaviour
     {
         public static TutorialPedestalUI Instance { get; private set; }
+
+
         [SerializeField] private GameObject pedestalPanel;
         [SerializeField] private Transform optionsParent;
         [SerializeField] private GameObject optionButtonPrefab;
         [SerializeField] private TextMeshProUGUI titleText;
 
-        [Header("Tutorial Customization")]
-        [SerializeField] private string tutorialMenuTitile = "ADMINISTER MEDICINE"; //these ones are just place holders, you can customize it to say whatever you want
-        [SerializeField] private string noItemsText = "You have no medicine to administer."; 
-        private TutorialPedestalInteract currentPedestal;
+        [Header("Customize Menu Text")]
+        [SerializeField] private string chooseMedicineTitle = "Choose medicine to administer";
+        [SerializeField] private string noMedicineText = "You have no medicine to administer.";
+
+        private TutPedestalInteract currentPedestal;
         public bool IsOpen { get; private set; } = false;
 
         private void Awake()
         {
-            if (Instance == null)
-            {
-                Instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-            if (pedestalPanel != null)
-            {
-                pedestalPanel.SetActive(false);
-            }
+            if (Instance == null) Instance = this;
+            else Destroy(gameObject);
+
+            if (pedestalPanel != null) pedestalPanel.SetActive(false);
         }
 
-        private void Update()
+       
+        public void OpenPedestalMenu(TutPedestalInteract pedestal)
         {
-            // Allows the player to press Escape or Q to close the menu if they get stuck
-            if (IsOpen && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Q)))
+            // Toggle closed if already open for this pedestal
+            if (IsOpen && currentPedestal == pedestal)
             {
                 ClosePedestalMenu();
+                return;
             }
-        }
-        public void OpenPedestalMenu(TutorialPedestalInteract pedestal)
-        {
+
             currentPedestal = pedestal;
             IsOpen = true;
 
-            if (titleText != null) // thsi sets the customer title text for the tutorial 
-            {
-                titleText.text = tutorialMenuTitile;
-            }
-
-            foreach (Transform child in optionsParent) //clears old buttons
+            foreach (Transform child in optionsParent)
             {
                 Destroy(child.gameObject);
             }
 
+            bool foundAny = false;
+
             if (InventoryManager.Instance != null)
             {
                 List<ItemData> items = InventoryManager.Instance.GetItems();
-
-                bool foundAny = false;
 
                 foreach (ItemData item in items)
                 {
@@ -79,23 +70,30 @@ namespace Interaction
                         butt.onClick.AddListener(() => OnItemSelected(selectedItem));
                     }
                 }
-                if (!foundAny && titleText != null)
+            }
+
+            // Dynamically set the title text depending on inventory contents
+            if (titleText != null)
+            {
+                if (foundAny)
                 {
-                    titleText.text = noItemsText;
+                    titleText.text = chooseMedicineTitle;
+                }
+                else
+                {
+                    titleText.text = noMedicineText;
                 }
             }
 
             pedestalPanel.SetActive(true);
-            
 
+            // Unlock mouse for UI interaction
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            var playerController = FindObjectOfType<FPController>();
-            if (playerController != null)
-            {
-                playerController.enabled = false; // Disables the controller script entirely while menu is open
-            }
+            // Safely pause player look input without touching FPController
+            var playerController = FindAnyObjectByType<FPController>();
+            if (playerController != null) playerController.enabled = false;
         }
 
         private void OnItemSelected(ItemData item)
@@ -104,29 +102,22 @@ namespace Interaction
             {
                 currentPedestal.TryPlaceMemory(item);
             }
-
             ClosePedestalMenu();
         }
 
         public void ClosePedestalMenu()
         {
+            if (!IsOpen) return;
+
             IsOpen = false;
-            if (pedestalPanel != null)
-            {
-                pedestalPanel.SetActive(false);
-            }
+            if (pedestalPanel != null) pedestalPanel.SetActive(false);
 
-            Time.timeScale = 1f;
-
+            // Re-lock mouse and restore player controls
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
 
-            // Re-enable the player controller script
-            var playerController = FindObjectOfType<FPController>();
-            if (playerController != null)
-            {
-                playerController.enabled = true;
-            }
+            var playerController = FindAnyObjectByType<FPController>();
+            if (playerController != null) playerController.enabled = true;
         }
     }
 }

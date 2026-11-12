@@ -23,8 +23,6 @@ public class PlayerHide : MonoBehaviour
     private bool isHiding = false;
     private float hideTimer;
 
-    public AudioSource heartBeat;
-
     private void OnEnable()
     {
         hideAction.action.performed += ToggleHide;
@@ -70,8 +68,6 @@ public class PlayerHide : MonoBehaviour
 
         playerController.enabled = false;
 
-        heartBeat.enabled = true;
-
         AttackEnemyAI[] enemies =
             FindObjectsByType<AttackEnemyAI>(FindObjectsSortMode.None);
 
@@ -93,8 +89,6 @@ public class PlayerHide : MonoBehaviour
         playerSanity.SetHiding(false);
 
         playerController.enabled = true;
-
-        heartBeat.enabled = false;
 
         AttackEnemyAI[] enemies =
             FindObjectsByType<AttackEnemyAI>(FindObjectsSortMode.None);

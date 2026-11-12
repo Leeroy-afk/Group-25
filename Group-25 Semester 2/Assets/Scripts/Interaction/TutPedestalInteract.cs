@@ -4,16 +4,15 @@ using UnityEngine;
 
 namespace Interaction
 {
-    public class TutorialPedestalInteract : MonoBehaviour, IInteractable
+    public class TutPedestalInteract : MonoBehaviour, IInteractable
     {
-        [SerializeField] private string pedestalName = "tutorial Pedestale";
-        [SerializeField] private List<PedestalParts> memAndBodies; // this refers to the item information and the physical item gameobject together as one element in the list. This looks at which object is occupying the pedastle
+        [SerializeField] private string pedestalName = "Tutorial Pedestal";
+        [SerializeField] private List<PedestalParts> memAndBodies;
 
         [SerializeField] private Material highlightMaterial;
         [SerializeField] private TextMeshProUGUI promptText;
 
         private Renderer objectRenderer;
-
         private Material originalMaterial;
 
         private ItemData currentlyPlacedItem;
@@ -24,7 +23,7 @@ namespace Interaction
         public bool CanInteract() => !IsOccupied;
 
         [System.Serializable]
-        public struct PedestalParts // basiaclly connects these two pieces of information (the memory fragment and the item data it has attached)
+        public struct PedestalParts
         {
             public ItemData itemData;
             public GameObject memoryObject;
@@ -33,35 +32,22 @@ namespace Interaction
         private void Awake()
         {
             objectRenderer = GetComponent<Renderer>();
-            if (objectRenderer != null)
-            {
-                originalMaterial = objectRenderer.material;
-            }
-            if (promptText != null)
-            {
-                promptText.gameObject.SetActive(false);
-            }
+            if (objectRenderer != null) originalMaterial = objectRenderer.material;
+            if (promptText != null) promptText.gameObject.SetActive(false);
         }
-
 
         private void Start()
         {
-            foreach (var Parts in memAndBodies)
+            foreach (var parts in memAndBodies)
             {
-                if (Parts.memoryObject != null)
-                {
-                    Parts.memoryObject.SetActive(false);
-                }
-
+                if (parts.memoryObject != null) parts.memoryObject.SetActive(false);
             }
         }
 
-        public void OnFocusGained() // this is the function that is called when the player looks at the pedestal. It will highlight the pedestal and show the prompt text
+        public void OnFocusGained()
         {
-            if (IsOccupied)
-            {
-                return;
-            }
+            if (IsOccupied) return;
+
             if (objectRenderer != null && highlightMaterial != null)
             {
                 objectRenderer.material = highlightMaterial;
@@ -69,13 +55,12 @@ namespace Interaction
             if (promptText != null)
             {
                 promptText.gameObject.SetActive(true);
-                promptText.text = " press [E]/ Button South to interact ";
+                promptText.text = " press [E] / Button South to interact ";
             }
         }
 
         public void OnFocusLost()
         {
-
             if (objectRenderer != null && originalMaterial != null)
             {
                 objectRenderer.material = originalMaterial;
@@ -86,13 +71,10 @@ namespace Interaction
             }
         }
 
-
         public void Interact()
         {
-            if (IsOccupied)
-            {
-                return;
-            }
+            if (IsOccupied) return;
+
             if (TutorialPedestalUI.Instance != null)
             {
                 TutorialPedestalUI.Instance.OpenPedestalMenu(this);
@@ -103,35 +85,27 @@ namespace Interaction
         {
             if (IsOccupied || itemData == null) return false;
 
-            foreach (var Parts in memAndBodies)
+            foreach (var parts in memAndBodies)
             {
-                if (Parts.itemData == itemData)
+                if (parts.itemData == itemData)
                 {
                     currentlyPlacedItem = itemData;
 
-                    if (Parts.memoryObject != null) // makes the memory object on the pedestal visible
+                    if (parts.memoryObject != null)
                     {
-                        Parts.memoryObject.SetActive(true);
+                        parts.memoryObject.SetActive(true); // Makes the 3D model appear
                     }
-                    if (InventoryManager.Instance != null) // removes memory from inventory 
+                    if (InventoryManager.Instance != null)
                     {
-                        InventoryManager.Instance.RemoveItem(itemData);
+                        InventoryManager.Instance.RemoveItem(itemData); // Removes item from inventory
                     }
-
-                    Cursor.lockState = CursorLockMode.None;
-                    Cursor.visible = true;
-
 
                     return true;
-
                 }
-
             }
 
-            Debug.LogWarning("This item cannot be placed on this pedestal.");
-
+            Debug.LogWarning("This item cannot be placed on this tutorial pedestal.");
             return false;
         }
     }
 }
-

@@ -1,21 +1,17 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Scene Settings")]
+    [SerializeField] private string deathSceneName = "DeathScene";
+
     public void PlayerDied()
     {
-        Debug.Log("PLAYER DIED: Respawning at checkpoint!");
+        Debug.Log("PLAYER DIED: Loading Death Scene!");
 
-        // Make sure gameplay is not paused.
         Time.timeScale = 1f;
 
-        if (SaveManager.Instance != null)
-        {
-            SaveManager.Instance.RespawnFromCheckpoint();
-        }
-        else
-        {
-            Debug.LogError("SaveManager was not found!");
-        }
+        SceneManager.LoadScene(deathSceneName);
     }
 }

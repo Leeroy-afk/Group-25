@@ -27888,7 +27888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3edef88360bc342a5162c290e7248d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.MemoryGate
-  requiredItemID: ItemTest
+  requiredItemID: GateKey_1
   gatePivot: {fileID: 395200054}
   openAngle: 90
   openDuration: 1.5
@@ -35686,6 +35686,80 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &468005490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468005493}
+  - component: {fileID: 468005492}
+  - component: {fileID: 468005491}
+  m_Layer: 0
+  m_Name: EnemyEncounter_02 (Aggressive)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &468005491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468005490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f38f1b08d2fd614997e10a35ebea3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyEncounterZone
+  encounterManager: {fileID: 245314408}
+  enemyAI: {fileID: 2104251759}
+  lightImmunity: 1
+  startPatrolling: 0
+  enemySpeed: 7
+  attackDamage: 25
+  attackCooldown: 0.5
+  encounterCooldown: 120
+--- !u!65 &468005492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468005490}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &468005493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468005490}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.64, y: 24.48, z: 67.3}
+  m_LocalScale: {x: 60, y: 5, z: 80}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480857465
 GameObject:
   m_ObjectHideFlags: 0
@@ -67726,8 +67800,8 @@ MonoBehaviour:
   lightImmunity: 0
   startPatrolling: 1
   enemySpeed: 3.5
-  attackDamage: 25
-  attackCooldown: 0.5
+  attackDamage: 10
+  attackCooldown: 1
   encounterCooldown: 5
 --- !u!65 &964986086
 BoxCollider:
@@ -129765,6 +129839,80 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1836384590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836384593}
+  - component: {fileID: 1836384592}
+  - component: {fileID: 1836384591}
+  m_Layer: 0
+  m_Name: EnemyEncounter_02 (Aggressive) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1836384591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836384590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f38f1b08d2fd614997e10a35ebea3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyEncounterZone
+  encounterManager: {fileID: 245314408}
+  enemyAI: {fileID: 2104251759}
+  lightImmunity: 0
+  startPatrolling: 0
+  enemySpeed: 3.5
+  attackDamage: 10
+  attackCooldown: 1
+  encounterCooldown: 15
+--- !u!65 &1836384592
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836384590}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1836384593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836384590}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -136, y: 24.48, z: 81.1}
+  m_LocalScale: {x: 90, y: 5, z: 80}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1837541963
 Mesh:
   m_ObjectHideFlags: 0
@@ -261162,6 +261310,8 @@ SceneRoots:
   - {fileID: 930722816}
   - {fileID: 245314409}
   - {fileID: 964986087}
+  - {fileID: 468005493}
+  - {fileID: 1836384593}
   - {fileID: 1251284785}
   - {fileID: 259548113}
   - {fileID: 420130538}

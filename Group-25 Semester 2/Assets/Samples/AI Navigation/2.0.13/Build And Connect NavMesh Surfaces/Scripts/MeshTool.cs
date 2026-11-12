@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.AI;
+using Unity.AI.Navigation;
 
 namespace Unity.AI.Navigation.Samples
 {

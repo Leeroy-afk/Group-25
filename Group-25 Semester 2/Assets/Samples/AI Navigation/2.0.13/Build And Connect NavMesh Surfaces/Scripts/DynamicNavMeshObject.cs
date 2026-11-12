@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.AI.Navigation;
 
 namespace Unity.AI.Navigation.Samples
 {

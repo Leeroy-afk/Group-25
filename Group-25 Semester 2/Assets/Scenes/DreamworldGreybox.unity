@@ -30540,7 +30540,6 @@ GameObject:
   - component: {fileID: 621375826}
   - component: {fileID: 621375825}
   - component: {fileID: 621375824}
-  - component: {fileID: 621375828}
   m_Layer: 0
   m_Name: 'Inventory manager '
   m_TagString: Untagged
@@ -30611,20 +30610,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &621375828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621375823}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fbbb0bd1d9fcd488f743059b6ee92b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interaction.NotificationDisplay
-  notificationText: {fileID: 2104863333}
-  notificationDuration: 2
 --- !u!43 &622447891
 Mesh:
   m_ObjectHideFlags: 0

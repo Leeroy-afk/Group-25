@@ -19,6 +19,9 @@ public class PatientAI : MonoBehaviour
 
     private bool isFollowing = true;
 
+    [Header("Animation")]
+    public Animator animator;
+
     void Start()
     {
         destination = GameObject.FindGameObjectWithTag("Player");
@@ -31,21 +34,26 @@ public class PatientAI : MonoBehaviour
         if (agent == null || destination == null)
             return;
 
+        UpdateAnimation();
+
+
         if (isFollowing)
         {
             agent.SetDestination(destination.transform.position);
         }
-
-        if (agent.velocity.magnitude > 0.1f)
+        if (patientSteps != null)
         {
-            if (!patientSteps.isPlaying)
+            if (agent.velocity.magnitude > 0.1f)
             {
-                patientSteps.Play();
+                if (!patientSteps.isPlaying)
+                {
+                    patientSteps.Play();
+                }
             }
-        }
-        else
-        {
-            patientSteps.Stop();
+            else
+            {
+                patientSteps.Stop();
+            }
         }
 
         if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
@@ -86,5 +94,16 @@ public class PatientAI : MonoBehaviour
         {
             promptText.text = "[Q] Ask to follow";
         }
+    }
+    private void UpdateAnimation()
+    {
+        if (animator == null || agent == null)
+            return;
+
+        float speed = agent.velocity.magnitude;
+
+        animator.SetFloat("Speed", speed, 0.1f, Time.deltaTime);
+
+        Debug.Log("Movement speed: " + agent.velocity.magnitude);
     }
 }

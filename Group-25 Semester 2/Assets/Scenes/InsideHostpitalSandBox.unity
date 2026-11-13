@@ -3369,6 +3369,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (25)
@@ -3953,6 +3957,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 99e07710a0d3f3744afb00b45ffd8141, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (14)
@@ -4588,6 +4596,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (11)
@@ -5706,6 +5718,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (16)
@@ -6502,6 +6518,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (20)
@@ -7768,6 +7788,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (10)
@@ -12678,6 +12702,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 737b9944afe31ae4eaf546196eea1f77, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle
@@ -13034,6 +13062,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a8f1a20e73ec0b4883be19e1676eff8, type: 2}
     - target: {fileID: 919132149155446097, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
       propertyPath: m_Name
       value: GloveBox (6)
@@ -17044,6 +17076,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (8)
@@ -18904,6 +18940,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (5)
@@ -19802,6 +19842,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (15)
@@ -20881,6 +20925,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (19)
@@ -22533,6 +22581,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a8f1a20e73ec0b4883be19e1676eff8, type: 2}
     - target: {fileID: 919132149155446097, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
       propertyPath: m_Name
       value: GloveBox (1)
@@ -22868,6 +22920,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (18)
@@ -26180,6 +26236,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (4)
@@ -28083,6 +28143,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3399a92ff07595d47ae688287e3fc167, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (9)
@@ -41391,6 +41455,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 13ea26c454f6b26489cfee7cdf30180f, type: 2}
     - target: {fileID: 919132149155446097, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
       propertyPath: m_Name
       value: GloveBox (3)
@@ -41898,6 +41966,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8591ada0832cbd046a90883b94c9aa4a, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (2)
@@ -42711,6 +42783,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 13ea26c454f6b26489cfee7cdf30180f, type: 2}
     - target: {fileID: 919132149155446097, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
       propertyPath: m_Name
       value: GloveBox (5)
@@ -42780,6 +42856,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (3)
@@ -43848,6 +43928,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (17)
@@ -45272,6 +45356,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (12)
@@ -50213,6 +50301,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a8f1a20e73ec0b4883be19e1676eff8, type: 2}
     - target: {fileID: 919132149155446097, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
       propertyPath: m_Name
       value: GloveBox (2)
@@ -50460,6 +50552,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (13)
@@ -50561,6 +50657,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (6)
@@ -51018,6 +51118,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a8f1a20e73ec0b4883be19e1676eff8, type: 2}
     - target: {fileID: 919132149155446097, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
       propertyPath: m_Name
       value: GloveBox
@@ -51443,6 +51547,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a8f1a20e73ec0b4883be19e1676eff8, type: 2}
     - target: {fileID: 919132149155446097, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
       propertyPath: m_Name
       value: GloveBox (4)
@@ -51512,6 +51620,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (22)
@@ -51613,6 +51725,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3399a92ff07595d47ae688287e3fc167, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (1)
@@ -51897,6 +52013,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 13ea26c454f6b26489cfee7cdf30180f, type: 2}
     - target: {fileID: 919132149155446097, guid: 39f6b94c9c6742e4aa0767e8e2d8a24e, type: 3}
       propertyPath: m_Name
       value: GloveBox (8)
@@ -52983,6 +53103,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (23)
@@ -59592,7 +59716,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4bb2c9dfbbb6a774f8b381fac06b7b2d, type: 2}
+  - {fileID: 2100000, guid: 02182ff0f9bae1a47ba228b1508b4cf5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59633,7 +59757,7 @@ Transform:
   m_GameObject: {fileID: 1964591048}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.76, y: 12.05, z: 23.08}
+  m_LocalPosition: {x: 9.75, y: 12.05, z: 23.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61877,6 +62001,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97eae10c55e0a374a87fe75135e86ab2, type: 2}
     - target: {fileID: 919132149155446097, guid: fe83466a33d60f743a201f6d3f23e0fc, type: 3}
       propertyPath: m_Name
       value: MedicineBottle (21)

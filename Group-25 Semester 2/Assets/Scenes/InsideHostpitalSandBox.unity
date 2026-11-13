@@ -9742,6 +9742,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6952542454545932753, guid: 0c9c0aa22e5310f4d9a06402dc77aa4b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197808762207114733, guid: 0c9c0aa22e5310f4d9a06402dc77aa4b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8576571238454634463, guid: 0c9c0aa22e5310f4d9a06402dc77aa4b, type: 3}
       propertyPath: m_Name
       value: TutInteractCanvas

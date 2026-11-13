@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed43b8c9f8528d4d831271bc212eaa6, type: 3}
   m_Name: mf_a bag of 13 coins
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
+  itemID: GateKey_4
   title: a bag of 13 gold coins
   description: 'it''s so specific, probably a gift for someone? '
   icon: {fileID: -357065325, guid: 076452513f3cd2041902242c6332ca2f, type: 3}

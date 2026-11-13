@@ -35,6 +35,11 @@ public class AttackEnemyAI : MonoBehaviour, ISaveable
 
     public bool lightImmunity = false;
 
+    private float currentSpeed;
+
+    [Header("Animation")]
+    public Animator animator;
+
     [Serializable]
     private class EnemyData
     {
@@ -70,6 +75,7 @@ public class AttackEnemyAI : MonoBehaviour, ISaveable
 
     private void Update()
     {
+        UpdateAnimation();
 
         if (!aiActive)
             return;
@@ -114,6 +120,18 @@ public class AttackEnemyAI : MonoBehaviour, ISaveable
             Attack();
         }
 
+    }
+
+    private void UpdateAnimation()
+    {
+        if (animator == null || agent == null)
+            return;
+
+        float speed = agent.velocity.magnitude;
+
+        animator.SetFloat("Speed", speed, 0.1f, Time.deltaTime);
+
+        Debug.Log("Movement speed: " + agent.velocity.magnitude);
     }
 
     private void Attack()

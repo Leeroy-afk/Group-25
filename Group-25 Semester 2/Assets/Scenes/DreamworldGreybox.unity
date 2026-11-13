@@ -72005,6 +72005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LowPoly_model
       objectReference: {fileID: 0}
+    - target: {fileID: 7288648778258558605, guid: eb9ca566d73f43f41bfb74b8748391ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5119254381276537374, guid: df1064cffd6935248986b18ea1a25867, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

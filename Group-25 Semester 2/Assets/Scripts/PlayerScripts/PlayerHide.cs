@@ -23,6 +23,12 @@ public class PlayerHide : MonoBehaviour
     private bool isHiding = false;
     private float hideTimer;
 
+    private bool canHide = false;
+
+    public void SetCanHide(bool value)
+    {
+        canHide = value;
+    }
     private void OnEnable()
     {
         hideAction.action.performed += ToggleHide;
@@ -50,6 +56,9 @@ public class PlayerHide : MonoBehaviour
 
     private void ToggleHide(InputAction.CallbackContext context)
     {
+        if (!canHide)
+            return;
+
         if (isHiding)
             return;
 

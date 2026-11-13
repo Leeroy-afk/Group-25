@@ -28,6 +28,14 @@ public class EnemyEncounterZone : MonoBehaviour
     private float originalCooldown;
     private bool originalLightImmunity;
 
+    [Header("Encounter Audio")]
+    public AudioSource audioSource;
+    public AudioClip encounterSFX;
+    public AudioClip encounterMusic;
+
+    public bool playSFXOnEnter = true;
+    public bool loopMusicDuringEncounter = true;
+
     private void Start()
     {
         if (enemyAI == null)
@@ -48,6 +56,7 @@ public class EnemyEncounterZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (!other.CompareTag("Player"))
             return;
 
@@ -61,6 +70,18 @@ public class EnemyEncounterZone : MonoBehaviour
             return;
 
         playerInside = true;
+
+        if (audioSource != null && playSFXOnEnter && encounterSFX != null)
+        {
+            audioSource.PlayOneShot(encounterSFX);
+        }
+
+        if (audioSource != null && loopMusicDuringEncounter  && encounterMusic != null)
+        {
+            audioSource.clip = encounterMusic;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
 
         if (agent != null)
             agent.speed = enemySpeed;

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed43b8c9f8528d4d831271bc212eaa6, type: 3}
   m_Name: mf_newspaper 1
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
+  itemID: GateKey_3
   title: a newspaper artical
   description: seems to talk of an infamous gangster
   icon: {fileID: -555329730, guid: 076452513f3cd2041902242c6332ca2f, type: 3}

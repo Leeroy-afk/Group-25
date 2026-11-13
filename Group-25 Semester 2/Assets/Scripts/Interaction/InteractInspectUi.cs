@@ -110,11 +110,11 @@ namespace Interaction
             {
                 if(currentInteractableComponent != null && currentInteractableComponent.AddToInventory) // modified for collectionaction on collectable items.
                 {
-                    exitPromptText.text = "Press [Q] / button east to collect item | press [E] / button south to exit";
+                    exitPromptText.text = "Press [Q] to collect item | press [E] to exit";
                 }
                 else
                 {
-                    exitPromptText.text = "press [E] / button south to exit";
+                    exitPromptText.text = "press [E] to exit";
                 }
                
             }
@@ -151,7 +151,7 @@ namespace Interaction
             }
             if (exitPromptText != null) 
             { 
-                exitPromptText.text = "press [Q] / button east to discard item | press [E] / button south to exit";
+                exitPromptText.text = "press [Q] to discard item | press [E] to exit";
             }
 
             if (itemImage != null)
@@ -193,7 +193,7 @@ namespace Interaction
                     {
                         if (exitPromptText != null)
                         {
-                            exitPromptText.text = "Inventory is full (max 5)! press [E] / button south to exit";
+                            exitPromptText.text = "Inventory is full (max 5)! press [E] to exit";
                         }
                     }
                 }

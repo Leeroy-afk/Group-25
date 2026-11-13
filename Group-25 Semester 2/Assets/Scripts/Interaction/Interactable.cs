@@ -89,7 +89,7 @@ namespace Interaction
             if (promptText != null)
             {
                 promptText.gameObject.SetActive(true);
-                promptText.text = (" press [E] / button south to interact ");
+                promptText.text = (" press [E] to interact ");
                 Debug.Log("prompt text is showing");
             }
         }

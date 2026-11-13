@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
+using TMPro;
 
 public class PatientAI : MonoBehaviour
 {
@@ -12,15 +13,17 @@ public class PatientAI : MonoBehaviour
 
     public AudioSource patientSteps;
 
-    private bool isFollowing = true;
+    [Header("UI Prompt")]
+    public TMP_Text promptText;
 
-    [Header("Animation")]
-    public Animator animator;
+
+    private bool isFollowing = true;
 
     void Start()
     {
         destination = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
+        UpdatePrompt();
     }
 
     private void Update()
@@ -45,11 +48,9 @@ public class PatientAI : MonoBehaviour
             patientSteps.Stop();
         }
 
-        if (animator != null)
+        if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
         {
-            float speed = agent.velocity.magnitude;
-
-            animator.SetFloat("Speed", speed);
+            ToggleFollowing();
         }
     }
     public void ToggleFollowing()
@@ -68,6 +69,22 @@ public class PatientAI : MonoBehaviour
             patientSteps.Stop();
 
             Debug.Log("Patient is staying in place");
+        }
+
+        UpdatePrompt();
+    }
+    private void UpdatePrompt()
+    {
+        if (promptText == null)
+            return;
+
+        if (isFollowing)
+        {
+            promptText.text = "[Q] Ask to stop";
+        }
+        else
+        {
+            promptText.text = "[Q] Ask to follow";
         }
     }
 }

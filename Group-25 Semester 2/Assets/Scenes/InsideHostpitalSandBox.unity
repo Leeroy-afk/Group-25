@@ -1396,7 +1396,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -27628,7 +27628,7 @@ MonoBehaviour:
   spLight2: {fileID: 137080177}
   spLight3: {fileID: 1918844101}
   spLight4: {fileID: 1676265149}
-  flashlightMessage: {fileID: 0}
+  flashlightMessage: {fileID: 1660746704}
   flickerCount: 5
   flickerSpeed: 0.2
 --- !u!65 &1226066385
@@ -45508,7 +45508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1660746705
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46144,7 +46144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnlockDialogueLater
   pedestals:
-  - {fileID: 0}
+  - {fileID: 7591775846975386006}
   dialogueTriggerObject: {fileID: 1430769209}
 --- !u!4 &1682062834
 Transform:

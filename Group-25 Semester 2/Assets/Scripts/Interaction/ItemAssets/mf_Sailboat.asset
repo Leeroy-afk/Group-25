@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: GateKey_6
   title: 'a pair of toy sail boats '
   description: each look hand carved and well worn
-  icon: {fileID: -672352431, guid: 076452513f3cd2041902242c6332ca2f, type: 3}
+  icon: {fileID: -234526942, guid: c90871a19688cf747a1694b7abe1b0e4, type: 3}
   alignment: 0
   isPlaceable: 0

@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: GateKey_2
   title: 'unsigned bank loan '
   description: 'there''s a signature missing '
-  icon: {fileID: -555329730, guid: 076452513f3cd2041902242c6332ca2f, type: 3}
+  icon: {fileID: -602916647, guid: c90871a19688cf747a1694b7abe1b0e4, type: 3}
   alignment: 0
   isPlaceable: 0

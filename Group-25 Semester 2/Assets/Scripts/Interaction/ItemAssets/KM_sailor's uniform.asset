@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed43b8c9f8528d4d831271bc212eaa6, type: 3}
   m_Name: KM_sailor's uniform
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
+  itemID: 
   title: sailor's uniform
   description: a discarded little child's sailor uniform, faintly stained with bloor
-  icon: {fileID: -167266480, guid: 076452513f3cd2041902242c6332ca2f, type: 3}
+  icon: {fileID: 352675310, guid: c90871a19688cf747a1694b7abe1b0e4, type: 3}
   alignment: 2
   isPlaceable: 1

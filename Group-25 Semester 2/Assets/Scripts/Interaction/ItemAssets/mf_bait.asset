@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: GateKey_7
   title: bucket of chum
   description: smells rancid, potent enough to attract some big predators
-  icon: {fileID: 1102518548, guid: 076452513f3cd2041902242c6332ca2f, type: 3}
+  icon: {fileID: 2137521813, guid: c90871a19688cf747a1694b7abe1b0e4, type: 3}
   alignment: 0
   isPlaceable: 0

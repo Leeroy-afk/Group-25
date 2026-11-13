@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: GateKey_4
   title: a bag of 13 gold coins
   description: 'it''s so specific, probably a gift for someone? '
-  icon: {fileID: -357065325, guid: 076452513f3cd2041902242c6332ca2f, type: 3}
+  icon: {fileID: 1581798147, guid: c90871a19688cf747a1694b7abe1b0e4, type: 3}
   alignment: 0
   isPlaceable: 0

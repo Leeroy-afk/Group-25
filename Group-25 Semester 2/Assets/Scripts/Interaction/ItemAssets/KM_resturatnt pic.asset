@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed43b8c9f8528d4d831271bc212eaa6, type: 3}
   m_Name: KM_resturatnt pic
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.ItemData
+  itemID: 
   title: 'a drawing of a fish resturant '
   description: a scribble of a resturant titled "Ramirez's"
-  icon: {fileID: -630331449, guid: 076452513f3cd2041902242c6332ca2f, type: 3}
+  icon: {fileID: -1107822182, guid: c90871a19688cf747a1694b7abe1b0e4, type: 3}
   alignment: 1
   isPlaceable: 1

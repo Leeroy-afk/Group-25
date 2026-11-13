@@ -17055,7 +17055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[1].speaker
-      value: ??
+      value: ???
       objectReference: {fileID: 0}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[2].speaker
@@ -17084,15 +17084,15 @@ PrefabInstance:
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[0].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
+      objectReference: {fileID: 21300000, guid: bdbf0a71f3c5f2c43a7d68289c2abdd4, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[1].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: ca85d89f65f6ddd438f48bc14a321e8f, type: 3}
+      objectReference: {fileID: 21300000, guid: 837095f82803be94a97fcb51e257f4d8, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[2].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
+      objectReference: {fileID: 21300000, guid: bdbf0a71f3c5f2c43a7d68289c2abdd4, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[3].portrait
       value: 
@@ -39821,27 +39821,27 @@ PrefabInstance:
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[0].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
+      objectReference: {fileID: 21300000, guid: bdbf0a71f3c5f2c43a7d68289c2abdd4, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[1].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
+      objectReference: {fileID: 21300000, guid: bdbf0a71f3c5f2c43a7d68289c2abdd4, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[2].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 52c73347324f6c74c8ef7c183e04ae89, type: 3}
+      objectReference: {fileID: 21300000, guid: 44f3a540fc41cc040a8ff09a8383f0f2, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[3].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
+      objectReference: {fileID: 21300000, guid: bdbf0a71f3c5f2c43a7d68289c2abdd4, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[4].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 52c73347324f6c74c8ef7c183e04ae89, type: 3}
+      objectReference: {fileID: 21300000, guid: 44f3a540fc41cc040a8ff09a8383f0f2, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[5].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
+      objectReference: {fileID: 21300000, guid: bdbf0a71f3c5f2c43a7d68289c2abdd4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -49067,15 +49067,15 @@ PrefabInstance:
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[0].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
+      objectReference: {fileID: 21300000, guid: bdbf0a71f3c5f2c43a7d68289c2abdd4, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[1].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 52c73347324f6c74c8ef7c183e04ae89, type: 3}
+      objectReference: {fileID: 21300000, guid: 44f3a540fc41cc040a8ff09a8383f0f2, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[2].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 52c73347324f6c74c8ef7c183e04ae89, type: 3}
+      objectReference: {fileID: 21300000, guid: 44f3a540fc41cc040a8ff09a8383f0f2, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[3].portrait
       value: 
@@ -115737,23 +115737,23 @@ PrefabInstance:
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[0].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 102df2b62cd06f242b819dd2ea823c2f, type: 3}
+      objectReference: {fileID: 21300000, guid: cb76790bc46c8104a81de61f88577730, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[1].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 102df2b62cd06f242b819dd2ea823c2f, type: 3}
+      objectReference: {fileID: 21300000, guid: cb76790bc46c8104a81de61f88577730, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[2].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: cfaff112d83d5ea4db5fab0cfb6d3482, type: 3}
+      objectReference: {fileID: 21300000, guid: bdbf0a71f3c5f2c43a7d68289c2abdd4, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[3].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 102df2b62cd06f242b819dd2ea823c2f, type: 3}
+      objectReference: {fileID: 21300000, guid: cb76790bc46c8104a81de61f88577730, type: 3}
     - target: {fileID: 8451805815172884903, guid: b25e08f8579e256468fee4ef832249d2, type: 3}
       propertyPath: conversations.Array.data[0].lines.Array.data[4].portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 102df2b62cd06f242b819dd2ea823c2f, type: 3}
+      objectReference: {fileID: 21300000, guid: cb76790bc46c8104a81de61f88577730, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -5,8 +5,16 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private Slider masterVolumeSlider;
     [SerializeField] private Slider mouseSensitivitySlider;
 
+    [SerializeField] private GameObject controlsPanel;
+   
+
     void Start()
     {
+        if (controlsPanel != null)
+        {
+            controlsPanel.SetActive(false);
+        }
+
         // saving defult values 
         float defaultVolume = 1f;
         float defaultSensitivity = 2f; 
@@ -38,5 +46,21 @@ public class SettingsManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("MouseSensitivity", sensitivity);
         PlayerPrefs.Save();
+    }
+
+    public void OpenControlsPanel()
+    {
+        if (controlsPanel != null)
+        {
+            controlsPanel.SetActive(true);
+        }
+    }
+
+    public void CloseControlsOverlay()
+    {
+        if (controlsPanel != null)
+        {
+            controlsPanel.SetActive(false);
+        }
     }
 }

@@ -2070,7 +2070,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3662,8 +3662,8 @@ Transform:
   m_GameObject: {fileID: 64278790}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.028616212, z: -0, w: 0.99959046}
-  m_LocalPosition: {x: 126.70462, y: 23.3, z: 28.912048}
-  m_LocalScale: {x: 2.1418004, y: 1, z: 2.293538}
+  m_LocalPosition: {x: 126.646, y: 23.3, z: 28.9094}
+  m_LocalScale: {x: 1.3412498, y: 1, z: 1.7970773}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1008527263}
@@ -6756,7 +6756,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8713,7 +8713,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -19447,7 +19447,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -19699,6 +19699,17 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &418387314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7036968964669859128, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+  m_PrefabInstance: {fileID: 2753735719210598286}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!43 &419060818
 Mesh:
   m_ObjectHideFlags: 0
@@ -28199,11 +28210,21 @@ Mesh:
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
-    indexCount: 36
+    indexCount: 18
+    topology: 0
+    baseVertex: 0
+    firstVertex: 4
+    vertexCount: 20
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+  - serializedVersion: 2
+    firstByte: 36
+    indexCount: 18
     topology: 0
     baseVertex: 0
     firstVertex: 0
-    vertexCount: 24
+    vertexCount: 20
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0.5, y: 0.5, z: 0.5}
@@ -28223,7 +28244,7 @@ Mesh:
   m_KeepVertices: 1
   m_KeepIndices: 1
   m_IndexFormat: 0
-  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
+  m_IndexBuffer: 0400050006000500070006000c000d000e000d000f000e00140015001600150017001600000001000200010003000200080009000a0009000b000a00100011001200110013001200
   m_VertexData:
     serializedVersion: 3
     m_VertexCount: 24
@@ -28361,6 +28382,11 @@ Mesh:
       m_LodBias: 0
     m_NumLevels: 1
     m_SubMeshes:
+    - serializedVersion: 2
+      m_Levels:
+      - serializedVersion: 1
+        m_IndexStart: 0
+        m_IndexCount: 0
     - serializedVersion: 2
       m_Levels:
       - serializedVersion: 1
@@ -29008,7 +29034,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -32268,11 +32294,21 @@ Mesh:
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
-    indexCount: 36
+    indexCount: 12
     topology: 0
     baseVertex: 0
     firstVertex: 0
-    vertexCount: 24
+    vertexCount: 20
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+  - serializedVersion: 2
+    firstByte: 24
+    indexCount: 24
+    topology: 0
+    baseVertex: 0
+    firstVertex: 4
+    vertexCount: 20
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0.5, y: 0.5, z: 0.5}
@@ -32292,7 +32328,7 @@ Mesh:
   m_KeepVertices: 1
   m_KeepIndices: 1
   m_IndexFormat: 0
-  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
+  m_IndexBuffer: 000001000200010003000200100011001200110013001200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00140015001600150017001600
   m_VertexData:
     serializedVersion: 3
     m_VertexCount: 24
@@ -32430,6 +32466,11 @@ Mesh:
       m_LodBias: 0
     m_NumLevels: 1
     m_SubMeshes:
+    - serializedVersion: 2
+      m_Levels:
+      - serializedVersion: 1
+        m_IndexStart: 0
+        m_IndexCount: 0
     - serializedVersion: 2
       m_Levels:
       - serializedVersion: 1
@@ -44119,7 +44160,7 @@ Transform:
   m_GameObject: {fileID: 1008527262}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.549, y: 0.22, z: -0.005}
+  m_LocalPosition: {x: -0.755, y: -0.01, z: 0.005}
   m_LocalScale: {x: 0.092300005, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44181,6 +44222,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 026fed176bd7fe24397cdf1dca6c3aac, type: 2}
+  - {fileID: 2100000, guid: bf83afd9e030a424d9f56df673e7ae5c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -44193,7 +44235,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -44255,7 +44297,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 0
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -44289,7 +44331,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 0
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -44323,7 +44365,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 0
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -44440,7 +44482,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 600059051}
-  m_VersionIndex: 23
+  m_VersionIndex: 35
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -44559,7 +44601,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -52395,8 +52437,8 @@ Transform:
   m_GameObject: {fileID: 1250206829}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.028616212, z: -0, w: 0.99959046}
-  m_LocalPosition: {x: 126.97052, y: 23.3, z: 24.970806}
-  m_LocalScale: {x: 2.1418004, y: 1, z: 2.293538}
+  m_LocalPosition: {x: 126.861, y: 23.3, z: 24.8457}
+  m_LocalScale: {x: 1.4145714, y: 1, z: 1.7999746}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1840929188}
@@ -54196,6 +54238,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290298762}
   m_CullTransparentMesh: 1
+--- !u!1 &1290440944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290440947}
+  - component: {fileID: 1290440946}
+  - component: {fileID: 1290440945}
+  m_Layer: 0
+  m_Name: pedestal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1290440945
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290440944}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: bf83afd9e030a424d9f56df673e7ae5c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1290440946
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290440944}
+  m_Mesh: {fileID: -7694812741669356860, guid: 81bbc0c1b93193f47b7ddaa914968a7f, type: 3}
+--- !u!4 &1290440947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290440944}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7067848, y: -0.021339105, z: -0.021339105, w: 0.7067848}
+  m_LocalPosition: {x: 126.65049, y: 22.9692, z: 28.74}
+  m_LocalScale: {x: 100, y: 100, z: 46.402164}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -3.459}
 --- !u!43 &1293949832
 Mesh:
   m_ObjectHideFlags: 0
@@ -55798,7 +55930,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -58188,6 +58320,96 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 259411858}
   m_SourcePrefab: {fileID: 100100000, guid: 843e7f2e0780ef441891d67fe5b6a8a8, type: 3}
+--- !u!1 &1358870385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1358870388}
+  - component: {fileID: 1358870387}
+  - component: {fileID: 1358870386}
+  m_Layer: 0
+  m_Name: pedestal (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1358870386
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358870385}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: bf83afd9e030a424d9f56df673e7ae5c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1358870387
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358870385}
+  m_Mesh: {fileID: -7694812741669356860, guid: 81bbc0c1b93193f47b7ddaa914968a7f, type: 3}
+--- !u!4 &1358870388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358870385}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7067848, y: -0.021339105, z: -0.021339105, w: 0.7067848}
+  m_LocalPosition: {x: 126.92429, y: 22.9692, z: 24.672}
+  m_LocalScale: {x: 100, y: 100, z: 46.402164}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -3.459}
 --- !u!108 &1365986000 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 1797280709400887406, guid: 67bb61ac70e99034e836a6c14dd71106, type: 3}
@@ -63815,6 +64037,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 28addb897f951164095f69916b6350a7, type: 2}
+  - {fileID: 2100000, guid: bf83afd9e030a424d9f56df673e7ae5c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63827,7 +64050,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -63906,7 +64129,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 0
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -63923,7 +64146,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 0
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -63940,7 +64163,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 0
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -63974,7 +64197,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 0
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -64074,7 +64297,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 660925352}
-  m_VersionIndex: 23
+  m_VersionIndex: 39
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -68001,7 +68224,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -74512,11 +74735,21 @@ Mesh:
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
-    indexCount: 36
+    indexCount: 24
+    topology: 0
+    baseVertex: 0
+    firstVertex: 4
+    vertexCount: 20
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+  - serializedVersion: 2
+    firstByte: 48
+    indexCount: 12
     topology: 0
     baseVertex: 0
     firstVertex: 0
-    vertexCount: 24
+    vertexCount: 12
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0.5, y: 0.5, z: 0.5}
@@ -74536,7 +74769,7 @@ Mesh:
   m_KeepVertices: 1
   m_KeepIndices: 1
   m_IndexFormat: 0
-  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
+  m_IndexBuffer: 0400050006000500070006000c000d000e000d000f000e00100011001200110013001200140015001600150017001600000001000200010003000200080009000a0009000b000a00
   m_VertexData:
     serializedVersion: 3
     m_VertexCount: 24
@@ -74674,6 +74907,11 @@ Mesh:
       m_LodBias: 0
     m_NumLevels: 1
     m_SubMeshes:
+    - serializedVersion: 2
+      m_Levels:
+      - serializedVersion: 1
+        m_IndexStart: 0
+        m_IndexCount: 0
     - serializedVersion: 2
       m_Levels:
       - serializedVersion: 1
@@ -76451,7 +76689,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -76985,7 +77223,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -79867,7 +80105,7 @@ Transform:
   m_GameObject: {fileID: 1840929187}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.573, y: 0.217, z: -0.015}
+  m_LocalPosition: {x: -0.608, y: 0.004, z: -0.014}
   m_LocalScale: {x: 0.092300005, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -79929,6 +80167,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f3dff6a152fc871448a6be1a72b207d6, type: 2}
+  - {fileID: 2100000, guid: bf83afd9e030a424d9f56df673e7ae5c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80003,7 +80242,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 0
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -80037,7 +80276,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 0
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -80188,7 +80427,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 1727363745}
-  m_VersionIndex: 23
+  m_VersionIndex: 31
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -125030,16 +125269,36 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2511976836626705850, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1500
+      value: 1800
       objectReference: {fileID: 0}
     - target: {fileID: 2511976836626705850, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 900
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584208204937197332, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontSize
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2584208204937197332, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 36224f9455608d7418f7efbc9f64ff91, type: 2}
+    - target: {fileID: 2584208204937197332, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584208204937197332, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584208204937197332, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.5660378
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584208204937197332, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2584208204937197332, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
@@ -125052,6 +125311,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 985
       objectReference: {fileID: 0}
+    - target: {fileID: 4078067318078068666, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 418387314}
     - target: {fileID: 4578345366039131319, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -125064,10 +125327,34 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5932395545000714179, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cb76790bc46c8104a81de61f88577730, type: 3}
+    - target: {fileID: 6043670653859788790, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6043670653859788790, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 7ad3fff22018890459cd0ee281982aa3, type: 2}
+    - target: {fileID: 6043670653859788790, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.06237883
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043670653859788790, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.06237883
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043670653859788790, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.23899364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043670653859788790, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6043670653859788790, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
@@ -125167,7 +125454,7 @@ PrefabInstance:
     - target: {fileID: 7443740541488206587, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1923501488, guid: ba2118ba71f5ee944b49205b4ae7b1b3, type: 3}
+      objectReference: {fileID: -1950261114, guid: 2a995aee187d8344281ee70700b21db0, type: 3}
     - target: {fileID: 7811140001787664959, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -125257,9 +125544,29 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8498876839033777068, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498876839033777068, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 7ad3fff22018890459cd0ee281982aa3, type: 2}
+    - target: {fileID: 8498876839033777068, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.067145236
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498876839033777068, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.067145236
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498876839033777068, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.22012573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498876839033777068, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8498876839033777068, guid: 70f3bf992ca125a48b76bec3c5c4f22f, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
@@ -202584,3 +202891,5 @@ SceneRoots:
   - {fileID: 1780100989}
   - {fileID: 616887103}
   - {fileID: 1299444796}
+  - {fileID: 1290440947}
+  - {fileID: 1358870388}

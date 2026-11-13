@@ -15,6 +15,10 @@ public class EnemyEncounterZone : MonoBehaviour
     public float attackDamage = 10f;
     public float attackCooldown = 1f;
 
+    [Header("Enemy Spawn")]
+    public bool SpawnEnemyOnEnter = false;
+    public float spawnBehindDistance = 3f;
+
     [Header("Cooldown")]
     public float encounterCooldown = 5f;
 
@@ -35,6 +39,11 @@ public class EnemyEncounterZone : MonoBehaviour
 
     public bool playSFXOnEnter = true;
     public bool loopMusicDuringEncounter = true;
+
+    [Header("Audio Fade")]
+    public float musicFadeDuration = 2f;
+
+    private Coroutine musicFadeCoroutine;
 
     private void Start()
     {
@@ -71,6 +80,11 @@ public class EnemyEncounterZone : MonoBehaviour
 
         playerInside = true;
 
+        if (SpawnEnemyOnEnter)
+        {
+            SpawnBehindPlayer(other.transform);
+        }
+
         if (audioSource != null && playSFXOnEnter && encounterSFX != null)
         {
             audioSource.PlayOneShot(encounterSFX);
@@ -78,6 +92,7 @@ public class EnemyEncounterZone : MonoBehaviour
 
         if (audioSource != null && loopMusicDuringEncounter  && encounterMusic != null)
         {
+            audioSource.volume = 0.75f;
             audioSource.clip = encounterMusic;
             audioSource.loop = true;
             audioSource.Play();
@@ -99,6 +114,32 @@ public class EnemyEncounterZone : MonoBehaviour
 
         Debug.Log("Enemy encounter started: " + gameObject.name);
     }
+    private void SpawnBehindPlayer(Transform player)
+    {
+        Vector3 spawnPosition = player.position - player.forward * spawnBehindDistance;
+
+        if (NavMesh.SamplePosition(spawnPosition, out NavMeshHit hit, 2f, NavMesh.AllAreas))
+        {
+            if (agent != null && agent.enabled && agent.isOnNavMesh)
+            {
+                agent.Warp(hit.position);
+            }
+            else
+            {
+                enemyAI.transform.position = hit.position;
+            }
+
+            Vector3 direction = player.position - hit.position;
+            direction.y = 0f;
+
+            if (direction.sqrMagnitude > 0.01f)
+                enemyAI.transform.rotation = Quaternion.LookRotation(direction);
+        }
+        else
+        {
+            Debug.LogWarning("Could not find a NavMesh position behind the player!");
+        }
+    }
 
     private void OnTriggerExit(Collider other)
     {
@@ -113,6 +154,37 @@ public class EnemyEncounterZone : MonoBehaviour
         StartCoroutine(ReturnToNaturalBehaviour());
 
         Debug.Log("Enemy encounter completed: " + gameObject.name);
+
+        if (audioSource != null && loopMusicDuringEncounter)
+        {
+            if (musicFadeCoroutine != null)
+                StopCoroutine(musicFadeCoroutine);
+
+            musicFadeCoroutine = StartCoroutine(FadeOutMusic());
+        }
+    }
+    private IEnumerator FadeOutMusic()
+    {
+        float startVolume = audioSource.volume;
+        float elapsed = 0f;
+
+        while (elapsed < musicFadeDuration)
+        {
+            elapsed += Time.deltaTime;
+
+            audioSource.volume = Mathf.Lerp(
+                startVolume,
+                0f,
+                elapsed / musicFadeDuration
+            );
+
+            yield return null;
+        }
+
+        audioSource.volume = 0f;
+        audioSource.Stop();
+        audioSource.clip = null;
+        audioSource.loop = false;
     }
 
     private IEnumerator ReturnToNaturalBehaviour()

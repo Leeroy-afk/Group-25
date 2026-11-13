@@ -14,6 +14,9 @@ public class PatientAI : MonoBehaviour
 
     private bool isFollowing = true;
 
+    [Header("Animation")]
+    public Animator animator;
+
     void Start()
     {
         destination = GameObject.FindGameObjectWithTag("Player");
@@ -40,6 +43,13 @@ public class PatientAI : MonoBehaviour
         else
         {
             patientSteps.Stop();
+        }
+
+        if (animator != null)
+        {
+            float speed = agent.velocity.magnitude;
+
+            animator.SetFloat("Speed", speed);
         }
     }
     public void ToggleFollowing()

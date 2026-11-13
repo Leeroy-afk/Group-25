@@ -17,6 +17,9 @@ public class AITriggerSequence : MonoBehaviour
     [Header("Movement Path")]
     public List<Transform> waypoints;
 
+    [Header("UI Prompt")]
+    public GameObject hidePrompt;
+
     private int currentWaypoint = 0;
     private bool sequenceStarted = false;
 
@@ -24,6 +27,7 @@ public class AITriggerSequence : MonoBehaviour
     {
         // Hide the AI when the scene starts
         aiCharacter.SetActive(false);
+        hidePrompt.SetActive(false);
 
         agent = aiCharacter.GetComponent<NavMeshAgent>();
     }
@@ -44,6 +48,7 @@ public class AITriggerSequence : MonoBehaviour
         sequenceStarted = true;
 
         aiCharacter.SetActive(true);
+        hidePrompt.SetActive(true);
 
         currentWaypoint = 0;
 
@@ -86,6 +91,7 @@ public class AITriggerSequence : MonoBehaviour
         agent.isStopped = true;
 
         aiCharacter.SetActive(false);
+        hidePrompt.SetActive(false);
 
         sequenceStarted = false;
     }

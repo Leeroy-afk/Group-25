@@ -1,21 +1,23 @@
 using Interaction;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UnlockDialogueLater : MonoBehaviour
 {
     [Header("Pedestals")]
-    public TutorialPedestalInteract[] pedestals;
+    public List<TutPedestalInteract> pedestals;
 
     [Header("Dialogue")]
-    public GameObject dialogueTrigger;
+    public GameObject dialogueTriggerObject;
 
     private bool dialogueUnlocked = false;
 
     private void Start()
     {
-        if (dialogueTrigger != null)
+        // Keep the dialogue trigger hidden until all items are placed
+        if (dialogueTriggerObject != null)
         {
-            dialogueTrigger.SetActive(false);
+            dialogueTriggerObject.SetActive(false);
         }
     }
 
@@ -24,14 +26,21 @@ public class UnlockDialogueLater : MonoBehaviour
         if (dialogueUnlocked)
             return;
 
-        foreach (TutorialPedestalInteract pedestal in pedestals)
+        CheckAllPedestals();
+    }
+
+    private void CheckAllPedestals()
+    {
+        if (pedestals.Count == 0)
+            return;
+
+        foreach (TutPedestalInteract pedestal in pedestals)
         {
             if (pedestal == null || !pedestal.IsOccupied)
-            {
                 return;
-            }
         }
 
+        // All items have been placed
         UnlockDialogue();
     }
 
@@ -39,12 +48,11 @@ public class UnlockDialogueLater : MonoBehaviour
     {
         dialogueUnlocked = true;
 
-        if (dialogueTrigger != null)
+        if (dialogueTriggerObject != null)
         {
-            dialogueTrigger.SetActive(true);
+            dialogueTriggerObject.SetActive(true);
         }
 
-        Debug.Log("Last Medicine placed. Dialogue unlocked.");
+        Debug.Log("All memories placed! Dialogue unlocked.");
     }
-
 }

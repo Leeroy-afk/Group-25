@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class LightFlicker : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class LightFlicker : MonoBehaviour
     [SerializeField] private Light spLight2;
     [SerializeField] private Light spLight3;
     [SerializeField] private Light spLight4;
+
+    [Header("Flashlight UI")]
+    [SerializeField] private GameObject flashlightMessage;
 
     public int flickerCount = 3;
     public float flickerSpeed = 0.15f;
@@ -44,6 +48,7 @@ public class LightFlicker : MonoBehaviour
         spLight2.enabled = true;
         spLight3.enabled = true;
         spLight4.enabled = true;
+        flashlightMessage.SetActive(false);
     }
     IEnumerator FlickerLight()
     {
@@ -73,6 +78,8 @@ public class LightFlicker : MonoBehaviour
         spLight2.enabled = false;
         spLight3.enabled = false;
         spLight4.enabled = false;
+
+        flashlightMessage.SetActive(true);
 
         flickerCoroutine = null;
     }

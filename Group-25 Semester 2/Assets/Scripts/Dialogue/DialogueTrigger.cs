@@ -7,7 +7,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public List<Conversation> conversations;
 
-    private int conversationCount = 0;
+    public int conversationCount = 0;
 
     private void OnTriggerEnter(Collider other)
     {
